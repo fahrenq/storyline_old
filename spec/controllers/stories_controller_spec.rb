@@ -6,7 +6,7 @@ describe Web::StoriesController, type: :controller do
     describe 'GET #index' do
       before(:each) { get :index }
       it { expect(response).to render_template(:index)  }
-      it { expect(assigns(:stories)) { Story.all } }
+      it { expect(assigns(:stories)).to eq(Story.all) }
     end
     describe 'GET #show' do
       let(:story) { create(:story) }
@@ -112,7 +112,7 @@ describe Web::StoriesController, type: :controller do
           end
         end
         context 'invalid_data' do
-          let(:valid_data) { attributes_for(:story, title: '',
+          let(:invalid_data) { attributes_for(:story, title: '',
                                             description: 'Brand new description'
                                            ) }
           before(:each) { patch :update, params: { id: story, story: invalid_data } }
@@ -127,11 +127,11 @@ describe Web::StoriesController, type: :controller do
         end
       end
       describe 'DELETE #destroy' do
-        let!(:story) { create(:story) }
+        let!(:story) { create(:story, user: user) }
         before(:each) { delete :destroy, params: { id: story } }
 
         it 'redirects to root page' do
-          expect(response).to redirect_to(root_path)
+          expect(response).to redirect_to(stories_path)
         end
         it 'deleted record from database' do
           expect(Story.exists?(story.id)).to be_falsy

@@ -14,12 +14,14 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'slim-rails'
 gem 'devise'
 gem 'simple_form'
+gem 'pundit'
 
 group :development, :test do
   gem 'byebug', platform: :mri
   gem 'rspec-rails', '~> 3.5'
   gem 'capybara'
   gem 'capybara-webkit'
+  gem 'rails-controller-testing'
   gem 'factory_girl_rails'
   gem 'faker'
 end
