@@ -6,7 +6,7 @@ describe Web::StoriesController, type: :controller do
     describe 'GET #index' do
       before(:each) { get :index }
       it { expect(response).to render_template(:index)  }
-      it { expect(assigns(:stories) { Story.all } }
+      it { expect(assigns(:stories)) { Story.all } }
     end
     describe 'GET #show' do
       let(:story) { create(:story) }
