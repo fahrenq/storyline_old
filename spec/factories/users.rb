@@ -4,7 +4,7 @@ FactoryGirl.define do
     sequence(:email) { |n| "samplemail_#{n}@example.com" }
     password 'pswd1234'
 
-    factory :user_fake do
+    factory :user_faker do
       name Faker::Internet.user_name
       email Faker::Internet.email
     end
