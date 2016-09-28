@@ -1,0 +1,10 @@
+h1
+  = @story.title
+p.text-right
+  |  from #{@story.created_at.strftime("%d %B %Y")}
+p.lead
+  = @story.description
+
+= link_to 'Edit', edit_story_path(@story)
+br
+= link_to 'Delete', story_path(@story), method: :delete, data: { confirm: 'Are you sure?' }

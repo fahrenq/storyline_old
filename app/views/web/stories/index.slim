@@ -1,0 +1,19 @@
+// temporary
+scss:
+  th {
+    text-align: center;
+  }
+  td.date {
+    text-align: center;
+  }
+
+table.table.table-bordered
+  th(colspan='2')
+    | Stories
+  - @stories.each do |story|
+    tr
+      td
+        = link_to story.title, story
+      td.date
+        = story.created_at.strftime('%d %b %Y')
+= link_to 'New story', new_story_path

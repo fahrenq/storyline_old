@@ -4,6 +4,8 @@ class CreateStories < ActiveRecord::Migration[5.0]
       t.string :title
       t.text :description
       t.belongs_to :user, foreign_key: true, index: true
+
+      t.timestamps
     end
   end
 end
