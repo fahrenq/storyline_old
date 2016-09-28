@@ -12,8 +12,12 @@ nav.navbar.navbar-default
     #bs-example-navbar-collapse-1.collapse.navbar-collapse
       ul.nav.navbar-nav.navbar-right
         - if current_user
-          p.navbar-text.current-user-name
-            = current_user.name
+          li.dropdown
+            a.dropdown-toggle#dropdown-user(data-toggle='dropdown' href='#' role='button' aria-haspopup='true' aria-expand='false' )
+              = current_user.name
+              span.caret
+            ul.dropdown-menu(aria-labelledby='dropdown-user')
+              li = link_to 'Edit account', edit_user_registration_path
           li
             = link_to 'Log out', destroy_user_session_path, method: :delete
         - else
