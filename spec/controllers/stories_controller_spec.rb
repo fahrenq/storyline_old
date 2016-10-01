@@ -47,6 +47,7 @@ describe Web::StoriesController, type: :controller do
       end
     end
   end
+
   describe 'authenticated user' do
     it_behaves_like 'public access to stories'
     let(:user) { create(:user) }
@@ -88,6 +89,7 @@ describe Web::StoriesController, type: :controller do
     end
     context 'user owns story' do
       let(:story) { create(:story, user: user) }
+
       describe 'GET #edit' do
         it 'renders :edit template' do
           get :edit, params: { id: story }
