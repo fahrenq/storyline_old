@@ -6,10 +6,10 @@ describe Web::Moments::NativeMomentsController, type: :controller do
     let(:native_moment) { create(:native_moment) }
 
     describe 'GET #show' do
-      before(:each) { get :show, params: { id: moment  } }
+      before(:each) { get :show, params: { id: native_moment  } }
 
       it { expect(response).to render_template(:show) }
-      it { expect(assigns(:native_moment)).to eq(moment) }
+      it { expect(assigns(:native_moment)).to eq(native_moment) }
     end
   end
 
@@ -28,18 +28,18 @@ describe Web::Moments::NativeMomentsController, type: :controller do
       it { delete :destroy, params: { id: native_moment } }
     end
     context 'does not touch database' do
-      describe 'POST #create' do
+      it 'POST #create' do
         expect {
           post :create, params: { story_id: story, native_moment: attributes_for(:native_moment) }
-        }.not_to change(NativeMoment, :conut)
+        }.not_to change(NativeMoment, :count)
       end
-      describe 'PATCH #update' do
+      it 'PATCH #update' do
         patch :update, params: { id: native_moment,
                                  native_moment: attributes_for(:native_moment, body: 'new body text')}
         native_moment.reload
         expect(native_moment.body).not_to eq('new body text')
       end
-      describe 'DELETE #destroy' do
+      it 'DELETE #destroy' do
         delete :destroy, params: { id: native_moment }
         expect(NativeMoment.exists?(native_moment.id)).to be_truthy
       end
@@ -56,7 +56,7 @@ describe Web::Moments::NativeMomentsController, type: :controller do
       let(:native_moment) { create(:native_moment, story: story) }
 
       context 'redirects to pundit path' do
-        after(:each) { expect(response).to redirect_to(stories_path) }
+        after(:each) { expect(response).to redirect_to(root_path) }
 
         it { get :new, params: { story_id: story } }
         it { post :create, params: { story_id: story,
@@ -71,7 +71,7 @@ describe Web::Moments::NativeMomentsController, type: :controller do
           expect {
             post :create, params: { story_id: story,
                                     native_moment: attributes_for(:native_moment) }
-          }.not_to change(NativeMoment, :cont)
+          }.not_to change(NativeMoment, :count)
         end
         it 'PATCH #update' do
           patch :update, params: { id: native_moment,
@@ -87,7 +87,7 @@ describe Web::Moments::NativeMomentsController, type: :controller do
     end
     context "is owner of native_moment's story" do
       let(:story) { create(:story, user: user) }
-      let(:native_moment) { create(:native_moment) }
+      let(:native_moment) { create(:native_moment, story: story) }
 
       describe 'GET #new' do
         before(:each) { get :new, params: { story_id: story } }
@@ -96,16 +96,33 @@ describe Web::Moments::NativeMomentsController, type: :controller do
         it { expect(assigns(:native_moment)).to be_a_new(NativeMoment) }
       end
       describe 'POST #create' do
-        it 'redirects to native_moment#show' do
-          post :create, params: { story_id: story,
-                                  native_moment: attributes_for(:native_moment) }
-          expect(response).to redirect_to(assigns[:native_moment])
-        end
-        it 'creates new reford in database' do
-          expect {
+        context 'valid data' do
+          let(:valid_data) { attributes_for(:native_moment) }
+          it 'redirects to native_moment#show' do
             post :create, params: { story_id: story,
-                                    native_moment: attributes_for(:native_moment) }
-          }.to change(NativeMoment, :count).by(1)
+                                    native_moment: valid_data }
+            expect(response).to redirect_to(assigns[:native_moment])
+          end
+          it 'creates new reford in database' do
+            expect {
+              post :create, params: { story_id: story,
+                                      native_moment: valid_data }
+            }.to change(NativeMoment, :count).by(1)
+          end
+        end
+        context 'invalid data' do
+          let(:invalid_data) { attributes_for(:native_moment, body: '') }
+          it 'renders new temlate' do
+            post :create, params: { story_id: story,
+                                    native_moment: invalid_data }
+            expect(response).to render_template(:new)
+          end
+          it 'does not create new reford in database' do
+            expect {
+              post :create, params: { story_id: story,
+                                      native_moment: invalid_data }
+            }.not_to change(NativeMoment, :count)
+          end
         end
       end
       describe 'GET #edit' do
@@ -115,13 +132,27 @@ describe Web::Moments::NativeMomentsController, type: :controller do
         it { expect(assigns(:native_moment)).to eq(native_moment) }
       end
       describe 'PATCH #update' do
-        before(:each) { patch :update, params: { id: native_moment,
-                                                 native_moment: attributes_for(:native_moment, body: 'new body text') } }
+        context 'valid_data' do
+          let (:valid_data) { attributes_for(:native_moment, body: 'new body text') }
+          before(:each) { patch :update, params: { id: native_moment,
+                                                   native_moment: valid_data } }
 
-        it { expect(response).to redirect_to(assigns[:native_moment]) }
-        it 'changes record in database' do
-          native_moment.reload
-          expect(native_moment.body).to eq('new body text')
+          it { expect(response).to redirect_to(assigns[:native_moment]) }
+          it 'changes record in database' do
+            native_moment.reload
+            expect(native_moment.body).to eq('new body text')
+          end
+        end
+        context 'invalid_data' do
+          let(:invalid_data) { attributes_for(:native_moment, body: '') }
+          before(:each) { patch :update, params: { id: native_moment,
+                                                   native_moment: invalid_data } }
+
+          it { expect(response).to render_template(:edit) }
+          it 'changes record in database' do
+            native_moment.reload
+            expect(native_moment.body).not_to eq('')
+          end
         end
       end
       describe 'DELTE #destroy' do

@@ -13,6 +13,10 @@ Rails.application.routes.draw do
     }
     # Devise routing end
 
-    resources :stories
+    resources :stories do
+      scope module: 'moments' do
+        resources :native_moments, shallow: true
+      end
+    end
   end
 end

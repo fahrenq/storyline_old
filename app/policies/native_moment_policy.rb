@@ -1,0 +1,2 @@
+class NativeMomentPolicy < MomentPolicy
+end
