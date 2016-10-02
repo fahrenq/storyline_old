@@ -8,3 +8,17 @@ p.lead
 = link_to 'Edit', edit_story_path(@story)
 br
 = link_to 'Delete', story_path(@story), method: :delete, data: { confirm: 'Are you sure?' }
+
+table.table.table-bordered
+  th.text-center(colspan='2')
+    | Moments
+  - @story.native_moments.each do |moment|
+    tr
+      td
+        = moment.body
+      td
+        = link_to 'show', moment
+
+- if policy(@story).edit?
+  = link_to 'new moment', new_story_native_moment_path(@story)
+
