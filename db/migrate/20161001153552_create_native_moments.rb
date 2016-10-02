@@ -1,7 +1,6 @@
 class CreateNativeMoments < ActiveRecord::Migration[5.0]
   def change
     create_table :native_moments do |t|
-      t.string :name
       t.text :body
       t.belongs_to :story, foreign_key: true, index: true
 

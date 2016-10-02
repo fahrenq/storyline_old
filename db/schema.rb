@@ -16,7 +16,6 @@ ActiveRecord::Schema.define(version: 20161001153552) do
   enable_extension "plpgsql"
 
   create_table "native_moments", force: :cascade do |t|
-    t.string   "name"
     t.text     "body"
     t.integer  "story_id"
     t.datetime "created_at", null: false
