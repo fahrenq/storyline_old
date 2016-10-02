@@ -2,4 +2,6 @@ p.lead
   = @native_moment.body
 = link_to 'edit', edit_native_moment_path(@native_moment)
 br
+= link_to 'delete', native_moment_path(@native_moment), method: :delete
+br
 = link_to 'get me to the story', @native_moment.story
