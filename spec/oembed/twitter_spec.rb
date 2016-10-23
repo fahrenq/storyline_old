@@ -1,6 +1,7 @@
 require 'rails_helper'
+require 'oembedapi/twitter'
 
-describe TwitterOEmbed  do
+describe OembedApi::Twitter do
   it 'receives successful response' do
     response = subject.new.fetch('https://twitter.com/fahrenhei7lt/status/788802438467837952')
     expect(response.is_a?(Hash)).to be_truthy
