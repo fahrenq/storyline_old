@@ -10,10 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161001153552) do
+ActiveRecord::Schema.define(version: 20161023193810) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "embedded_moments", force: :cascade do |t|
+    t.json     "body"
+    t.integer  "story_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["story_id"], name: "index_embedded_moments_on_story_id", using: :btree
+  end
 
   create_table "native_moments", force: :cascade do |t|
     t.text     "body"

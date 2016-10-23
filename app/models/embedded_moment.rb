@@ -1,0 +1,2 @@
+class EmbeddedMoment < ApplicationRecord
+end
