@@ -2,16 +2,16 @@ require 'oembedapi/twitter'
 class CreateEmbeddedMoment
   attr_reader :url, :service, :api_class, :story
 
-  def initialize(params)
+  def initialize(story, params)
     @url = params[:url]
     @service = params[:service]
-    @story = params[:story_id]
+    @story = story
   end
 
   def call
-    embedded_moment = EmbeddedMoment.new(body: response, story_id: story)
+    embedded_moment = EmbeddedMoment.new(body: response, story: story)
     if embedded_moment.save
-      true
+      embedded_moment
     else
       false
     end
