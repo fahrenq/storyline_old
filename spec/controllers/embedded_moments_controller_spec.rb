@@ -25,14 +25,14 @@ describe Web::Moments::EmbeddedMomentsController, type: :controller do
       after(:each) { expect(response).to redirect_to(new_user_session_url) }
       it { get :new, params: { story_id: story } }
       it { post :create, params: { story_id: story,
-                                   embedded_moment: embedded_moment_attributes } }
+                                   embedded_moment_attrs: embedded_moment_attributes } }
       it { delete :destroy, params: { id: embedded_moment } }
     end
     context 'does not touch database' do
       it 'POST #create' do
         expect {
           post :create, params: { story_id: story,
-                                  embedded_moment: embedded_moment_attributes }
+                                  embedded_moment_attrs: embedded_moment_attributes }
         }.not_to change(EmbeddedMoment, :count)
       end
       it 'DELETE #destroy' do
@@ -57,14 +57,14 @@ describe Web::Moments::EmbeddedMomentsController, type: :controller do
 
         it { get :new, params: { story_id: story } }
         it { post :create, params: { story_id: story,
-                                     embedded_moment: embedded_moment_attributes } }
+                                     embedded_moment_attrs: embedded_moment_attributes } }
         it { delete :destroy, params: { id: embedded_moment } }
       end
       context 'does not touch database' do
         it 'POST #create' do
           expect {
             post :create, params: { story_id: story,
-                                    embedded_moment: embedded_moment_attributes }
+                                    embedded_moment_attrs: embedded_moment_attributes }
           }.not_to change(EmbeddedMoment, :count)
         end
         it 'DELETE #destroy' do
@@ -87,14 +87,14 @@ describe Web::Moments::EmbeddedMomentsController, type: :controller do
         context 'valid_data' do
           it 'redirects to story#show' do
             post :create, params: { story_id: story,
-                                    embedded_moment: embedded_moment_attributes }
+                                    embedded_moment_attrs: embedded_moment_attributes }
             expect(response).to redirect_to(story.embedded_moments.last)
           end
         end
         context 'invalid_data' do
           it 'renders :new template' do
             post :create, params: { story_id: story,
-                                    embedded_moment: embedded_moment_attributes.merge(url: 'srcwrong') }
+                                    embedded_moment_attrs: embedded_moment_attributes.merge(url: 'srcwrong') }
             expect(response).to render_template(:new)
           end
         end
@@ -106,7 +106,7 @@ describe Web::Moments::EmbeddedMomentsController, type: :controller do
             .with(story, params)
           expect(create_embedded_moment).to receive(:call)
           post :create, params: { story_id: story,
-                                  embedded_moment: embedded_moment_attributes }
+                                  embedded_moment_attrs: embedded_moment_attributes }
         end
       end
       describe 'DELETE #destroy' do

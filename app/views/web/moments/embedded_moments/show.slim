@@ -1,0 +1,5 @@
+= @embedded_moment.body['html'].html_safe
+br
+= link_to 'delete', embedded_moment_path(@embedded_moment), method: :delete
+br
+= link_to 'get me to the story', @embedded_moment.story

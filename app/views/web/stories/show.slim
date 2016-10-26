@@ -12,13 +12,15 @@ br
 table.table.table-bordered
   th.text-center(colspan='2')
     | Moments
-  - @story.native_moments.each do |moment|
+  - @moments.each do |moment|
     tr
       td
-        = moment.body
+        = render partial: 'moment_body', locals: { moment: moment }
       td
         = link_to 'show', moment
 
 - if policy(@story).edit?
-  = link_to 'new moment', new_story_native_moment_path(@story)
+  = link_to 'new native moment', new_story_native_moment_path(@story)
+  br
+  = link_to 'new embedded moment', new_story_embedded_moment_path(@story)
 

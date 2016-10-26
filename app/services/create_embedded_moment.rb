@@ -1,4 +1,6 @@
 require 'oembedapi/twitter'
+require 'oembedapi/youtube'
+
 class CreateEmbeddedMoment
   attr_reader :url, :service, :api_class, :story
 
@@ -23,11 +25,13 @@ class CreateEmbeddedMoment
     @api_class ||= case service
                    when 'twitter'
                      OembedApi::Twitter.new
+                   when 'youtube'
+                     OembedApi::Youtube.new
                    end
   end
 
   def response
-    return nil if api_class == nil
+    return nil if api_class.nil?
     @response ||= api_class.fetch(url)
   end
 end

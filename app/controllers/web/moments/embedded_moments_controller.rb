@@ -32,7 +32,7 @@ class Web::Moments::EmbeddedMomentsController < Web::Moments::ApplicationControl
   end
 
   def embedded_moment_params
-    params.require(:embedded_moment)
+    params.require(:embedded_moment_attrs)
           .permit(:url, :service)
         # .merge(story: current_story)
   end
