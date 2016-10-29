@@ -13,6 +13,7 @@
 class Story < ApplicationRecord
   belongs_to :user
   has_many :native_moments, dependent: :destroy
+  has_many :embedded_moments, dependent: :destroy
 
   validates :title,
     presence: true,

@@ -1,12 +1,15 @@
 class Web::StoriesController < Web::ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
-  before_action :set_story, only: [:show, :edit, :update, :destroy]
+  before_action :set_story, only: [:edit, :update, :destroy]
 
   def index
     @stories = Story.all
   end
 
-  def show; end
+  def show
+    @story = Story.includes(:native_moments, :embedded_moments).find(params[:id])
+    @moments = (@story.native_moments + @story.embedded_moments).sort_by(&:created_at).reverse!
+  end
 
   def new
     @story = Story.new

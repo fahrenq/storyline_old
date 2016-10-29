@@ -15,6 +15,7 @@ gem 'slim-rails'
 gem 'devise'
 gem 'simple_form'
 gem 'pundit'
+gem 'oembed'
 
 group :development, :test do
   gem 'byebug', platform: :mri

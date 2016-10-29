@@ -2,7 +2,6 @@ class Web::Moments::NativeMomentsController < Web::Moments::ApplicationControlle
   before_action :set_moment, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:show]
 
-
   def show; end
 
   def new
@@ -47,7 +46,7 @@ class Web::Moments::NativeMomentsController < Web::Moments::ApplicationControlle
 
   def native_moment_params
     params.require(:native_moment)
-          .permit(:name, :body, :story_id)
+          .permit(:name, :body)
         # .merge(story: current_story)
   end
 end

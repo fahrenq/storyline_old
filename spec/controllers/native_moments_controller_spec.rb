@@ -48,7 +48,7 @@ describe Web::Moments::NativeMomentsController, type: :controller do
 
   describe 'authenticated user' do
     let(:user) { create(:user) }
-    before {sign_in(user)}
+    before { sign_in(user) }
 
     context "is not the owner of native_moment's story" do
       let(:user_2) { create(:user) }
@@ -161,8 +161,6 @@ describe Web::Moments::NativeMomentsController, type: :controller do
         it { expect(response).to redirect_to(story) }
         it { expect(NativeMoment.exists?(native_moment.id)).to be_falsy }
       end
-
     end
   end
-
 end

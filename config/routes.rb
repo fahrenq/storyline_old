@@ -16,6 +16,7 @@ Rails.application.routes.draw do
     resources :stories do
       scope module: 'moments' do
         resources :native_moments, shallow: true
+        resources :embedded_moments, shallow: true
       end
     end
   end
