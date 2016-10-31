@@ -17,6 +17,6 @@ RSpec.describe NativeMoment, type: :model do
   it { should validate_length_of(:body).is_at_least(4) }
   it { should validate_length_of(:body).is_at_most(2048) }
 
-  #associations
+  # associations
   it { should belong_to(:story) }
 end

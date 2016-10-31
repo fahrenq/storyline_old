@@ -7,19 +7,18 @@ describe OembedApi::Handler do
     it 'with url protocol' do
       expect(OembedApi::Twitter).to receive(:new)
       OembedApi::Handler.new('https://twitter.com/username')
-        .response
+                        .response
     end
     it 'without url protocol' do
       expect(OembedApi::Twitter).to receive(:new)
       OembedApi::Handler.new('twitter.com/username')
-        .response
+                        .response
     end
   end
   it 'returns hash on successful request' do
     response = OembedApi::Handler
-      .new('https://twitter.com/fahrenhei7lt/status/788802438467837952')
-      .response
+               .new('https://twitter.com/fahrenhei7lt/status/788802438467837952')
+               .response
     expect(response).to be_a(Hash)
   end
 end
-

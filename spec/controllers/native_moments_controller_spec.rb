@@ -1,12 +1,11 @@
 require 'rails_helper'
 
 describe Web::Moments::NativeMomentsController, type: :controller do
-
   shared_examples 'public access to native_moments' do
     let(:native_moment) { create(:native_moment) }
 
     describe 'GET #show' do
-      before(:each) { get :show, params: { id: native_moment  } }
+      before(:each) { get :show, params: { id: native_moment } }
 
       it { expect(response).to render_template(:show) }
       it { expect(assigns(:native_moment)).to eq(native_moment) }
@@ -21,12 +20,14 @@ describe Web::Moments::NativeMomentsController, type: :controller do
     context 'redirects to login page' do
       after(:each) { expect(response).to redirect_to(new_user_session_url) }
       it { get :new, params: { story_id: story } }
-      it { post :create, params: { story_id: story, native_moment: attributes_for(:native_moment) } }
+      it { post :create, params: { story_id: story,
+                                   native_moment: attributes_for(:native_moment) } }
       it { get :edit, params: { id: native_moment } }
       it { patch :update, params: { id: native_moment,
                                     native_moment: attributes_for(:native_moment, body: 'new body text')} }
       it { delete :destroy, params: { id: native_moment } }
     end
+
     context 'does not touch database' do
       it 'POST #create' do
         expect {
@@ -66,6 +67,7 @@ describe Web::Moments::NativeMomentsController, type: :controller do
                                       native_moment: attributes_for(:native_moment, body: 'new body text') } }
         it { delete :destroy, params: { id: native_moment } }
       end
+
       context 'does not touch database' do
         it 'POST #create' do
           expect {
@@ -85,6 +87,7 @@ describe Web::Moments::NativeMomentsController, type: :controller do
         end
       end
     end
+
     context "is owner of native_moment's story" do
       let(:story) { create(:story, user: user) }
       let(:native_moment) { create(:native_moment, story: story) }
@@ -95,6 +98,7 @@ describe Web::Moments::NativeMomentsController, type: :controller do
         it { expect(response).to render_template(:new) }
         it { expect(assigns(:native_moment)).to be_a_new(NativeMoment) }
       end
+
       describe 'POST #create' do
         context 'valid data' do
           let(:valid_data) { attributes_for(:native_moment) }
@@ -110,6 +114,7 @@ describe Web::Moments::NativeMomentsController, type: :controller do
             }.to change(NativeMoment, :count).by(1)
           end
         end
+
         context 'invalid data' do
           let(:invalid_data) { attributes_for(:native_moment, body: '') }
           it 'renders new temlate' do
@@ -125,15 +130,17 @@ describe Web::Moments::NativeMomentsController, type: :controller do
           end
         end
       end
+
       describe 'GET #edit' do
         before(:each) { get :edit, params: { id: native_moment } }
 
         it { expect(response).to render_template(:edit) }
         it { expect(assigns(:native_moment)).to eq(native_moment) }
       end
+
       describe 'PATCH #update' do
         context 'valid_data' do
-          let (:valid_data) { attributes_for(:native_moment, body: 'new body text') }
+          let(:valid_data) { attributes_for(:native_moment, body: 'new body text') }
           before(:each) { patch :update, params: { id: native_moment,
                                                    native_moment: valid_data } }
 
@@ -143,6 +150,7 @@ describe Web::Moments::NativeMomentsController, type: :controller do
             expect(native_moment.body).to eq('new body text')
           end
         end
+
         context 'invalid_data' do
           let(:invalid_data) { attributes_for(:native_moment, body: '') }
           before(:each) { patch :update, params: { id: native_moment,
@@ -155,6 +163,7 @@ describe Web::Moments::NativeMomentsController, type: :controller do
           end
         end
       end
+
       describe 'DELTE #destroy' do
         before(:each) { delete :destroy, params: { id: native_moment } }
 

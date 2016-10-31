@@ -1,13 +1,14 @@
 require 'rails_helper'
 
 describe Web::StoriesController, type: :controller do
-
   shared_examples 'public access to stories' do
+
     describe 'GET #index' do
       before(:each) { get :index }
       it { expect(response).to render_template(:index)  }
       it { expect(assigns(:stories)).to eq(Story.all) }
     end
+
     describe 'GET #show' do
       let(:story) { create(:story) }
       before(:each) { get :show, params: { id: story } }
@@ -29,6 +30,7 @@ describe Web::StoriesController, type: :controller do
                                     story: attributes_for(:story, title: 'New title')} }
       it { delete :destroy, params: { id: story } }
     end
+
     context 'does not touch database' do
       it 'POST #create' do
         expect {
@@ -59,6 +61,7 @@ describe Web::StoriesController, type: :controller do
       it { expect(response).to render_template(:new) }
       it { expect(assigns(:story)).to be_a_new(Story) }
     end
+
     describe 'POST #create' do
       context 'valid data' do
         let(:valid_data) { attributes_for(:story) }
@@ -73,6 +76,7 @@ describe Web::StoriesController, type: :controller do
           }.to change(Story, :count).by(1)
         end
       end
+
       context 'invalid data' do
         let(:invalid_data) { attributes_for(:story, title: '') }
 
@@ -87,6 +91,7 @@ describe Web::StoriesController, type: :controller do
         end
       end
     end
+
     context 'user owns story' do
       let(:story) { create(:story, user: user) }
 
@@ -100,6 +105,7 @@ describe Web::StoriesController, type: :controller do
           expect(assigns(:story)).to eq(story)
         end
       end
+
       describe 'PATCH #update' do
         context 'valid data' do
           let(:valid_data) { attributes_for(:story, title: 'Brand new title') }
@@ -113,6 +119,7 @@ describe Web::StoriesController, type: :controller do
             expect(story.title).to eq('Brand new title')
           end
         end
+
         context 'invalid_data' do
           let(:invalid_data) { attributes_for(:story, title: '',
                                             description: 'Brand new description'
@@ -128,6 +135,7 @@ describe Web::StoriesController, type: :controller do
           end
         end
       end
+
       describe 'DELETE #destroy' do
         let!(:story) { create(:story, user: user) }
         before(:each) { delete :destroy, params: { id: story } }
@@ -140,6 +148,7 @@ describe Web::StoriesController, type: :controller do
         end
       end
     end
+
     context 'user does not own story' do
       let(:story) { create(:story) }
 
@@ -150,6 +159,7 @@ describe Web::StoriesController, type: :controller do
                                                                        title: 'Brand new title')} }
         it { delete :destroy, params: { id: story } }
       end
+
       context 'does not change database' do
         it 'PATCH #update' do
           patch :update, params: { id: story, story: attributes_for(:story,

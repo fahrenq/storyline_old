@@ -14,7 +14,6 @@ require 'oembedapi/handler'
 require 'oembedapi/twitter'
 
 describe EmbeddedMoment, type: :model do
-
   # TODO: shoulda-matchers tests
 
   describe 'fill method' do
@@ -42,5 +41,4 @@ describe EmbeddedMoment, type: :model do
       }.not_to change(EmbeddedMoment, :count)
     end
   end
-
 end
