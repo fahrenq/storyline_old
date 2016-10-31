@@ -1,8 +1,7 @@
 require 'rails_helper'
 
 describe Web::Moments::EmbeddedMomentsController, type: :controller do
-  let(:embedded_moment_attributes) { { url: 'https://twitter.com/fahrenhei7lt/status/765376955697008640',
-                                       service: 'twitter' } }
+  let(:embedded_moment_attributes) { { url: 'https://twitter.com/fahrenhei7lt/status/765376955697008640' } }
 
 
   shared_examples 'public access to embedded_moments' do
@@ -98,13 +97,15 @@ describe Web::Moments::EmbeddedMomentsController, type: :controller do
             expect(response).to render_template(:new)
           end
         end
-        it 'sends request to service object' do
-          create_embedded_moment = instance_double(CreateEmbeddedMoment)
-          allow(CreateEmbeddedMoment).to receive(:new) { create_embedded_moment }
-          params = ActionController::Parameters.new(embedded_moment_attributes).permit(:url, :service)
-          expect(CreateEmbeddedMoment).to receive(:new)
-            .with(story, params)
-          expect(create_embedded_moment).to receive(:call)
+        it 'sends fill method to model object' do
+          embedded_moment_model = instance_double(EmbeddedMoment)
+          allow(EmbeddedMoment).to receive(:new) { embedded_moment_model }
+          allow(controller).to receive(:authorize) { true }
+          params = ActionController::Parameters.new(embedded_moment_attributes).permit(:url)
+          expect(EmbeddedMoment).to receive(:new)
+            .with(story: story)
+          expect(embedded_moment_model).to receive(:fill)
+            .with(params)
           post :create, params: { story_id: story,
                                   embedded_moment_attrs: embedded_moment_attributes }
         end
