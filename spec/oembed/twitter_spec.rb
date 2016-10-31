@@ -8,7 +8,6 @@ describe OembedApi::Twitter do
   end
   it 'reveives nil on invalid tweet adress' do
     response = subject.fetch('https://twithter.com/f1238')
-    puts response
     expect(response.nil?).to be_truthy
   end
 end

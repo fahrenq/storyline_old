@@ -10,9 +10,9 @@ class Web::Moments::EmbeddedMomentsController < Web::Moments::ApplicationControl
   end
 
   def create
-    authorize EmbeddedMoment.new(story: current_story)
-    @embedded_moment = CreateEmbeddedMoment.new(current_story, embedded_moment_params).call
-    if @embedded_moment
+    @embedded_moment = EmbeddedMoment.new(story: current_story)
+    authorize @embedded_moment
+    if @embedded_moment.fill(embedded_moment_params)
       redirect_to @embedded_moment
     else
       render :new
@@ -33,7 +33,7 @@ class Web::Moments::EmbeddedMomentsController < Web::Moments::ApplicationControl
 
   def embedded_moment_params
     params.require(:embedded_moment_attrs)
-          .permit(:url, :service)
+          .permit(:url)
         # .merge(story: current_story)
   end
 
