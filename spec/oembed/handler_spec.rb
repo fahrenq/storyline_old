@@ -15,7 +15,7 @@ describe OembedApi::Handler do
                         .response
     end
   end
-  it 'returns hash on successful request' do
+  it 'returns hash on successful request', :vcr do
     response = OembedApi::Handler
                .new('https://twitter.com/fahrenhei7lt/status/788802438467837952')
                .response

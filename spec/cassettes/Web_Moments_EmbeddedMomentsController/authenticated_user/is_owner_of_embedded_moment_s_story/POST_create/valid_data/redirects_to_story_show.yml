@@ -1,0 +1,78 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://publish.twitter.com/oembed?omit_script=true&url=https://twitter.com/fahrenhei7lt/status/765376955697008640
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - must-revalidate, max-age=3153600000
+      Content-Disposition:
+      - attachment; filename=json.json
+      Content-Length:
+      - '492'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 31 Oct 2016 21:54:25 GMT
+      Expires:
+      - Wed, 07 Oct 2116 21:54:25 GMT
+      Last-Modified:
+      - Mon, 31 Oct 2016 21:54:25 GMT
+      Server:
+      - tsa_o
+      Set-Cookie:
+      - guest_id=v1%3A147795086522958581; Domain=.twitter.com; Path=/; Expires=Wed,
+        31-Oct-2018 21:54:25 UTC
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Connection-Hash:
+      - 95944458ec3638647192200a1fc0ad74
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Response-Time:
+      - '116'
+      X-Xss-Protection:
+      - 1; mode=block
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJ1cmwiOiJodHRwczpcL1wvdHdpdHRlci5jb21cL2ZhaHJlbmhlaTdsdFwv
+        c3RhdHVzXC83NjUzNzY5NTU2OTcwMDg2NDAiLCJhdXRob3JfbmFtZSI6Ikl2
+        YW4gS3V6bmV0c292IiwiYXV0aG9yX3VybCI6Imh0dHBzOlwvXC90d2l0dGVy
+        LmNvbVwvZmFocmVuaGVpN2x0IiwiaHRtbCI6Ilx1MDAzQ2Jsb2NrcXVvdGUg
+        Y2xhc3M9XCJ0d2l0dGVyLXR3ZWV0XCJcdTAwM0VcdTAwM0NwIGxhbmc9XCJy
+        dVwiIGRpcj1cImx0clwiXHUwMDNF0J3QsNC60L7QvdC10YYg0YLQviDRjdGC
+        0L4g0LzQvtC20L3QviDRgdC00LXQu9Cw0YLRjCDRgdC+INGB0L/QvtC60L7Q
+        udC90L7QuSDQtNGD0YjQvtC5LiDQoSDQv9C10YDQstC+0LPQviDRgNCw0LfQ
+        sCwgMCDQvtGI0LjQsdC+0LouINCh0L/QsNGB0LjQsdC+LCBcdTAwM0NhIGhy
+        ZWY9XCJodHRwczpcL1wvdHdpdHRlci5jb21cL3JlYWN0aXZlcGhvbmVcIlx1
+        MDAzRUByZWFjdGl2ZXBob25lXHUwMDNDXC9hXHUwMDNFIFx1MDAzQ2EgaHJl
+        Zj1cImh0dHBzOlwvXC90LmNvXC9YZHlMeHA5SUdKXCJcdTAwM0VwaWMudHdp
+        dHRlci5jb21cL1hkeUx4cDlJR0pcdTAwM0NcL2FcdTAwM0VcdTAwM0NcL3Bc
+        dTAwM0UmbWRhc2g7IEl2YW4gS3V6bmV0c292IChAZmFocmVuaGVpN2x0KSBc
+        dTAwM0NhIGhyZWY9XCJodHRwczpcL1wvdHdpdHRlci5jb21cL2ZhaHJlbmhl
+        aTdsdFwvc3RhdHVzXC83NjUzNzY5NTU2OTcwMDg2NDBcIlx1MDAzRUF1Z3Vz
+        dCAxNiwgMjAxNlx1MDAzQ1wvYVx1MDAzRVx1MDAzQ1wvYmxvY2txdW90ZVx1
+        MDAzRVxuIiwid2lkdGgiOjU1MCwiaGVpZ2h0IjpudWxsLCJ0eXBlIjoicmlj
+        aCIsImNhY2hlX2FnZSI6IjMxNTM2MDAwMDAiLCJwcm92aWRlcl9uYW1lIjoi
+        VHdpdHRlciIsInByb3ZpZGVyX3VybCI6Imh0dHBzOlwvXC90d2l0dGVyLmNv
+        bSIsInZlcnNpb24iOiIxLjAifQ==
+    http_version: 
+  recorded_at: Mon, 31 Oct 2016 21:54:24 GMT
+recorded_with: VCR 3.0.3

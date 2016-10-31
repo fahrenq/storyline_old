@@ -87,7 +87,7 @@ describe Web::Moments::EmbeddedMomentsController, type: :controller do
 
       describe 'POST #create' do
         context 'valid_data' do
-          it 'redirects to story#show' do
+          it 'redirects to story#show', :vcr do
             post :create, params: { story_id: story,
                                     embedded_moment_attrs: embedded_moment_attributes }
             expect(response).to redirect_to(story.embedded_moments.last)
@@ -95,7 +95,7 @@ describe Web::Moments::EmbeddedMomentsController, type: :controller do
         end
 
         context 'invalid_data' do
-          it 'renders :new template' do
+          it 'renders :new template', :vcr do
             post :create, params: { story_id: story,
                                     embedded_moment_attrs: embedded_moment_attributes.merge(url: 'srcwrong') }
             expect(response).to render_template(:new)
