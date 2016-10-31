@@ -1,5 +1,4 @@
 class StoryPolicy < ApplicationPolicy
-
   attr_reader :user, :story
 
   def initialize(user, story)
@@ -12,5 +11,4 @@ class StoryPolicy < ApplicationPolicy
       story.user == user
     end
   end
-
 end

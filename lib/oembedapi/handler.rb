@@ -9,10 +9,11 @@ module OembedApi
     SERVICES = {
       twitter: OembedApi::Twitter,
       youtube: OembedApi::Youtube
-    }
+    }.freeze
 
     def initialize(url)
       @url = url
+      # adds 'http://' if http or https protocol not stated
       smart_add_url_protocol
     end
 
@@ -25,9 +26,7 @@ module OembedApi
     private
 
     def smart_add_url_protocol
-      unless url[/\Ahttp:\/\//] || url[/\Ahttps:\/\//]
-        @url = "http://#{url}"
-      end
+      @url = "http://#{url}" unless url[%r{\Ahttps?:\/\/}]
     end
 
     def service_class
@@ -35,8 +34,9 @@ module OembedApi
     end
 
     def domain_name
+      # gets domain name part of url,
+      # ex: http://mobile.twitter.com/userman/userwoman returns just twutter
       @domain_name ||= URI.parse(url).host.split('.').last(2)[0]
     end
-
   end
 end

@@ -1,5 +1,4 @@
 class MomentPolicy < ApplicationPolicy
-
   attr_reader :user, :moment
 
   def initialize(user, moment)
@@ -12,5 +11,4 @@ class MomentPolicy < ApplicationPolicy
       moment.story.user == user
     end
   end
-
 end

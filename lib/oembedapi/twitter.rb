@@ -6,7 +6,7 @@ module OembedApi
       'https://publish.twitter.com/oembed'
     end
 
-    def fetch(url, options={})
+    def fetch(url, options = {})
       super url, options.merge(omit_script: true)
     end
   end
