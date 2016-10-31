@@ -47,6 +47,5 @@ class Web::Moments::NativeMomentsController < Web::Moments::ApplicationControlle
   def native_moment_params
     params.require(:native_moment)
           .permit(:name, :body)
-        # .merge(story: current_story)
   end
 end

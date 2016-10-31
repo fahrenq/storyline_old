@@ -7,8 +7,10 @@ class Web::StoriesController < Web::ApplicationController
   end
 
   def show
-    @story = Story.includes(:native_moments, :embedded_moments).find(params[:id])
-    @moments = (@story.native_moments + @story.embedded_moments).sort_by(&:created_at).reverse!
+    @story = Story.includes(:native_moments, :embedded_moments)
+                  .find(params[:id])
+    @moments = (@story.native_moments + @story.embedded_moments)
+               .sort_by(&:created_at).reverse!
   end
 
   def new
@@ -16,6 +18,7 @@ class Web::StoriesController < Web::ApplicationController
   end
 
   def create
+    # User data merges in story_params hash
     @story = Story.new(story_params)
     if @story.save
       redirect_to @story

@@ -12,6 +12,11 @@ class Web::Moments::EmbeddedMomentsController < Web::Moments::ApplicationControl
   def create
     @embedded_moment = EmbeddedMoment.new(story: current_story)
     authorize @embedded_moment
+    # EmbeddedMoment#fill receives params and fetch url from them,
+    # then, it calls OembedApi::Handler. It determines what API class
+    # to use, request JSON response from server and return it or nil.
+    # #fill method writes it in EmbeddedMoment#body, and if it saves -
+    # returns self, otherwise - returns false
     if @embedded_moment.fill(embedded_moment_params)
       redirect_to @embedded_moment
     else
@@ -34,7 +39,5 @@ class Web::Moments::EmbeddedMomentsController < Web::Moments::ApplicationControl
   def embedded_moment_params
     params.require(:embedded_moment_attrs)
           .permit(:url)
-        # .merge(story: current_story)
   end
-
 end
