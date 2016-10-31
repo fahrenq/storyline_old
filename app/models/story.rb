@@ -16,9 +16,9 @@ class Story < ApplicationRecord
   has_many :embedded_moments, dependent: :destroy
 
   validates :title,
-    presence: true,
-    length: { in: 4..72 }
+            presence: true,
+            length: { in: 4..72 }
 
   validates :description,
-    length: { in: 4..4128 }
+            length: { in: 4..4128 }
 end

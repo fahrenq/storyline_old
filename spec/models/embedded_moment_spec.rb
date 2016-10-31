@@ -1,3 +1,14 @@
+# == Schema Information
+#
+# Table name: embedded_moments
+#
+#  id         :integer          not null, primary key
+#  body       :json
+#  story_id   :integer
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
 require 'rails_helper'
 require 'oembedapi/handler'
 require 'oembedapi/twitter'
