@@ -20,5 +20,6 @@ class Story < ApplicationRecord
             length: { in: 4..72 }
 
   validates :description,
+            presence: true,
             length: { in: 4..4128 }
 end
