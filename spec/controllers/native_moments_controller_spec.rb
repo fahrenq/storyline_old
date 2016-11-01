@@ -96,7 +96,7 @@ describe Web::Moments::NativeMomentsController, type: :controller do
         before(:each) { get :new, params: { story_id: story } }
 
         it { expect(response).to render_template(:new) }
-        it { expect(assigns(:native_moment)).to be_a_new(nativemoment) }
+        it { expect(assigns(:native_moment)).to be_a_new(NativeMoment) }
       end
 
       describe 'POST #create' do
