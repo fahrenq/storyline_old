@@ -16,6 +16,8 @@ gem 'devise'
 gem 'simple_form'
 gem 'pundit'
 gem 'oembed'
+gem 'paperclip', '~> 5.0.0'
+gem 'paperclip-i18n'
 
 group :development, :test do
   gem 'byebug', platform: :mri

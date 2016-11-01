@@ -107,11 +107,17 @@ describe Web::Moments::NativeMomentsController, type: :controller do
                                     native_moment: valid_data }
             expect(response).to redirect_to(assigns[:native_moment])
           end
-          it 'creates new reford in database' do
+          it 'creates new record in database' do
             expect {
               post :create, params: { story_id: story,
                                       native_moment: valid_data }
             }.to change(NativeMoment, :count).by(1)
+          end
+          it 'creates new record in database with image' do
+            picture = fixture_file_upload("#{Rails.root}/spec/fixtures/native_moment_picture.png", 'image/png')
+            post :create, params: { story_id: story,
+                                    native_moment: valid_data.merge(picture: picture) }
+            expect(assigns[:native_moment].picture.original_filename).to eq(picture.original_filename)
           end
         end
 

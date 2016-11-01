@@ -1,4 +1,6 @@
 - if moment.is_a?(EmbeddedMoment)
   = moment.body['html'].html_safe
 - elsif moment.is_a?(NativeMoment)
+  = image_tag moment.picture.url(:medium)
+  br
   = moment.body

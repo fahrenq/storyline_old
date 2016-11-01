@@ -46,6 +46,6 @@ class Web::Moments::NativeMomentsController < Web::Moments::ApplicationControlle
 
   def native_moment_params
     params.require(:native_moment)
-          .permit(:name, :body)
+          .permit(:body, :picture)
   end
 end

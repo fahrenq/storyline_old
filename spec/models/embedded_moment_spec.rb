@@ -14,7 +14,10 @@ require 'oembedapi/handler'
 require 'oembedapi/twitter'
 
 describe EmbeddedMoment, type: :model do
-  # TODO: shoulda-matchers tests
+  # validations
+  it { should validate_presence_of(:body) }
+  # associations
+  it { should belong_to(:story) }
 
   describe 'fill method' do
     let(:story) { create(:story) }
