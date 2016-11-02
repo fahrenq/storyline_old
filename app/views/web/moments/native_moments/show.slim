@@ -1,6 +1,7 @@
 p.lead
-  = image_tag @native_moment.picture.url(:medium)
-  br
+  - if @native_moment.picture.exists?
+    = image_tag @native_moment.picture.url(:medium) 
+    br
   = @native_moment.body
 = link_to 'edit', edit_native_moment_path(@native_moment)
 br
