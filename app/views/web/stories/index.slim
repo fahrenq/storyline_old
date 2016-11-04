@@ -12,20 +12,9 @@ scss:
       tr
         td
           = link_to story.title, story
-          - if story.subscribers.include?(current_user)
+          - if current_user && story.subscribers.include?(current_user)
             b
               '  (subscribed)
         td.date
           = story.created_at.strftime('%d %b %Y')
   = link_to 'New story', new_story_path
-
-.col-md-6
-  table.table.table-bordered
-    th.text-center(colspan='2')
-      | Subscribed to
-    - @subs_stories.each do |story|
-      tr
-        td
-          = link_to story.title, story
-        td.date
-          = story.created_at.strftime('%d %b %Y')
