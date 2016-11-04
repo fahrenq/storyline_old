@@ -1,6 +1,6 @@
 class Web::StoriesController < Web::ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
-  before_action :set_story, only: [:edit, :update, :destroy]
+  before_action :set_story, only: [:edit, :update, :destroy, :subscribe, :unsubscribe]
 
   def index
     @stories = Story.all
@@ -46,6 +46,18 @@ class Web::StoriesController < Web::ApplicationController
 
     @story.destroy
     redirect_to stories_path
+  end
+
+  def subscribe
+    authorize @story
+
+    @story.subscribers << current_user
+    redirect_to @story
+  end
+
+  def unsubscribe
+    @story.subscribers.delete(current_user)
+    redirect_to @story
   end
 
   private
