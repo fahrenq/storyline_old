@@ -15,6 +15,9 @@ class Story < ApplicationRecord
   has_many :native_moments, dependent: :destroy
   has_many :embedded_moments, dependent: :destroy
 
+  has_many :subscriptions
+  has_many :subscribers, through: :subscriptions, class_name: 'User'
+
   validates :title,
             presence: true,
             length: { in: 4..72 }

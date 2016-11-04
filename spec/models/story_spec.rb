@@ -23,4 +23,5 @@ describe Story, type: :model do
   # associations
   it { should belong_to :user }
   it { should have_many(:native_moments).dependent(:destroy) }
+  it { should have_many(:subscribers).through(:subscriptions) }
 end
