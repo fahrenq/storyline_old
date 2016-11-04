@@ -218,15 +218,30 @@ describe Web::StoriesController, type: :controller do
       end
 
       describe 'DELETE #unsubscribe' do
-        let(:story) { create(:story, subscribers: [user]) }
-        it 'redirect to story' do
-          delete :unsubscribe, params: { id: story }
-          expect(response).to redirect_to(story)
+        context 'subscribed users' do
+          let(:story) { create(:story, subscribers: [user]) }
+          it 'redirect to story' do
+            delete :unsubscribe, params: { id: story }
+            expect(response).to redirect_to(story)
+          end
+          it 'deletes subscription' do
+            delete :unsubscribe, params: { id: story }
+            story.reload
+            expect(story.subscribers).not_to include(user)
+          end
         end
-        it 'deletes subscription' do
-          delete :unsubscribe, params: { id: story }
-          story.reload
-          expect(story.subscribers).not_to include(user)
+
+        context 'unsubscribed users' do
+          let(:story) { create(:story) }
+          it 'redirects to pundit path' do
+            delete :unsubscribe, params: { id: story }
+            expect(response).to redirect_to(root_path)
+          end
+          it 'does not changes database' do
+            expect {
+              delete :unsubscribe, params: { id: story }
+            }.not_to change(story.subscribers, :count)
+          end
         end
       end
     end

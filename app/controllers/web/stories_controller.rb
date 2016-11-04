@@ -56,6 +56,8 @@ class Web::StoriesController < Web::ApplicationController
   end
 
   def unsubscribe
+    authorize @story
+
     @story.subscribers.delete(current_user)
     redirect_to @story
   end
