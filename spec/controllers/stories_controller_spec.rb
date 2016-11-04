@@ -29,6 +29,7 @@ describe Web::StoriesController, type: :controller do
       it { patch :update, params: { id: story,
                                     story: attributes_for(:story, title: 'New title')} }
       it { delete :destroy, params: { id: story } }
+      it { post :subscribe, params: { id: story } }
     end
 
     context 'does not touch database' do
@@ -46,6 +47,11 @@ describe Web::StoriesController, type: :controller do
       it 'DELETE #destroy' do
         delete :destroy, params: { id: story }
         expect(Story.exists?(story.id)).to be_truthy
+      end
+      it 'POST #subscribe' do
+        expect {
+          post :subscribe, params: { id: story }
+        }.not_to change(story.subscribers, :count)
       end
     end
   end

@@ -19,7 +19,7 @@ Rails.application.routes.draw do
         resources :embedded_moments, shallow: true
       end
     end
-    post '/story/:id/subscribe', to: 'stories#subscribe'
-    delete '/story/:id/unsubscribe', to: 'stories#unsubscribe'
+    post '/story/:id/subscribe', to: 'stories#subscribe', as: :subscribe_to_story
+    delete '/story/:id/unsubscribe', to: 'stories#unsubscribe', as: :unsubscribe_from_story
   end
 end

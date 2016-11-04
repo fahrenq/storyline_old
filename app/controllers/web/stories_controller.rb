@@ -3,7 +3,9 @@ class Web::StoriesController < Web::ApplicationController
   before_action :set_story, only: [:edit, :update, :destroy, :subscribe, :unsubscribe]
 
   def index
-    @stories = Story.all
+    @stories = Story.joins(:subscriptions).all
+    # TODO rewrite
+    @subs_stories = current_user.sub_stories
   end
 
   def show
