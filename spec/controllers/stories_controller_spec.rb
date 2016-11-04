@@ -30,6 +30,7 @@ describe Web::StoriesController, type: :controller do
                                     story: attributes_for(:story, title: 'New title')} }
       it { delete :destroy, params: { id: story } }
       it { post :subscribe, params: { id: story } }
+      it { delete :unsubscribe, params: { id: story } }
     end
 
     context 'does not touch database' do
