@@ -11,4 +11,12 @@ class StoryPolicy < ApplicationPolicy
       story.user == user
     end
   end
+
+  def subscribe?
+    story.user != user && story.subscribers.exclude?(user)
+  end
+
+  def unsubscribe?
+    story.subscribers.include?(user)
+  end
 end

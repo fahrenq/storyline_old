@@ -26,6 +26,9 @@ class User < ApplicationRecord
 
   has_many :stories
 
+  has_many :subscriptions
+  has_many :sub_stories, through: :subscriptions, source: :story
+
   validates :name,
             presence: true,
             uniqueness: {

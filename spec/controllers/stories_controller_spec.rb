@@ -29,6 +29,8 @@ describe Web::StoriesController, type: :controller do
       it { patch :update, params: { id: story,
                                     story: attributes_for(:story, title: 'New title')} }
       it { delete :destroy, params: { id: story } }
+      it { post :subscribe, params: { id: story } }
+      it { delete :unsubscribe, params: { id: story } }
     end
 
     context 'does not touch database' do
@@ -46,6 +48,11 @@ describe Web::StoriesController, type: :controller do
       it 'DELETE #destroy' do
         delete :destroy, params: { id: story }
         expect(Story.exists?(story.id)).to be_truthy
+      end
+      it 'POST #subscribe' do
+        expect {
+          post :subscribe, params: { id: story }
+        }.not_to change(story.subscribers, :count)
       end
     end
   end
@@ -122,8 +129,8 @@ describe Web::StoriesController, type: :controller do
 
         context 'invalid_data' do
           let(:invalid_data) { attributes_for(:story, title: '',
-                                            description: 'Brand new description'
-                                           ) }
+                                              description: 'Brand new description'
+                                             ) }
           before(:each) { patch :update, params: { id: story, story: invalid_data } }
 
           it 'renders :edit template' do
@@ -145,6 +152,17 @@ describe Web::StoriesController, type: :controller do
         end
         it 'deleted record from database' do
           expect(Story.exists?(story.id)).to be_falsy
+        end
+      end
+
+      describe 'POST #subscribe' do
+        it 'redirects to pundit path' do
+          post :subscribe, params: { id: story }
+          expect(response).to redirect_to(root_path)
+        end
+        it 'does not changes database' do
+          post :subscribe, params: { id: story }
+          expect(story.subscribers).not_to include(user)
         end
       end
     end
@@ -170,6 +188,61 @@ describe Web::StoriesController, type: :controller do
         it 'DELETE #destroy' do
           delete :destroy, params: { id: story }
           expect(Story.exists?(story.id)).to be_truthy
+        end
+      end
+
+      describe 'POST #subscribe' do
+        context 'user not subscribed' do
+          it 'redirects to story' do
+            post :subscribe, params: { id: story }
+            expect(response).to redirect_to(story)
+          end
+          it 'changes database' do
+            post :subscribe, params: { id: story }
+            expect(story.subscribers).to include(user)
+          end
+        end
+
+        context 'user already subscribed' do
+          let(:story) { create(:story, subscribers: [user]) }
+
+          it 'redirects to pundit path' do
+            post :subscribe, params: { id: story }
+            expect(response).to redirect_to(root_path)
+          end
+          it 'does not change database' do
+            expect {
+              post :subscribe, params: { id: story }
+            }.not_to change(story.subscribers, :count)
+          end
+        end
+      end
+
+      describe 'DELETE #unsubscribe' do
+        context 'subscribed users' do
+          let(:story) { create(:story, subscribers: [user]) }
+          it 'redirect to story' do
+            delete :unsubscribe, params: { id: story }
+            expect(response).to redirect_to(story)
+          end
+          it 'deletes subscription' do
+            delete :unsubscribe, params: { id: story }
+            story.reload
+            expect(story.subscribers).not_to include(user)
+          end
+        end
+
+        context 'unsubscribed users' do
+          let(:story) { create(:story) }
+          it 'redirects to pundit path' do
+            delete :unsubscribe, params: { id: story }
+            expect(response).to redirect_to(root_path)
+          end
+          it 'does not changes database' do
+            expect {
+              delete :unsubscribe, params: { id: story }
+            }.not_to change(story.subscribers, :count)
+          end
         end
       end
     end

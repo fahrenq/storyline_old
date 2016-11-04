@@ -29,4 +29,5 @@ RSpec.describe User, type: :model do
 
   # associations
   it { should have_many :stories }
+  it { should have_many(:sub_stories).through(:subscriptions) }
 end

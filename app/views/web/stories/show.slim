@@ -1,5 +1,10 @@
 h1
   = @story.title
+- if policy(@story).subscribe? && current_user
+  = link_to 'subscribe', subscribe_to_story_path(@story), method: :post
+- elsif @story.subscribers.include?(current_user) && current_user
+  = link_to 'unsubscribe', unsubscribe_from_story_path(@story), method: :delete
+
 p.text-right
   |  from #{@story.created_at.strftime("%d %B %Y")}
 p.lead
