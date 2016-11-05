@@ -29,6 +29,9 @@ class User < ApplicationRecord
   has_many :subscriptions
   has_many :sub_stories, through: :subscriptions, source: :story
 
+  has_many :notification_recipients
+  has_many :notifications, through: :notification_recipients
+
   validates :name,
             presence: true,
             uniqueness: {

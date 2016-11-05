@@ -89,7 +89,8 @@ describe Web::Moments::NativeMomentsController, type: :controller do
     end
 
     context "is owner of native_moment's story" do
-      let(:story) { create(:story, user: user) }
+      let(:subscriber) { create(:user) }
+      let(:story) { create(:story, user: user, subscribers: [subscriber]) }
       let(:native_moment) { create(:native_moment, story: story) }
 
       describe 'GET #new' do
@@ -118,6 +119,17 @@ describe Web::Moments::NativeMomentsController, type: :controller do
             post :create, params: { story_id: story,
                                     native_moment: valid_data.merge(picture: picture) }
             expect(assigns[:native_moment].picture.original_filename).to eq(picture.original_filename)
+          end
+          it 'creates notification for subscribed users' do
+            expect {
+              post :create, params: { story_id: story,
+                                      native_moment: valid_data }
+            }.to change(subscriber.notifications, :count).by(1)
+          end
+          it 'creates notification with right data' do
+              post :create, params: { story_id: story,
+                                      native_moment: valid_data }
+              expect(subscriber.notifications.last.info).to be_a(Hash)
           end
         end
 

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161104142538) do
+ActiveRecord::Schema.define(version: 20161105104738) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,6 +33,23 @@ ActiveRecord::Schema.define(version: 20161104142538) do
     t.integer  "picture_file_size"
     t.datetime "picture_updated_at"
     t.index ["story_id"], name: "index_native_moments_on_story_id", using: :btree
+  end
+
+  create_table "notification_recipients", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "notification_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.index ["notification_id"], name: "index_notification_recipients_on_notification_id", using: :btree
+    t.index ["user_id"], name: "index_notification_recipients_on_user_id", using: :btree
+  end
+
+  create_table "notifications", force: :cascade do |t|
+    t.string   "body"
+    t.integer  "category",   default: 0
+    t.json     "info"
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
   create_table "stories", force: :cascade do |t|
