@@ -75,7 +75,7 @@ describe Web::Moments::EmbeddedMomentsController, type: :controller do
     end
 
     context "is owner of embedded_moment's story" do
-      let(:subscriber)
+      let(:subscriber) { create(:user) }
       let(:story) { create(:story, user: user, subscribers: [subscriber]) }
       let(:embedded_moment) { create(:embedded_moment, story: story) }
 
@@ -93,13 +93,17 @@ describe Web::Moments::EmbeddedMomentsController, type: :controller do
                                     embedded_moment_attrs: embedded_moment_attributes }
             expect(response).to redirect_to(story.embedded_moments.last)
           end
-          it 'creates notification for subscribed user' do
+          it 'creates notification for subscribed user', :vcr do
             expect {
               post :create, params: { story_id: story,
                                       embedded_moment_attrs: embedded_moment_attributes }
             }.to change(subscriber.notifications, :count).by(1)
           end
-          it 'creates notification with right data'
+          it 'creates notification with right data', :vcr do
+              post :create, params: { story_id: story,
+                                      embedded_moment_attrs: embedded_moment_attributes }
+              expect(subscriber.notifications.last.info).to be_a(Hash)
+          end
         end
 
         context 'invalid_data' do

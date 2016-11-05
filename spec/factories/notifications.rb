@@ -1,7 +1,7 @@
 FactoryGirl.define do
   factory :notification do
     body "MyString"
-    type 1
+    category :new_moment
     info ""
   end
 end

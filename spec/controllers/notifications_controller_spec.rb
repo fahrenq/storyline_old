@@ -13,12 +13,13 @@ describe Web::NotificationsController, type: :controller do
   describe 'authenticated user' do
     let(:user) { create(:user) }
     let(:notifications) { create_list(:notification, 5, users: [user]) }
+    before { sign_in user }
 
     describe 'GET #index' do
       before(:each) { get :index }
 
       it { expect(response).to render_template(:index) }
-      it { expect(assifns(:notifications)).to match_array(notifications) }
+      it { expect(assigns(:notifications)).to eq(notifications) }
     end
   end
 

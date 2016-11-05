@@ -46,10 +46,10 @@ ActiveRecord::Schema.define(version: 20161105104738) do
 
   create_table "notifications", force: :cascade do |t|
     t.string   "body"
-    t.integer  "type"
+    t.integer  "category",   default: 0
     t.json     "info"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
   create_table "stories", force: :cascade do |t|

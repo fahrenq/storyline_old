@@ -13,6 +13,9 @@ class Web::Moments::NativeMomentsController < Web::Moments::ApplicationControlle
     @native_moment = current_story.native_moments.new(native_moment_params)
     authorize @native_moment
     if @native_moment.save
+      Notification.create(users: @native_moment.story.subscribers,
+                          info: { story_id: @native_moment.story.id, story_title: @native_moment.story.title },
+                          category: 'new_moment' )
       redirect_to @native_moment
     else
       render :new

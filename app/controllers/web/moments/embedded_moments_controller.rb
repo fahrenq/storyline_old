@@ -18,6 +18,9 @@ class Web::Moments::EmbeddedMomentsController < Web::Moments::ApplicationControl
     # #fill method writes it in EmbeddedMoment#body, and if it saves -
     # returns self, otherwise - returns false
     if @embedded_moment.fill(embedded_moment_params)
+      Notification.create(users: @embedded_moment.story.subscribers,
+                          info: { story_id: @embedded_moment.story.id, story_title: @embedded_moment.story.title },
+                          category: 'new_moment' )
       redirect_to @embedded_moment
     else
       render :new

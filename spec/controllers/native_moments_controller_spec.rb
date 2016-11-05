@@ -89,7 +89,7 @@ describe Web::Moments::NativeMomentsController, type: :controller do
     end
 
     context "is owner of native_moment's story" do
-      let(:subscriber)
+      let(:subscriber) { create(:user) }
       let(:story) { create(:story, user: user, subscribers: [subscriber]) }
       let(:native_moment) { create(:native_moment, story: story) }
 
@@ -126,7 +126,11 @@ describe Web::Moments::NativeMomentsController, type: :controller do
                                       native_moment: valid_data }
             }.to change(subscriber.notifications, :count).by(1)
           end
-          it 'creates notification with right data'
+          it 'creates notification with right data' do
+              post :create, params: { story_id: story,
+                                      native_moment: valid_data }
+              expect(subscriber.notifications.last.info).to be_a(Hash)
+          end
         end
 
         context 'invalid data' do
