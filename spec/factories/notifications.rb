@@ -1,7 +1,12 @@
 FactoryGirl.define do
   factory :notification do
-    body "MyString"
+    body 'MyString'
     category :new_moment
-    info ""
+    info {
+      {
+        'story_id'    => 1,
+        'story_title' => 'MyTitle'
+      }
+    }
   end
 end
