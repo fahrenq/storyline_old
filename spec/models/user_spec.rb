@@ -20,7 +20,7 @@
 
 require 'rails_helper'
 
-RSpec.describe User, type: :model do
+describe User, type: :model do
   # validations
   it { should validate_uniqueness_of(:name).case_insensitive }
   it { should validate_presence_of(:name) }
@@ -30,4 +30,5 @@ RSpec.describe User, type: :model do
   # associations
   it { should have_many :stories }
   it { should have_many(:sub_stories).through(:subscriptions) }
+  it { should have_many(:notifications).through(:notification_recipients) }
 end
