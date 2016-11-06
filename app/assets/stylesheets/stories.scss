@@ -1,0 +1,16 @@
+.stories-cards-wrapper {
+  margin-top: 10px;
+}
+
+.story-card {
+  border: 1px solid rgb(95, 135, 175);
+  border-radius: 4px;
+
+  &:not(:first-child) {
+    margin-top: 10px;
+  }
+
+  .body {
+    padding: 10px 20px;
+  }
+}

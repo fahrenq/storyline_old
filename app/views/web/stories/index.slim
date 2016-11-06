@@ -1,20 +1,9 @@
-// temporary
-scss:
-  td.date {
-    text-align: center;
-  }
-
-.col-md-6
-  table.table.table-bordered
-    th.text-center(colspan='2')
-      | Stories
-    - @stories.each do |story|
-      tr
-        td
-          = link_to story.title, story
-          - if current_user && story.subscribers.include?(current_user)
-            b
-              '  (subscribed)
-        td.date
-          = story.created_at.strftime('%d %b %Y')
-  = link_to 'New story', new_story_path
+h1.text-center Newest stories
+.btn.btn-default = link_to 'Add your story', new_story_path
+.stories-cards-wrapper
+  - @stories.each do |story|
+    .story-card.col-md-12
+      .body
+        h4
+          b = link_to story.title, story
+        p.text-right from #{story.created_at.strftime('%d %b %Y')}

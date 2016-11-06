@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
   scope module: 'web' do
-    root to: 'static_pages#welcome'
+
+    authenticated :user do
+      root 'stories#index', as: :authenticated_root
+    end
+    unauthenticated do
+      root 'static_pages#welcome', as: :unauthenticated_root
+    end
     # Devise routing start
     devise_for :users, path: '', controllers: {
       sessions: 'custom_sessions',

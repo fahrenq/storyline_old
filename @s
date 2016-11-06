@@ -1,0 +1,19 @@
+// temporary
+scss:
+  td.date {
+    text-align: center;
+  }
+
+.stories-cards-wrapper
+  - @stories.each do |story|
+    .story-card
+      .body
+        h4
+          b = link_to story.title, story
+        p from #{story.created_at.strftime('%d %b %Y')}
+    /- if current_user && story.subscribers.include?(current_user)
+      b
+        '  (subscribed)
+
+
+/= link_to 'New story', new_story_path
