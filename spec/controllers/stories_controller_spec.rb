@@ -158,7 +158,7 @@ describe Web::StoriesController, type: :controller do
       describe 'POST #subscribe' do
         it 'redirects to pundit path' do
           post :subscribe, params: { id: story }
-          expect(response).to redirect_to(root_path)
+          expect(response).to redirect_to('/')
         end
         it 'does not changes database' do
           post :subscribe, params: { id: story }
@@ -171,7 +171,7 @@ describe Web::StoriesController, type: :controller do
       let(:story) { create(:story) }
 
       context 'redirects to pundit path' do
-        after(:each) { expect(response).to redirect_to(root_path) }
+        after(:each) { expect(response).to redirect_to('/') }
         it { get :edit, params: { id: story } }
         it { patch :update, params: { id: story, story: attributes_for(:story,
                                                                        title: 'Brand new title')} }
@@ -208,7 +208,7 @@ describe Web::StoriesController, type: :controller do
 
           it 'redirects to pundit path' do
             post :subscribe, params: { id: story }
-            expect(response).to redirect_to(root_path)
+            expect(response).to redirect_to('/')
           end
           it 'does not change database' do
             expect {
@@ -236,7 +236,7 @@ describe Web::StoriesController, type: :controller do
           let(:story) { create(:story) }
           it 'redirects to pundit path' do
             delete :unsubscribe, params: { id: story }
-            expect(response).to redirect_to(root_path)
+            expect(response).to redirect_to('/')
           end
           it 'does not changes database' do
             expect {

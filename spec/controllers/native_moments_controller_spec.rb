@@ -57,7 +57,7 @@ describe Web::Moments::NativeMomentsController, type: :controller do
       let(:native_moment) { create(:native_moment, story: story) }
 
       context 'redirects to pundit path' do
-        after(:each) { expect(response).to redirect_to(root_path) }
+        after(:each) { expect(response).to redirect_to('/') }
 
         it { get :new, params: { story_id: story } }
         it { post :create, params: { story_id: story,
