@@ -1,22 +1,3 @@
-/- if moment.is_a?(EmbeddedMoment)
-  /.moment.embedded.row
-    /.col-md-2
-      /.date
-        /= moment.created_at
-    /.body.col-md-10
-      /= moment.body['html'].html_safe
-/- elsif moment.is_a?(NativeMoment)
-  //- if moment.picture.exists?
-    //= image_tag moment.picture.url(:medium)
-    //br
-  /.moment.native.row
-    /.date.col-md-2
-      /= moment.created_at
-    /.body.col-md-10
-      /p.lead  = moment.body
-
-
-
 .moment.row
   .date.col-md-2
     = moment.created_at
