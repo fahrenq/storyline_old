@@ -1,5 +1,5 @@
 h1.text-center Newest stories
-.btn.btn-default = link_to 'Add your story', new_story_path
+= link_to 'Add your story', new_story_path, class: 'btn btn-default btn-new-story '
 .stories-cards-wrapper
   - @stories.each do |story|
     .story-card.col-md-12

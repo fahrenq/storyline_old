@@ -1,3 +1,4 @@
+// index
 .stories-cards-wrapper {
   margin-top: 10px;
 }
@@ -12,5 +13,55 @@
 
   .body {
     padding: 10px 20px;
+  }
+}
+
+// new
+.new-story {
+  float: none;
+  margin: 0 auto;
+
+  textarea {
+    height: 250px;
+    resize: vertical;
+  }
+
+  .btn-back {
+    margin-top: 10px;
+  }
+}
+
+// show
+.moment {
+  &:not(:first-child) {
+    margin-top: 20px;
+  }
+
+  min-height: 45px;
+  display: table;
+  table-layout: fixed;
+
+  .date, .body {
+    display: table-cell;
+    vertical-align: middle;
+    float: none;
+  }
+
+  .date {
+    border-right: 2px solid #5f87af;
+  }
+
+  .body {
+    padding-left: 50px;
+
+    p.native-moment {
+      font-size: 1.9em;
+      margin: 0;
+    }
+  }
+
+  iframe {
+    width: 500px;
+    height: 280px;
   }
 }

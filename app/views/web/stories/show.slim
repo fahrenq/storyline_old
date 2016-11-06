@@ -1,33 +1,29 @@
-h1
-  = @story.title
-- if policy(@story).subscribe? && current_user
-  = link_to 'subscribe', subscribe_to_story_path(@story), method: :post
-- elsif @story.subscribers.include?(current_user) && current_user
-  = link_to 'unsubscribe', unsubscribe_from_story_path(@story), method: :delete
+h1 = @story.title
 
-p.text-right
-  |  from #{@story.created_at.strftime("%d %B %Y")}
-p.lead
+- if policy(@story).subscribe? && current_user
+  .text-center
+    = link_to 'subscribe', subscribe_to_story_path(@story), method: :post, class: 'btn btn-success'
+  br
+- elsif @story.subscribers.include?(current_user) && current_user
+  .text-centr
+    = link_to 'unsubscribe', unsubscribe_from_story_path(@story), method: :delete, class: 'btn btn-danger'
+  br
+
+p.lead.text-center
   = @story.description
 
+.text-center
+  - if policy(@story).edit?
+    = link_to 'Edit', edit_story_path(@story), class: 'btn btn-default'
+    |   or  
+    = link_to 'Delete', story_path(@story), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger'
+br
 
 - if policy(@story).edit?
-  = link_to 'new native moment', new_story_native_moment_path(@story)
-  br
-  = link_to 'new embedded moment', new_story_embedded_moment_path(@story)
-  br
-  = link_to 'Edit', edit_story_path(@story)
-  br
-  = link_to 'Delete', story_path(@story), method: :delete, data: { confirm: 'Are you sure?' }
+  .text-center
+    = link_to 'Add moment', new_story_native_moment_path(@story), class: 'btn btn-default'
+    |   or  
+    = link_to 'Embed moment from social', new_story_embedded_moment_path(@story), class: 'btn btn-default'
 
-table.table.table-bordered
-  th.text-center(colspan='2')
-    | Moments
-  - @moments.each do |moment|
-    tr
-      td
-        = render partial: 'moment_body', locals: { moment: moment }
-      td
-        = link_to 'show', moment
-
-
+- @moments.each do |moment|
+  = render partial: 'moment_body', locals: { moment: moment }
