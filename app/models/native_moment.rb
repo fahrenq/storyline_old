@@ -13,9 +13,7 @@
 #  picture_updated_at   :datetime
 #
 
-class NativeMoment < ApplicationRecord
-  belongs_to :story
-
+class NativeMoment < Moment
   validates :body,
             presence: true,
             length: { in: 4..2048 }

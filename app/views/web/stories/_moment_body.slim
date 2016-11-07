@@ -1,5 +1,5 @@
 - if moment.is_a?(EmbeddedMoment)
-  = moment.body['html'].html_safe
+  = moment.json_body['html'].html_safe
 - elsif moment.is_a?(NativeMoment)
   - if moment.picture.exists?
     = image_tag moment.picture.url(:medium)

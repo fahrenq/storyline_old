@@ -15,7 +15,7 @@ require 'oembedapi/twitter'
 
 describe EmbeddedMoment, type: :model do
   # validations
-  it { should validate_presence_of(:body) }
+  it { should validate_presence_of(:json_body) }
   # associations
   it { should belong_to(:story) }
 

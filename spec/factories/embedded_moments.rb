@@ -11,7 +11,7 @@
 
 FactoryGirl.define do
   factory :embedded_moment do
-    body {
+    json_body {
       {
         "url"           =>"https://twitter.com/fahrenhei7lt/status/788802438467837952",
         "author_name"   =>"Ivan Kuznetsov",

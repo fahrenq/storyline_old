@@ -11,13 +11,11 @@
 
 require 'oembedapi/handler'
 
-class EmbeddedMoment < ApplicationRecord
-  belongs_to :story
-
-  validates :body, presence: true
+class EmbeddedMoment < Moment
+  validates :json_body, presence: true
 
   def fill(params)
-    self.body = OembedApi::Handler.new(params[:url]).response
+    self.json_body = OembedApi::Handler.new(params[:url]).response
     if save
       self
     else

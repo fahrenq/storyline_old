@@ -83,7 +83,7 @@ describe Web::Moments::EmbeddedMomentsController, type: :controller do
         before(:each) { get :new, params: { story_id: story } }
 
         it { expect(response).to render_template(:new) }
-        it { expect(assigns(:embedded_moment)).to be_a_new(EmbeddedMoment) }
+        it { expect(assigns(:embedded_moment)).to be_a_new(Moment) }
       end
 
       describe 'POST #create' do
@@ -91,7 +91,7 @@ describe Web::Moments::EmbeddedMomentsController, type: :controller do
           it 'redirects to story#show', :vcr do
             post :create, params: { story_id: story,
                                     embedded_moment_attrs: embedded_moment_attributes }
-            expect(response).to redirect_to(story.embedded_moments.last)
+            expect(response).to redirect_to(assigns[:embedded_moment])
           end
           it 'creates notification for subscribed user', :vcr do
             expect {

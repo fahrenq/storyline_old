@@ -10,11 +10,11 @@ class Web::Moments::NativeMomentsController < Web::Moments::ApplicationControlle
   end
 
   def create
-    @native_moment = current_story.native_moments.new(native_moment_params)
+    @native_moment = NativeMoment.new(native_moment_params)
     authorize @native_moment
     if @native_moment.save
       Notification.create_for_new_moment(@native_moment)
-      redirect_to @native_moment
+      redirect_to native_moment_path(@native_moment.id)
     else
       render :new
     end
@@ -26,7 +26,7 @@ class Web::Moments::NativeMomentsController < Web::Moments::ApplicationControlle
 
   def update
     authorize @native_moment
-    if @native_moment.update(native_moment_params)
+    if @native_moment.update(native_moment_params_without_story)
       redirect_to @native_moment
     else
       render :edit
@@ -46,6 +46,12 @@ class Web::Moments::NativeMomentsController < Web::Moments::ApplicationControlle
   end
 
   def native_moment_params
+    params.require(:native_moment)
+          .permit(:body, :picture)
+          .merge(story: current_story)
+  end
+
+  def native_moment_params_without_story
     params.require(:native_moment)
           .permit(:body, :picture)
   end

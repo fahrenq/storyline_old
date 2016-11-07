@@ -12,8 +12,7 @@
 
 class Story < ApplicationRecord
   belongs_to :user
-  has_many :native_moments, dependent: :destroy
-  has_many :embedded_moments, dependent: :destroy
+  has_many :moments, dependent: :destroy
 
   has_many :subscriptions
   has_many :subscribers, through: :subscriptions, source: :user
@@ -25,4 +24,6 @@ class Story < ApplicationRecord
   validates :description,
             presence: true,
             length: { in: 4..4128 }
+
+  delegate :embedded_moments, :native_moments, to: :moments
 end
