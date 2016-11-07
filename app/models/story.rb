@@ -25,4 +25,12 @@ class Story < ApplicationRecord
   validates :description,
             presence: true,
             length: { in: 4..4128 }
+
+  def self.last_updated
+    joins(native_moments: :moment).order('moment.created_at')
+  end
+
+  def moments
+    (native_moments + embedded_moments).sort_by(&:created_at).reverse!
+  end
 end

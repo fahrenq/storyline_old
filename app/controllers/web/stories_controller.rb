@@ -3,7 +3,7 @@ class Web::StoriesController < Web::ApplicationController
   before_action :set_story, only: [:edit, :update, :destroy, :subscribe, :unsubscribe]
 
   def index
-    @stories = Story.all.reverse
+    @last_updated_stories = Story.all.reverse
   end
 
   def show

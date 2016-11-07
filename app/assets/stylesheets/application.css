@@ -12,5 +12,5 @@
  *
  *= require import
  *= require footer
- *= require stories
+ *= require_tree ./temporary-styles
  */

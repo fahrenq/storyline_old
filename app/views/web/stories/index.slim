@@ -1,9 +1,10 @@
-h1.text-center Newest stories
-= link_to 'Add your story', new_story_path, class: 'btn btn-default btn-new-story '
-.stories-cards-wrapper
+/= link_to 'Add your story', new_story_path, class: 'btn btn-default btn-new-story '
+.col-md-4
+  h1.text-center Last updated stories
   - @stories.each do |story|
-    .story-card.col-md-12
-      .body
-        h4
-          b = link_to story.title, story
-        p.text-right from #{story.created_at.strftime('%d %b %Y')}
+    .card
+      h4
+        b = link_to story.title, story
+      p.lead.description
+        = truncate(story.description, length: 200)
+      p.text-right from #{story.created_at.strftime('%d %b %Y')}
