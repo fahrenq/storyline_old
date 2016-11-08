@@ -20,6 +20,8 @@ require 'oembedapi/handler'
 class EmbeddedMoment < Moment
   validates :json_body, presence: true
 
+  # alias_attribute :body, :json_body
+
   def fill(params)
     self.json_body = OembedApi::Handler.new(params[:url]).response
     if save
