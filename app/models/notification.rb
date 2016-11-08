@@ -1,3 +1,15 @@
+# == Schema Information
+#
+# Table name: notifications
+#
+#  id         :integer          not null, primary key
+#  body       :string
+#  category   :integer          default("new_moment")
+#  info       :json
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
 class Notification < ApplicationRecord
   has_many :notification_recipients
   has_many :users, through: :notification_recipients

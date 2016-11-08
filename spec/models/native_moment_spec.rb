@@ -1,10 +1,12 @@
 # == Schema Information
 #
-# Table name: native_moments
+# Table name: moments
 #
 #  id                   :integer          not null, primary key
 #  body                 :text
+#  json_body            :json
 #  story_id             :integer
+#  type                 :string
 #  created_at           :datetime         not null
 #  updated_at           :datetime         not null
 #  picture_file_name    :string
