@@ -8,7 +8,7 @@ class Web::StoriesController < Web::ApplicationController
 
   def show
     @story = Story.includes(:moments).find(params[:id])
-    @moments = @story.moments.sort_by(&:created_at).reverse!
+    @moments = @story.moments.order(created_at: :desc)
   end
 
   def new

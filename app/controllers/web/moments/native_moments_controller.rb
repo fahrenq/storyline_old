@@ -26,7 +26,7 @@ class Web::Moments::NativeMomentsController < Web::Moments::ApplicationControlle
 
   def update
     authorize @native_moment
-    if @native_moment.update(native_moment_params_without_story)
+    if @native_moment.update(native_moment_params_shallow)
       redirect_to @native_moment
     else
       render :edit
@@ -51,7 +51,7 @@ class Web::Moments::NativeMomentsController < Web::Moments::ApplicationControlle
           .merge(story: current_story)
   end
 
-  def native_moment_params_without_story
+  def native_moment_params_shallow
     params.require(:native_moment)
           .permit(:body, :picture)
   end
