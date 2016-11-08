@@ -12,6 +12,7 @@ module Storyline
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
     # config.autoload_paths += %W(#{config.root}/lib)
+  config.autoload_paths += %W(#{config.root}/app/models/moments)
 
     config.generators do |g|
       g.test_framework :rspec, fixture_replacement: :factory_girl

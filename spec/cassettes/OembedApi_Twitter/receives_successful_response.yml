@@ -27,26 +27,26 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Sat, 05 Nov 2016 15:56:36 GMT
+      - Mon, 07 Nov 2016 19:54:28 GMT
       Expires:
-      - Mon, 12 Oct 2116 15:56:36 GMT
+      - Wed, 14 Oct 2116 19:54:28 GMT
       Last-Modified:
-      - Sat, 05 Nov 2016 15:56:36 GMT
+      - Mon, 07 Nov 2016 19:54:28 GMT
       Server:
       - tsa_o
       Set-Cookie:
-      - guest_id=v1%3A147836139658836477; Domain=.twitter.com; Path=/; Expires=Mon,
-        05-Nov-2018 15:56:36 UTC
+      - guest_id=v1%3A147854846814278367; Domain=.twitter.com; Path=/; Expires=Wed,
+        07-Nov-2018 19:54:28 UTC
       Strict-Transport-Security:
       - max-age=631138519
       X-Connection-Hash:
-      - 9595dfc1edcb19511578cbd0893f9792
+      - 13f09e3cfefea23ef8278703dbd680a2
       X-Content-Type-Options:
       - nosniff
       X-Frame-Options:
       - SAMEORIGIN
       X-Response-Time:
-      - '112'
+      - '129'
       X-Xss-Protection:
       - 1; mode=block
     body:
@@ -58,5 +58,5 @@ http_interactions:
         Ivan Kuznetsov (@fahrenhei7lt) \u003Ca href=\"https:\/\/twitter.com\/fahrenhei7lt\/status\/788802438467837952\"\u003EOctober
         19, 2016\u003C\/a\u003E\u003C\/blockquote\u003E\n","width":550,"height":null,"type":"rich","cache_age":"3153600000","provider_name":"Twitter","provider_url":"https:\/\/twitter.com","version":"1.0"}'
     http_version: 
-  recorded_at: Sat, 05 Nov 2016 15:56:35 GMT
+  recorded_at: Mon, 07 Nov 2016 19:54:28 GMT
 recorded_with: VCR 3.0.3

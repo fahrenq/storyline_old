@@ -8,7 +8,7 @@ class MomentPolicy < ApplicationPolicy
 
   %w(new? create? edit? update? destroy?).each do |m|
     define_method(m) do
-      moment.story.user == user
+       moment.story.user == user
     end
   end
 end

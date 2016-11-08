@@ -1,10 +1,12 @@
 # == Schema Information
 #
-# Table name: native_moments
+# Table name: moments
 #
 #  id                   :integer          not null, primary key
 #  body                 :text
+#  json_body            :json
 #  story_id             :integer
+#  type                 :string
 #  created_at           :datetime         not null
 #  updated_at           :datetime         not null
 #  picture_file_name    :string
@@ -13,13 +15,9 @@
 #  picture_updated_at   :datetime
 #
 
-class NativeMoment < ApplicationRecord
+class Moment < ApplicationRecord
   belongs_to :story
 
-  validates :body,
-            presence: true,
-            length: { in: 4..2048 }
-
-  has_attached_file :picture, styles: { medium: "300x300>", thumb: "100x100>" }
-  validates_attachment_content_type :picture, content_type: /\Aimage\/.*\z/
+  scope :embedded_moments, -> { where(type: 'embedded_moment') }
+  scope :native_moments, -> { where(type: 'native_moment') }
 end

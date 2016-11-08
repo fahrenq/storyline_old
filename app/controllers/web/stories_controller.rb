@@ -7,10 +7,8 @@ class Web::StoriesController < Web::ApplicationController
   end
 
   def show
-    @story = Story.includes(:native_moments, :embedded_moments)
-                  .find(params[:id])
-    @moments = (@story.native_moments + @story.embedded_moments)
-               .sort_by(&:created_at).reverse!
+    @story = Story.includes(:moments).find(params[:id])
+    @moments = @story.moments.order(created_at: :desc)
   end
 
   def new
