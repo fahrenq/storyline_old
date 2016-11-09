@@ -10,6 +10,9 @@ p.text-right
 p.lead
   = @story.description
 
+- if @story.picture.exists?
+  = image_tag @story.picture.url(:thumb)
+  br
 
 - if policy(@story).edit?
   = link_to 'new native moment', new_story_native_moment_path(@story)
