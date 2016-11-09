@@ -68,7 +68,7 @@ class Web::StoriesController < Web::ApplicationController
 
   def story_params
     params.require(:story)
-          .permit(:title, :description, :user_id)
+          .permit(:title, :description, :picture, :user_id)
           .merge(user: current_user)
   end
 end

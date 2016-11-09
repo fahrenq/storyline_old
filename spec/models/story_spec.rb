@@ -11,6 +11,7 @@
 #
 
 require 'rails_helper'
+require 'paperclip/matchers'
 
 describe Story, type: :model do
   # validations
@@ -19,6 +20,10 @@ describe Story, type: :model do
   it { should validate_length_of(:title).is_at_most(72) }
   it { should validate_length_of(:description).is_at_least(4) }
   it { should validate_length_of(:description).is_at_most(4128) }
+  it { should validate_attachment_content_type(:picture)
+              .allowing('image/png', 'image/jpeg', 'image/gif')
+              .rejecting('text/plain', 'text/xml') }
+  it { should have_attached_file(:picture) }
 
   # associations
   it { should belong_to :user }

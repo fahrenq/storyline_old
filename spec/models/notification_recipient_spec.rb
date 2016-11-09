@@ -8,6 +8,7 @@
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
 #
+
 require 'rails_helper'
 
 describe NotificationRecipient, type: :model do
