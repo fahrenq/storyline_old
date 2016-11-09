@@ -82,6 +82,11 @@ describe Web::StoriesController, type: :controller do
             post :create, params: { story: valid_data }
           }.to change(Story, :count).by(1)
         end
+        it 'creates new record in database with image' do
+          picture = fixture_file_upload("#{Rails.root}/spec/fixtures/story_picture.png", 'image/png')
+          post :create, params: { story: valid_data.merge(picture: picture) }
+          expect(assigns[:story].picture.original_filename).to eq(picture.original_filename)
+        end
       end
 
       context 'invalid data' do
