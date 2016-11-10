@@ -14,13 +14,19 @@ class Notification < ApplicationRecord
   has_many :notification_recipients
   has_many :users, through: :notification_recipients
 
+  validates_presence_of :users
+
   enum category: [:new_moment]
 
   def self.create_for_new_moment(moment)
-    create(
+    new(
       users: moment.story.subscribers,
       info: { story_id: moment.story.id, story_title: moment.story.title },
       category: 'new_moment'
-    )
+    ).save
+  end
+
+  def read_by?(user)
+    notification_recipients.where(user: user).first.read == true
   end
 end
