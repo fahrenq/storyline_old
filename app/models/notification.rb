@@ -25,4 +25,8 @@ class Notification < ApplicationRecord
       category: 'new_moment'
     ).save
   end
+
+  def read_by?(user)
+    notification_recipients.where(user: user).first.read == true
+  end
 end

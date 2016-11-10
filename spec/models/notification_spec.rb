@@ -19,4 +19,15 @@ describe Notification, type: :model do
   # associations
   it { should have_many(:users).through(:notification_recipients) }
 
+  describe 'read_by? mehtod' do
+    let(:notification) { create(:notification, users: [create(:user)]) }
+    it 'returns true' do
+      notification_recipient = create(:notification_recipient, notification: notification, read: true)
+      expect(notification.read_by?(notification_recipient.user)).to be_truthy
+    end
+    it 'returns false' do
+      notification_recipient = create(:notification_recipient, notification: notification)
+      expect(notification.read_by?(notification_recipient.user)).to be_falsy
+    end
+  end
 end

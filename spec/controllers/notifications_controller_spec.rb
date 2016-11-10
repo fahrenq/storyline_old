@@ -20,6 +20,7 @@ describe Web::NotificationsController, type: :controller do
 
       it { expect(response).to render_template(:index) }
       it { expect(assigns(:notifications)).to eq(notifications) }
+      it { expect(user.notifications.all? { |n| n.read_by?(user) }).to be_truthy }
     end
   end
 

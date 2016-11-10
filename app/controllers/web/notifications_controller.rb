@@ -3,5 +3,6 @@ class Web::NotificationsController < Web::ApplicationController
 
   def index
     @notifications = current_user.notifications
+    ReadNotifications.new(@notifications, current_user).call
   end
 end
