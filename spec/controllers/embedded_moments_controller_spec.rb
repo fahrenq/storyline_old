@@ -100,9 +100,16 @@ describe Web::Moments::EmbeddedMomentsController, type: :controller do
             }.to change(subscriber.notifications, :count).by(1)
           end
           it 'creates notification with right data', :vcr do
-              post :create, params: { story_id: story,
+            post :create, params: { story_id: story,
+                                    embedded_moment_attrs: embedded_moment_attributes }
+            expect(subscriber.notifications.last.info).to be_a(Hash)
+          end
+          it 'does not create notification for stoty without subs', :vcr do
+            expect {
+              story_without_sub = create(:story, user: user)
+              post :create, params: { story_id: story_without_sub,
                                       embedded_moment_attrs: embedded_moment_attributes }
-              expect(subscriber.notifications.last.info).to be_a(Hash)
+            }.not_to change(Notification, :count)
           end
         end
 

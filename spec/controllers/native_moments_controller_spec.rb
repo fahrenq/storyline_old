@@ -127,9 +127,16 @@ describe Web::Moments::NativeMomentsController, type: :controller do
             }.to change(subscriber.notifications, :count).by(1)
           end
           it 'creates notification with right data' do
-              post :create, params: { story_id: story,
+            post :create, params: { story_id: story,
+                                    native_moment: valid_data }
+            expect(subscriber.notifications.last.info).to be_a(Hash)
+          end
+          it 'does not create notification for stoty without subs' do
+            story_without_sub = create(:story, user: user)
+            expect {
+              post :create, params: { story_id: story_without_sub,
                                       native_moment: valid_data }
-              expect(subscriber.notifications.last.info).to be_a(Hash)
+            }.not_to change(Notification, :count)
           end
         end
 
