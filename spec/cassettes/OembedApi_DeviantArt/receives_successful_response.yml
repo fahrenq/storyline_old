@@ -1,0 +1,50 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://backend.deviantart.com/oembed?url=http://www.deviantart.com/art/Reading-time-645328427
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '645'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=180
+      Date:
+      - Sat, 12 Nov 2016 17:51:08 GMT
+      Expires:
+      - Sat, 12 Nov 2016 17:54:08 GMT
+      Server:
+      - Apache
+      Vary:
+      - Accept-Encoding
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 1bf0d882921b31997e2650c5d2719973.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - 4C1-1X8MzlPlVVtKQznjxqlfyKPofzgMm7lTENJxm5-kwRP9qFfuYw==
+    body:
+      encoding: ASCII-8BIT
+      string: '{"version":"1.0","type":"photo","title":"Reading time!","category":"Manga
+        & Anime > Digital Media > Drawings","url":"http:\/\/pre07.deviantart.net\/2ede\/th\/pre\/i\/2016\/316\/c\/2\/reading_time__by_piss_kun-dao7mln.png","author_name":"Piss-kun","author_url":"http:\/\/Piss-kun.deviantart.com","provider_name":"DeviantArt","provider_url":"http:\/\/www.deviantart.com","safety":"nonadult","pubdate":"2016-11-11T21:01:38-08:00","community":{"statistics":{"_attributes":{"views":196,"favorites":193,"comments":11,"downloads":0}}},"tags":"fanart,
+        hanamaru, kunikida, live, love, lovelive, lovelivesunshine","copyright":{"_attributes":{"url":"http:\/\/Piss-kun.deviantart.com","year":"2016","entity":"Piss-kun"}},"width":738,"height":1082,"imagetype":"png","thumbnail_url":"http:\/\/t14.deviantart.net\/PVQEFS95KQvWJIMZct97gVtlePI=\/fit-in\/300x900\/filters:no_upscale():origin()\/pre07\/2ede\/th\/pre\/i\/2016\/316\/c\/2\/reading_time__by_piss_kun-dao7mln.png","thumbnail_width":300,"thumbnail_height":440,"thumbnail_url_150":"http:\/\/t03.deviantart.net\/rRM41VWkt6LjOpqORNmEHSe0YGM=\/fit-in\/150x150\/filters:no_upscale():origin()\/pre07\/2ede\/th\/pre\/i\/2016\/316\/c\/2\/reading_time__by_piss_kun-dao7mln.png","thumbnail_url_200h":"http:\/\/t13.deviantart.net\/hNID3cRDAepj3o1GiJFqJV62wBs=\/300x200\/filters:fixed_height(100,100):origin()\/pre07\/2ede\/th\/pre\/i\/2016\/316\/c\/2\/reading_time__by_piss_kun-dao7mln.png","thumbnail_width_200h":136,"thumbnail_height_200h":200}'
+    http_version: 
+  recorded_at: Sat, 12 Nov 2016 17:51:08 GMT
+recorded_with: VCR 3.0.3

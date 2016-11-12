@@ -2,6 +2,7 @@ require 'uri'
 require 'oembedapi/twitter'
 require 'oembedapi/youtube'
 require 'oembedapi/speaker_deck'
+require 'oembedapi/deviant_art'
 
 module OembedApi
   class Handler
@@ -10,7 +11,8 @@ module OembedApi
     SERVICES = {
       twitter: OembedApi::Twitter,
       youtube: OembedApi::Youtube,
-      speakerdeck: OembedApi::SpeakerDeck
+      speakerdeck: OembedApi::SpeakerDeck,
+      deviantart: OembedApi::DeviantArt
     }.freeze
 
     def initialize(url)
