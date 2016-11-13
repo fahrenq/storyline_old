@@ -1,3 +1,5 @@
+/ this helper lives in app/helpers/moments_helper
+/ and renders partials from app/views/shared/moments
 = render_moment(@embedded_moment)
 br
 = link_to 'delete', embedded_moment_path(@embedded_moment), method: :delete

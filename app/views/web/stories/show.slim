@@ -29,6 +29,8 @@ table.table.table-bordered
   - @moments.each do |moment|
     tr
       td
+        / this helper lives in app/helpers/moments_helper
+        / and renders partials from app/views/shared/moments
         = render_moment(moment)
       td
         = link_to 'show', moment

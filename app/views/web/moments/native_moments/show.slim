@@ -1,8 +1,7 @@
 p.lead
-  - if @native_moment.picture.exists?
-    = image_tag @native_moment.picture.url(:medium) 
-    br
-  = @native_moment.body
+  / this helper lives in app/helpers/moments_helper
+  / and renders partials from app/views/shared/moments
+  = render_moment(@native_moment)
 = link_to 'edit', edit_native_moment_path(@native_moment)
 br
 = link_to 'delete', native_moment_path(@native_moment), method: :delete
