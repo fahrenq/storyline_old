@@ -17,4 +17,5 @@ scss:
               '  (subscribed)
         td.date
           = story.created_at.strftime('%d %b %Y')
-  = link_to 'New story', new_story_path
+  - if current_user
+    = link_to 'New story', new_story_path
