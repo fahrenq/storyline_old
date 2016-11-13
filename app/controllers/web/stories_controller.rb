@@ -8,6 +8,9 @@ class Web::StoriesController < Web::ApplicationController
 
   def show
     @story = Story.includes(:moments).find(params[:id])
+    # at this step, we have all (embedded and native) moments in one relation.
+    # later on, it would devided to views partials by helper method, and in
+    # partials.
     @moments = @story.moments.order(created_at: :desc)
   end
 

@@ -32,6 +32,7 @@ class EmbeddedMoment < Moment
   end
 
   def provider
+    # provider is service name like 'twitter', 'youtube', etc.
     json_body['provider_name'].downcase
   end
 end
