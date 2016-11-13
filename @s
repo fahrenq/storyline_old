@@ -1,0 +1,12 @@
+= moment.class
+- case moment.class
+- when 'NativeMoment' # native moments start here
+  - if moment.picture.exists?
+    = image_tag moment.picture.url(:medium)
+    br
+  = moment.body
+- when 'EmbeddedMoment'
+  - if moment.provider == 'deviantart'
+    ' deviant art image
+  - else
+    = moment.json_body['html'].html_safe

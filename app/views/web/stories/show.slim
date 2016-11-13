@@ -29,7 +29,7 @@ table.table.table-bordered
   - @moments.each do |moment|
     tr
       td
-        = render partial: 'moment_body', locals: { moment: moment }
+        = render_moment(moment)
       td
         = link_to 'show', moment
 

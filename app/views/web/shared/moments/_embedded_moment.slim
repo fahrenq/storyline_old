@@ -1,0 +1,5 @@
+- case moment.provider
+- when 'deviantart'
+  = image_tag moment.json_body['url']
+- else
+  = moment.json_body['html'].html_safe

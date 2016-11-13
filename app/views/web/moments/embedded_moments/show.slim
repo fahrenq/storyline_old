@@ -1,4 +1,4 @@
-= @embedded_moment.json_body['html'].html_safe
+= render_moment(@embedded_moment)
 br
 = link_to 'delete', embedded_moment_path(@embedded_moment), method: :delete
 br

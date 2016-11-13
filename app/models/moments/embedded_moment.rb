@@ -30,4 +30,8 @@ class EmbeddedMoment < Moment
       false
     end
   end
+
+  def provider
+    json_body['provider_name'].downcase
+  end
 end
