@@ -1,10 +1,9 @@
 - case moment.provider
-- when *['twitter', 'youtube', 'speaker deck']
-  = moment.json_body['html'].html_safe
 - when 'deviantart'
   / we need to specify views for deviantart art embed because it (devart) provides
   / us just link to picture and links to authors, there is no ['html'] key-value
   / pair
   = image_tag moment.json_body['url']
   ' Deviant Art
-
+- else # *['twitter', 'youtube', 'speaker deck', 'instagram']
+  = moment.json_body['html'].html_safe
