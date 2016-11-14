@@ -3,6 +3,7 @@ require 'oembedapi/twitter'
 require 'oembedapi/youtube'
 require 'oembedapi/speaker_deck'
 require 'oembedapi/deviant_art'
+require 'oembedapi/instagram'
 
 module OembedApi
   class Handler
@@ -11,6 +12,7 @@ module OembedApi
     SERVICES = {
       twitter: OembedApi::Twitter,
       youtube: OembedApi::Youtube,
+      instagram: OembedApi::Instagram,
       speakerdeck: OembedApi::SpeakerDeck,
       deviantart: OembedApi::DeviantArt
     }.freeze
