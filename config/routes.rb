@@ -4,7 +4,8 @@ Rails.application.routes.draw do
     # Devise routing start
     devise_for :users, path: '', controllers: {
       sessions: 'custom_sessions',
-      registrations: 'custom_registrations'
+      registrations: 'custom_registrations',
+      confirmations: 'custom_confirmations'
     },
     path_names: {
       sign_up: 'registration',
