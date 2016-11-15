@@ -1,9 +1,9 @@
 # https://richonrails.com/articles/environment-variables-in-ruby-on-rails
 class Application < Rails::Application
   config.before_configuration do
-    env_file = Rails.root.join("config", 'environment_variables.yml').to_s
+    env_file = Rails.root.join('config', 'environment_variables.yml').to_s
 
-    if File.exists?(env_file)
+    if File.exists?(env_file) && Rails.env != 'test'
       YAML.load_file(env_file)[Rails.env].each do |key, value|
         ENV[key.to_s] = value
       end # end YAML.load_file
