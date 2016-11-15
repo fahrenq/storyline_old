@@ -26,8 +26,6 @@ Rails.application.configure do
     config.cache_store = :null_store
   end
 
-  # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = false
 
   config.action_mailer.perform_caching = false
 
@@ -45,15 +43,19 @@ Rails.application.configure do
   # Suppress logger output for asset requests.
   config.assets.quiet = true
 
+  # Don't care if the mailer can't send.
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.default_url_options = { :host => 'localhost' }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    address:              'smtp.gmail.com',
+    address:              'smtp.mailgun.org',
     port:                 587,
-    domain:               'localhost:3000',
-    user_name:            ENV['GMAIL_USERNAME'],
-    password:             ENV['GMAIL_PASSWORD'],
-    # authentication:       'plain',
-    enable_starttls_auto: true  }
+    domain:               ENV['MAILGUN_DOMAIN'],
+    user_name:            ENV['MAILGUN_USERNAME'],
+    password:             ENV['MAILGUN_PASSWORD'],
+     authentication:       'plain',
+    enable_starttls_auto: true
+  }
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
