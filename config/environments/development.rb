@@ -45,15 +45,19 @@ Rails.application.configure do
 
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.default_url_options = { :host => 'localhost' }
+
   config.action_mailer.delivery_method = :smtp
+  config.action_mailer.default_url_options = { host: 'localhost:3000' }
+  byebug
   config.action_mailer.smtp_settings = {
-    address:              'smtp.mailgun.org',
+    address:              'smtp.gmail.com',
     port:                 587,
-    domain:               ENV['MAILGUN_DOMAIN'],
-    user_name:            ENV['MAILGUN_USERNAME'],
-    password:             ENV['MAILGUN_PASSWORD'],
-     authentication:       'plain',
+    # domain:               ENV['GMAIL_DOMAIN'],
+    user_name:            ENV['GMAIL_USERNAME'],
+    #user_name:            'storyline.q@gmail.com',
+    #password:             '0w9Y!FLN88w1',
+    password:             ENV['GMAIL_PASSWORD'],
+    authentication:       :plain,
     enable_starttls_auto: true
   }
 
