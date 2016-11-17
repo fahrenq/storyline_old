@@ -23,6 +23,11 @@ FactoryGirl.define do
     sequence(:name) { |n| "UserName#{n}" }
     sequence(:email) { |n| "samplemail_#{n}@example.com" }
     password 'pswd1234'
+    confirmed_at Time.now
+
+    factory :unconfirmed_user do
+      confirmed_at nil
+    end
 
     factory :user_faker do
       name Faker::Internet.user_name

@@ -2,7 +2,7 @@ require 'rails_helper'
 require_relative '../../support/user/login_form'
 
 feature 'Log in with login/password' do
-  let!(:user) { FactoryGirl.create(:user) }
+  let!(:user) { create(:user) }
   let(:login_form) { LoginForm.new }
   let(:success_content) { I18n.t('devise.sessions.signed_in') }
 

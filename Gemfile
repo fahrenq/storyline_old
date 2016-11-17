@@ -24,12 +24,14 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.5'
   gem 'capybara'
   gem 'capybara-webkit'
+  gem 'capybara-email'
   gem 'rails-controller-testing'
   gem 'factory_girl_rails'
   gem 'faker'
 end
 
 group :test do
+  gem 'email_spec'
   gem 'database_cleaner'
   gem 'codeclimate-test-reporter', require: nil
   gem 'vcr'
