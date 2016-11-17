@@ -1,8 +1,8 @@
 require 'rails_helper'
 
 describe Web::StoriesController, type: :controller do
-  shared_examples 'public access to stories' do
 
+  shared_examples 'public access to stories' do
     describe 'GET #index' do
       before(:each) { get :index }
       it { expect(response).to render_template(:index)  }
@@ -17,12 +17,11 @@ describe Web::StoriesController, type: :controller do
     end
   end
 
-  describe 'guest user' do
-    it_behaves_like 'public access to stories'
+  shared_examples 'denied access' do
     let(:story) { create(:story) }
-
     context 'redirects to login page' do
       after(:each) { expect(response).to redirect_to(new_user_session_url) }
+
       it { get :new }
       it { post :create, params: { story: attributes_for(:story) } }
       it { get :edit, params: { id: story } }
@@ -32,7 +31,6 @@ describe Web::StoriesController, type: :controller do
       it { post :subscribe, params: { id: story } }
       it { delete :unsubscribe, params: { id: story } }
     end
-
     context 'does not touch database' do
       it 'POST #create' do
         expect {
@@ -55,6 +53,17 @@ describe Web::StoriesController, type: :controller do
         }.not_to change(story.subscribers, :count)
       end
     end
+  end
+
+  describe 'guest user' do
+    it_behaves_like 'public access to stories'
+    it_behaves_like 'denied access'
+  end
+
+  describe 'unconfirmed user' do
+    let(:user) { create(:unconfirmed_user) }
+    before { sign_in user }
+    it_behaves_like 'denied access'
   end
 
   describe 'authenticated user' do
