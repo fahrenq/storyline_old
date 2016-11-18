@@ -5,5 +5,5 @@
   / pair
   = image_tag moment.json_body['url']
   ' Deviant Art
-- else # *['twitter', 'youtube', 'speaker deck', 'instagram']
+- else # *['twitter', 'youtube', 'speaker deck', 'instagram', 'vimeo']
   = moment.json_body['html'].html_safe

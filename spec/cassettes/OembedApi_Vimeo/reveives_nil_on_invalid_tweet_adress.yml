@@ -1,0 +1,76 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://vimeo.com/api/oembed.json?url=https://vimo.om/169850570
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - nginx
+      Content-Type:
+      - text/html; charset=UTF-8
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - X-Requested-With
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - sameorigin
+      Cache-Control:
+      - max-age=300, must-revalidate
+      Expires:
+      - Fri, 18 Nov 2016 19:46:54 GMT
+      X-Ua-Compatible:
+      - IE=edge
+      X-Xss-Protection:
+      - 1; mode=block
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains; preload
+      Content-Security-Policy-Report-Only:
+      - 'default-src https: data: blob: ''unsafe-inline'' ''unsafe-eval''; report-uri
+        /_csp'
+      Via:
+      - 1.1 varnish
+      - 1.1 varnish
+      Fastly-Debug-Digest:
+      - 3b0412cc6f8e8ba7a8e59c1bf26d6d525e94c0422230de1798f403b89ce2e18f
+      Content-Length:
+      - '33'
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Fri, 18 Nov 2016 19:41:54 GMT
+      Age:
+      - '0'
+      Connection:
+      - keep-alive
+      X-Served-By:
+      - cache-iad2140-IAD, cache-ams4443-AMS
+      X-Cache:
+      - MISS, MISS
+      X-Cache-Hits:
+      - 0, 0
+      X-Timer:
+      - S1479498114.138889,VS0,VE111
+      Vary:
+      - User-Agent,Accept-Encoding
+    body:
+      encoding: ASCII-8BIT
+      string: 404 Not Found
+    http_version: 
+  recorded_at: Fri, 18 Nov 2016 19:41:54 GMT
+recorded_with: VCR 3.0.3

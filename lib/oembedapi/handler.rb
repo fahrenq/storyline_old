@@ -4,6 +4,7 @@ require 'oembedapi/youtube'
 require 'oembedapi/speaker_deck'
 require 'oembedapi/deviant_art'
 require 'oembedapi/instagram'
+require 'oembedapi/vimeo'
 
 module OembedApi
   class Handler
@@ -12,6 +13,7 @@ module OembedApi
     SERVICES = {
       twitter: OembedApi::Twitter,
       youtube: OembedApi::Youtube,
+      vimeo: OembedApi::Vimeo,
       instagram: OembedApi::Instagram,
       speakerdeck: OembedApi::SpeakerDeck,
       deviantart: OembedApi::DeviantArt
