@@ -1,5 +1,5 @@
 class CustomSessionsController < Devise::SessionsController
-  def after_sign_in_path_for(users)
+  def after_sign_in_path_for(_users)
     # TODO: decide where to redirect user after sign in
     # return authenticated_root_url
     root_url

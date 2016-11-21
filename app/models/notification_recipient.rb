@@ -14,5 +14,4 @@ class NotificationRecipient < ApplicationRecord
   belongs_to :notification
 
   validates :user, :notification, presence: true
-
 end

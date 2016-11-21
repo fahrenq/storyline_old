@@ -48,6 +48,8 @@ class User < ApplicationRecord
 
   # let authenticate with login. with help of
   # https://github.com/plataformatec/devise/wiki/How-To:-Allow-users-to-sign-in-using-their-username-or-email-address
+  # yes, rubocop warning this syntax, but for keep things simple and accorting
+  # to official code - let's leave from refactoring.
   attr_accessor :login
   def self.find_for_database_authentication(warden_conditions)
     conditions = warden_conditions.dup

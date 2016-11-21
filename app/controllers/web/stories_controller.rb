@@ -1,6 +1,7 @@
 class Web::StoriesController < Web::ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
-  before_action :set_story, only: [:edit, :update, :destroy, :subscribe, :unsubscribe]
+  before_action :set_story, only: [:edit, :update, :destroy, :subscribe,
+                                   :unsubscribe]
 
   def index
     @stories = Story.all

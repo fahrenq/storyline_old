@@ -7,6 +7,7 @@ class ReadNotifications
   end
 
   def call
-    NotificationRecipient.where(notification: notifications, user: user).update_all(read: true)
+    NotificationRecipient.where(notification: notifications, user: user)
+                         .update_all(read: true)
   end
 end
