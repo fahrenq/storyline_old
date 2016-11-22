@@ -1,12 +1,10 @@
 class Web::UsersController < Web::ApplicationController
+  before_action :authenticate_user!
   before_action :set_user
 
   def change_avatar
-    if @user.update(avatar_params)
-      redirect_to edit_user_registration_path
-    else
-      render :edit
-    end
+    @user.update(avatar_params)
+    redirect_to edit_user_registration_path
   end
 
   def destroy_avatar
@@ -22,7 +20,6 @@ class Web::UsersController < Web::ApplicationController
   end
 
   def avatar_params
-    params.require(:user)
-      .permit(:avatar)
+    params.permit(:avatar)
   end
 end

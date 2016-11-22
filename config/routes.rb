@@ -13,7 +13,7 @@ Rails.application.routes.draw do
       sign_in: 'login'
     }
     # Devise routing end
-    post '/change_avatar', to: 'users#change_avatar', as: :change_avatar
+    patch '/change_avatar', to: 'users#change_avatar', as: :change_avatar
     delete '/destroy_avatar', to: 'users#destroy_avatar', as: :destroy_avatar
 
     resources :stories do
