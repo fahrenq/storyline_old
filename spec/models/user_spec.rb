@@ -33,6 +33,10 @@ describe User, type: :model do
   it { should validate_presence_of(:name) }
   it { should validate_length_of(:name).is_at_least(2) }
   it { should validate_length_of(:name).is_at_most(28) }
+  it { should validate_attachment_content_type(:avatar)
+              .allowing('image/png', 'image/jpeg', 'image/gif')
+              .rejecting('text/plain', 'text/xml') }
+  it { should have_attached_file(:avatar) }
 
   # associations
   it { should have_many :stories }

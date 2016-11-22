@@ -24,6 +24,7 @@
 #  avatar_file_size       :integer
 #  avatar_updated_at      :datetime
 #
+include ActionDispatch::TestProcess
 
 FactoryGirl.define do
   factory :user do
@@ -31,6 +32,10 @@ FactoryGirl.define do
     sequence(:email) { |n| "samplemail_#{n}@example.com" }
     password 'pswd1234'
     confirmed_at Time.now
+
+    factory :user_with_avatar do
+      avatar { fixture_file_upload("#{Rails.root}/spec/fixtures/user_avatar.png", 'image/png') }
+    end
 
     factory :unconfirmed_user do
       confirmed_at nil
