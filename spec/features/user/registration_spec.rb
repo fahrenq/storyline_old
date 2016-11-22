@@ -16,9 +16,6 @@ feature 'Registration with email' do
                      .fill_in_with
                      .submit
     expect(page).to have_content(success_content_regexp)
-    # testing avatar upload here, because we don't write controller tests for
-    # users
-    expect(User.last.avatar.original_filename).to eq(RegistrationForm::AVATAR_FILENAME)
   end
 
   scenario 'registration with invalid data' do
