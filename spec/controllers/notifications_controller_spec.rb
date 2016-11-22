@@ -23,5 +23,4 @@ describe Web::NotificationsController, type: :controller do
       it { expect(user.notifications.all? { |n| n.read_by?(user) }).to be_truthy }
     end
   end
-
 end

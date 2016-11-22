@@ -28,7 +28,7 @@ class Web::Moments::EmbeddedMomentsController < Web::Moments::ApplicationControl
   def destroy
     authorize @embedded_moment
     @embedded_moment.destroy
-    redirect_to @embedded_moment.story
+    redirect_to story_path(@embedded_moment.story)
   end
 
   private

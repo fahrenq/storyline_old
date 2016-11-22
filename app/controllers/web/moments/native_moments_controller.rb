@@ -36,7 +36,7 @@ class Web::Moments::NativeMomentsController < Web::Moments::ApplicationControlle
   def destroy
     authorize @native_moment
     @native_moment.destroy
-    redirect_to @native_moment.story
+    redirect_to story_path(@native_moment.story)
   end
 
   private
