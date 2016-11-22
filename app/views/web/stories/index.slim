@@ -3,7 +3,8 @@ scss:
   td.date {
     text-align: center;
   }
-
+- if current_user
+  = image_tag current_user.avatar.url(:medium)
 .col-md-6
   table.table.table-bordered
     th.text-center(colspan='2')

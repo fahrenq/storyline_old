@@ -21,3 +21,11 @@ p
   | Unhappy? 
   = link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete
 = link_to "Back", :back
+
+br
+
+= image_tag current_user.avatar.url(:thumb)
+= form_tag(change_avatar_path, method: :patch, multipart: true) do
+  = file_field_tag(:avatar)
+  = submit_tag
+= link_to 'Delete my avatar', destroy_avatar_path, method: :delete
