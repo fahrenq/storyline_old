@@ -16,6 +16,13 @@
 #  created_at             :datetime         not null
 #  updated_at             :datetime         not null
 #  name                   :string
+#  confirmation_token     :string
+#  confirmed_at           :datetime
+#  confirmation_sent_at   :datetime
+#  avatar_file_name       :string
+#  avatar_content_type    :string
+#  avatar_file_size       :integer
+#  avatar_updated_at      :datetime
 #
 
 class User < ApplicationRecord
@@ -44,6 +51,10 @@ class User < ApplicationRecord
               with: /\A[a-zA-Z0-9_\.]*\z/
             },
             length: { in: 2..28 }
+
+  has_attached_file :avatar, styles: { medium: '300x300>', thumb: '100x100>' },
+                             default_url: '/images/avatar_:style.png'
+  validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\z/
 
   # let authenticate with login. with help of
   # https://github.com/plataformatec/devise/wiki/How-To:-Allow-users-to-sign-in-using-their-username-or-email-address
