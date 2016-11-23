@@ -1,0 +1,109 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://codepen.io/api/oembed?url=http://codepen.i/ureo/e/BWgM
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Wed, 23 Nov 2016 16:00:32 GMT
+      Content-Type:
+      - text/html; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d09c34929dad838823d161d4cbf50c9b01479916831; expires=Thu, 23-Nov-17
+        16:00:31 GMT; path=/; domain=.codepen.io; HttpOnly
+      Status:
+      - 302 Found
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - b1c0c945-b0e7-4673-8440-fe63801700aa
+      Location:
+      - https://codepen.io/api/oembed?url=http%3A%2F%2Fcodepen.i%2Fureo%2Fe%2FBWgM
+      X-Runtime:
+      - '0.002972'
+      X-Frame-Options:
+      - ALLOWALL
+      X-Powered-By:
+      - Phusion Passenger Enterprise 5.0.30
+      Server:
+      - cloudflare-nginx
+      Cf-Ray:
+      - 3065d5a734d636de-ARN
+    body:
+      encoding: UTF-8
+      string: <html><body>You are being <a href="https://codepen.io/api/oembed?url=http%3A%2F%2Fcodepen.i%2Fureo%2Fe%2FBWgM">redirected</a>.</body></html>
+    http_version: 
+  recorded_at: Wed, 23 Nov 2016 16:00:32 GMT
+- request:
+    method: get
+    uri: https://codepen.io/api/oembed?url=http://codepen.i/ureo/e/BWgM
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Date:
+      - Wed, 23 Nov 2016 16:00:33 GMT
+      Content-Type:
+      - text/html; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d7c83969ddbf3af862927b3bec6dfe9121479916832; expires=Thu, 23-Nov-17
+        16:00:32 GMT; path=/; domain=.codepen.io; HttpOnly
+      - _codepen_session=Yzk0ZzRrdjhVaXRzYWh0aGVxY0JzVWJBalRWaHZaUkRSRkJ4VkVkRjJyOHltTUlKZzFMeUM3REpRTEt2VENtQVcraW5uR0tCZTZMajdQRURCNURKMnNuT1hBVWNSNG9mdVd6bFRpZ256Wjg9LS1zNWk2QTZFRVFUU1pzclBkVSs0WEJnPT0%3D--fbfacf1c5b90b5e7095dcea3a07c734fe7e267a5;
+        path=/; expires=Fri, 23 Dec 2016 16:00:33 -0000; HttpOnly
+      Status:
+      - 404 Not Found
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 36bf5c0d-daa8-404b-bc19-85488922f869
+      X-Env:
+      - production
+      X-Runtime:
+      - '0.012265'
+      X-Frame-Options:
+      - ALLOWALL
+      X-Powered-By:
+      - Phusion Passenger Enterprise 5.0.30
+      Server:
+      - cloudflare-nginx
+      Cf-Ray:
+      - 3065d5aacc3937b6-ARN
+    body:
+      encoding: ASCII-8BIT
+      string: Not Found
+    http_version: 
+  recorded_at: Wed, 23 Nov 2016 16:00:33 GMT
+recorded_with: VCR 3.0.3

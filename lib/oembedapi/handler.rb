@@ -5,6 +5,8 @@ require 'oembedapi/speaker_deck'
 require 'oembedapi/deviant_art'
 require 'oembedapi/instagram'
 require 'oembedapi/vimeo'
+require 'oembedapi/codepen'
+
 
 module OembedApi
   class Handler
@@ -16,7 +18,8 @@ module OembedApi
       vimeo: OembedApi::Vimeo,
       instagram: OembedApi::Instagram,
       speakerdeck: OembedApi::SpeakerDeck,
-      deviantart: OembedApi::DeviantArt
+      deviantart: OembedApi::DeviantArt,
+      codepen: OembedApi::Codepen
     }.freeze
 
     def initialize(url)

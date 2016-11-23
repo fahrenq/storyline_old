@@ -1,0 +1,109 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://speakerdeck.com/oembed.json?url=https://speakerdeck.com/akmu322
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - close
+      Date:
+      - Wed, 23 Nov 2016 16:00:37 GMT
+      Status:
+      - 301 Moved Permanently
+      Strict-Transport-Security:
+      - max-age=0
+      Content-Type:
+      - text/html
+      Location:
+      - https://speakerdeck.com/oembed.json?url=https%3A%2F%2Fspeakerdeck.com%2Fakmu322
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 60d3817b-284a-4233-bec8-1bf710802f00
+      X-Runtime:
+      - '0.005157'
+      X-Rack-Cache:
+      - miss
+      Vary:
+      - Accept-Encoding
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    http_version: 
+  recorded_at: Wed, 23 Nov 2016 16:00:37 GMT
+- request:
+    method: get
+    uri: https://speakerdeck.com/oembed.json?url=https://speakerdeck.com/akmu322
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - close
+      Date:
+      - Wed, 23 Nov 2016 16:00:38 GMT
+      Status:
+      - 404 Not Found
+      Strict-Transport-Security:
+      - max-age=0
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - no-cache
+      Set-Cookie:
+      - _secure_speakerd_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJTE2MTMzZGIxMmRmYmVjNDQ2NjEwZjdiZDFmN2MxN2MxBjsAVA%3D%3D--0b1f563134f392221efefb7ace2539f3710017c6;
+        path=/; expires=Wed, 07-Dec-2016 16:00:38 GMT; secure; HttpOnly
+      - peek=false; path=/
+      X-Request-Id:
+      - af929aad-74cb-42dd-9f39-405d14bf3ce2
+      X-Runtime:
+      - '0.011256'
+      X-Rack-Cache:
+      - miss
+      Vary:
+      - Accept-Encoding
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: ASCII-8BIT
+      string: " "
+    http_version: 
+  recorded_at: Wed, 23 Nov 2016 16:00:38 GMT
+recorded_with: VCR 3.0.3
