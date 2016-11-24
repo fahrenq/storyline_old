@@ -6,6 +6,7 @@ require 'oembedapi/deviant_art'
 require 'oembedapi/instagram'
 require 'oembedapi/vimeo'
 require 'oembedapi/codepen'
+require 'oembedapi/soundcloud'
 
 
 module OembedApi
@@ -15,6 +16,7 @@ module OembedApi
     SERVICES = {
       twitter: OembedApi::Twitter,
       youtube: OembedApi::Youtube,
+      soundcloud: OembedApi::Soundcloud,
       vimeo: OembedApi::Vimeo,
       instagram: OembedApi::Instagram,
       speakerdeck: OembedApi::SpeakerDeck,
