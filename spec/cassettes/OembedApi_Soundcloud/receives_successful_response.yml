@@ -1,0 +1,57 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://soundcloud.com/oembed?format=json&url=https://soundcloud.com/21savage/x-feat-future
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Headers:
+      - Accept, Authorization, Content-Type, Origin
+      Access-Control-Allow-Methods:
+      - GET, PUT, POST, DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - Date
+      Cache-Control:
+      - private, max-age=0, must-revalidate
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 24 Nov 2016 19:49:57 GMT
+      Etag:
+      - '"f98b6b8d5bc1ea4a3830c8224a22b044"'
+      Server:
+      - am/2
+      Set-Cookie:
+      - sc_anonymous_id=757280-686502-53744-462157; path=/; expires=Sun, 22 Nov 2026
+        19:49:57 GMT; domain=.soundcloud.com
+      Status:
+      - 200 OK
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '492'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"version":1.0,"type":"rich","provider_name":"SoundCloud","provider_url":"http://soundcloud.com","height":400,"width":"100%","title":"X
+        (feat. Future) by 21 Savage","description":"21 Savage \u0026 Metro Boomin''s
+        collaborative album, #SAVAGEMODE available on iTunes: http://smarturl.it/SavageModeiTunes\n\nhttp://21savage.com\nhttp://twitter.com/21savage\nhttp://instagram.com/21savage\nhttp://facebook.com/21savage\nhttp://youtube.com/c/21savage","thumbnail_url":"http://i1.sndcdn.com/artworks-000171597968-6ou25w-t500x500.jpg","html":"\u003Ciframe
+        width=\"100%\" height=\"400\" scrolling=\"no\" frameborder=\"no\" src=\"https://w.soundcloud.com/player/?visual=true\u0026url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F273828810\u0026show_artwork=true\"\u003E\u003C/iframe\u003E","author_name":"21
+        Savage","author_url":"http://soundcloud.com/21savage"}'
+    http_version: 
+  recorded_at: Thu, 24 Nov 2016 19:49:56 GMT
+recorded_with: VCR 3.0.3
