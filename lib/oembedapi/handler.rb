@@ -8,7 +8,6 @@ require 'oembedapi/vimeo'
 require 'oembedapi/codepen'
 require 'oembedapi/soundcloud'
 
-
 module OembedApi
   class Handler
     attr_accessor :url, :service_class
@@ -48,7 +47,7 @@ module OembedApi
 
     def domain_name
       # gets domain name part of url,
-      # ex: http://mobile.twitter.com/userman/userwoman returns just twutter
+      # ex: http://mobile.twitter.com/userman/userwoman returns just twitter
       @domain_name ||= URI.parse(url).host.split('.').last(2)[0]
     end
   end
