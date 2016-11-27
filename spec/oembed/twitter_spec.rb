@@ -1,5 +1,4 @@
 require 'rails_helper'
-require 'oembedapi/twitter'
 
 describe OembedApi::Twitter, :vcr do
   it 'receives successful response' do

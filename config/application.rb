@@ -27,6 +27,9 @@ module Storyline
     # autoload STI model files
     config.autoload_paths += %W(#{config.root}/app/models/moments)
 
+    # autoload lib files
+    config.autoload_paths += %W(#{config.root}/lib)
+
     config.generators do |g|
       g.test_framework :rspec, fixture_replacement: :factory_girl
       g.fixture false

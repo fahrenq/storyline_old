@@ -15,8 +15,6 @@
 #  picture_updated_at   :datetime
 #
 
-require 'oembedapi/handler'
-
 class EmbeddedMoment < Moment
   validates :json_body, presence: true
 

@@ -1,5 +1,4 @@
 require 'rails_helper'
-require 'oembedapi/soundcloud'
 
 describe OembedApi::Soundcloud, :vcr do
   it 'receives successful response' do

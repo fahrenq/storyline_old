@@ -16,8 +16,6 @@
 #
 
 require 'rails_helper'
-require 'oembedapi/handler'
-require 'oembedapi/twitter'
 
 describe EmbeddedMoment, type: :model do
   # validations

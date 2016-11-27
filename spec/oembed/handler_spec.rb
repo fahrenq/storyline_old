@@ -1,6 +1,4 @@
 require 'rails_helper'
-require 'oembedapi/handler'
-require 'oembedapi/twitter'
 
 describe OembedApi::Handler do
   context 'choose api to call' do

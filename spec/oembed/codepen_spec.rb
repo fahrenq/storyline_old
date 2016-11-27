@@ -1,5 +1,4 @@
 require 'rails_helper'
-require 'oembedapi/codepen'
 
 describe OembedApi::Codepen, :vcr do
   it 'receives successful response' do

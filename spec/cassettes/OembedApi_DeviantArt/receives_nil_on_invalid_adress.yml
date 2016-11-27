@@ -1,0 +1,43 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://backend.deviantart.com/oembed?url=http://www.deviantart.com/riie-645328427
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - text/html; charset=ISO-8859-1
+      Content-Length:
+      - '128'
+      Connection:
+      - keep-alive
+      Date:
+      - Sun, 27 Nov 2016 20:32:58 GMT
+      Server:
+      - Apache
+      X-Cache:
+      - Error from cloudfront
+      Via:
+      - 1.1 c661b957fae167a13aab464a9ce9b407.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - E830-SYlS6t_e7ChSBo-xgERwMDoZ8cjnKGF-pi-9E7yzak8OAXoMQ==
+    body:
+      encoding: UTF-8
+      string: 404 Not Found (http://www.deviantart.com/riie-645328427) The URL http://www.deviantart.com/riie-645328427
+        is not a deviation URL
+    http_version: 
+  recorded_at: Sun, 27 Nov 2016 20:32:58 GMT
+recorded_with: VCR 3.0.3

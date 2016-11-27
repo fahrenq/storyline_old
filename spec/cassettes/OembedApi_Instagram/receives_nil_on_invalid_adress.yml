@@ -1,0 +1,180 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.instagram.com/oembed?url=https://www.instagramcm.sr/pBMCEzS6hd4/?ake-y=heroku
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Content-Language:
+      - en
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Vary:
+      - Accept-Language
+      Location:
+      - https://api.instagram.com/publicapi/oembed/?url=https%3A%2F%2Fwww.instagramcm.sr%2FpBMCEzS6hd4%2F%3Fake-y%3Dheroku
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Date:
+      - Sun, 27 Nov 2016 20:32:59 GMT
+      Content-Type:
+      - text/html; charset=utf-8
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '0'
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Sun, 27 Nov 2016 20:32:59 GMT
+- request:
+    method: get
+    uri: https://api.instagram.com/publicapi/oembed/?url=https://www.instagramcm.sr/pBMCEzS6hd4/?ake-y=heroku
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Content-Language:
+      - en
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Vary:
+      - Accept-Language
+      Location:
+      - https://www.instagram.com/publicapi/oembed/?url=https://www.instagramcm.sr/pBMCEzS6hd4/?ake-y=heroku
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Date:
+      - Sun, 27 Nov 2016 20:33:00 GMT
+      Content-Type:
+      - text/html; charset=utf-8
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '0'
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Sun, 27 Nov 2016 20:33:00 GMT
+- request:
+    method: get
+    uri: https://www.instagram.com/publicapi/oembed/?url=https://www.instagramcm.sr/pBMCEzS6hd4/?ake-y=heroku
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Strict-Transport-Security:
+      - max-age=86400
+      Content-Language:
+      - en
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Vary:
+      - Accept-Language
+      Location:
+      - https://api.instagram.com/oembed/?url=https://www.instagramcm.sr/pBMCEzS6hd4/?ake-y=heroku
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Date:
+      - Sun, 27 Nov 2016 20:33:01 GMT
+      Content-Type:
+      - text/html; charset=utf-8
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '0'
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Sun, 27 Nov 2016 20:33:01 GMT
+- request:
+    method: get
+    uri: https://api.instagram.com/oembed/?url=https://www.instagramcm.sr/pBMCEzS6hd4/?ake-y=heroku
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Content-Language:
+      - en
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Vary:
+      - Cookie, Accept-Language
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Date:
+      - Sun, 27 Nov 2016 20:33:02 GMT
+      Content-Type:
+      - text/html; charset=utf-8
+      Set-Cookie:
+      - csrftoken=9XnKSVvncD4YxngZis26qyT25HfE0lzN; expires=Sun, 26-Nov-2017 20:33:02
+        GMT; Max-Age=31449600; Path=/; secure
+      - mid=WDtC_gAEAAEXHWmauDXD8TFDNQSv; expires=Sat, 22-Nov-2036 20:33:02 GMT; Max-Age=630720000;
+        Path=/
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '12'
+    body:
+      encoding: UTF-8
+      string: No URL Match
+    http_version: 
+  recorded_at: Sun, 27 Nov 2016 20:33:02 GMT
+recorded_with: VCR 3.0.3

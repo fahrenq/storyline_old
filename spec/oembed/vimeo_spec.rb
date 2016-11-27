@@ -1,5 +1,4 @@
 require 'rails_helper'
-require 'oembedapi/vimeo'
 
 describe OembedApi::Vimeo, :vcr do
   it 'receives successful response' do

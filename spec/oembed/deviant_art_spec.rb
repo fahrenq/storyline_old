@@ -1,5 +1,4 @@
 require 'rails_helper'
-require 'oembedapi/deviant_art'
 
 describe OembedApi::DeviantArt, :vcr do
   it 'receives successful response' do

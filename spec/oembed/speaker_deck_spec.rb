@@ -1,5 +1,4 @@
 require 'rails_helper'
-require 'oembedapi/speaker_deck'
 
 describe OembedApi::SpeakerDeck, :vcr do
   it 'receives successful response' do

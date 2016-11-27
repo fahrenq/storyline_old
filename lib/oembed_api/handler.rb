@@ -1,12 +1,4 @@
 require 'uri'
-require 'oembedapi/twitter'
-require 'oembedapi/youtube'
-require 'oembedapi/speaker_deck'
-require 'oembedapi/deviant_art'
-require 'oembedapi/instagram'
-require 'oembedapi/vimeo'
-require 'oembedapi/codepen'
-require 'oembedapi/soundcloud'
 
 module OembedApi
   class Handler

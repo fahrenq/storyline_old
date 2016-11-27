@@ -1,5 +1,4 @@
 require 'rails_helper'
-require 'oembedapi/instagram'
 
 describe OembedApi::Instagram, :vcr do
   it 'receives successful response' do

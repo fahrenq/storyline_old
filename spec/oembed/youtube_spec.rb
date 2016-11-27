@@ -1,5 +1,4 @@
 require 'rails_helper'
-require 'oembedapi/youtube'
 
 describe OembedApi::Youtube, :vcr do
   it 'receives successful response' do
