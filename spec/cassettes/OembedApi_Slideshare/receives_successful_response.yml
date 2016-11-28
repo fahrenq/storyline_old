@@ -1,0 +1,87 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://www.slideshare.net/api/oembed/2?format=json&url=http://www.slideshare.net/inarocket/learn-bem-css-naming-convention/2-Learn_frontend_development_at_rocket
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 28 Nov 2016 18:59:57 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 200 OK
+      X-Request-Uuid:
+      - BtHeS/fxWxYH5OdZnt3sOg==
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      - nosniff
+      X-Runtime:
+      - '0.032012'
+      X-Request-Id:
+      - f4ce8c3b565ee5f35b0c02e8385d4d21
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Bench-Route:
+      - oembed/get_oembed_code
+      P3p:
+      - CP="OTI DSP COR CUR ADM DEV PSD IVD CONo OUR IND"
+      X-Varnish:
+      - '753669872'
+      Age:
+      - '0'
+      Accept-Ranges:
+      - bytes
+      X-Fs-Uuid:
+      - 17b4a0e2354b8b144095b5b9942b0000
+      X-Li-Fabric:
+      - prod-lva1
+      Set-Cookie:
+      - SERVERID=r88|WDx+s|WDx+s; path=/
+      - _uv_id=1758324602; Path=/; Domain=.slideshare.net
+      - bcookie="v=2&51f4d835-697a-435c-80a4-114bbcf06f4f"; domain=.slideshare.net;
+        Path=/; Expires=Thu, 29-Nov-2018 06:37:29 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Li-Pop:
+      - PROD-IDB2
+      X-Li-Uuid:
+      - F7Sg4jVLixRAlbW5lCsAAA==
+    body:
+      encoding: ASCII-8BIT
+      string: '{"thumbnail":"//cdn.slidesharecdn.com/ss_thumbnails/learn-bem-css-naming-convention-160906200350-thumbnail.jpg?cb=1473332126","version":"1.0","provider_url":"http://www.slideshare.net","total_slides":27,"author_url":"http://www.slideshare.net/inarocket","type":"rich","title":"Learn
+        BEM: CSS Naming Convention","thumbnail_width":170,"slide_image_baseurl":"//image.slidesharecdn.com/learn-bem-css-naming-convention-160906200350/95/slide-","thumbnail_height":128,"slideshow_id":65752735,"version_no":"1473332126","thumbnail_url":"https://cdn.slidesharecdn.com/ss_thumbnails/learn-bem-css-naming-convention-160906200350-thumbnail.jpg?cb=1473332126","provider_name":"SlideShare","html":"\u003Ciframe
+        src=\"https://www.slideshare.net/slideshow/embed_code/key/8IvB9fJqJ1ppUJ\"
+        width=\"427\" height=\"356\" frameborder=\"0\" marginwidth=\"0\" marginheight=\"0\"
+        scrolling=\"no\" style=\"border:1px solid #CCC; border-width:1px; margin-bottom:5px;
+        max-width: 100%;\" allowfullscreen\u003E \u003C/iframe\u003E \u003Cdiv style=\"margin-bottom:5px\"\u003E
+        \u003Cstrong\u003E \u003Ca href=\"https://www.slideshare.net/inarocket/learn-bem-css-naming-convention\"
+        title=\"Learn BEM: CSS Naming Convention\" target=\"_blank\"\u003ELearn BEM:
+        CSS Naming Convention\u003C/a\u003E \u003C/strong\u003E from \u003Cstrong\u003E\u003Ca
+        target=\"_blank\" href=\"http://www.slideshare.net/inarocket\"\u003EIn a Rocket\u003C/a\u003E\u003C/strong\u003E
+        \u003C/div\u003E\n\n","conversion_version":2,"height":355,"width":425,"slide_image_baseurl_suffix":"-1024.jpg","author_name":"In
+        a Rocket"}'
+    http_version: 
+  recorded_at: Mon, 28 Nov 2016 18:59:57 GMT
+recorded_with: VCR 3.0.3

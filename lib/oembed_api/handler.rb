@@ -10,7 +10,8 @@ module OembedApi
       soundcloud: OembedApi::Soundcloud,
       vimeo: OembedApi::Vimeo,
       instagram: OembedApi::Instagram,
-      speakerdeck: OembedApi::SpeakerDeck,
+      speakerdeck: OembedApi::Speakerdeck,
+      slideshare: OembedApi::Slideshare,
       deviantart: OembedApi::DeviantArt,
       codepen: OembedApi::Codepen
     }.freeze

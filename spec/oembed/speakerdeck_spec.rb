@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe OembedApi::SpeakerDeck, :vcr do
+describe OembedApi::Speakerdeck, :vcr do
   it 'receives successful response' do
     response = subject.fetch('https://speakerdeck.com/akmur/atom-resistance-is-futile')
     expect(response.is_a?(Hash)).to be_truthy

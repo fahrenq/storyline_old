@@ -1,5 +1,5 @@
 module OembedApi
-  class SpeakerDeck
+  class Speakerdeck
     include Oembed::Client
 
     def endpoint_uri

@@ -1,0 +1,118 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://www.slideshare.net/api/oembed/2?format=json&url=http://www.sledshr.et/ifrontend_development_at_ot
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 28 Nov 2016 18:59:57 GMT
+      Content-Type:
+      - text/html; charset=utf-8
+      Status:
+      - 404 Not Found
+      X-Request-Id:
+      - 36c5bb13c5fde7ed9ddceca30bab6907
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Request-Uuid:
+      - IBbRE6S4MBePShq/vm5aWQ==
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      X-Runtime:
+      - '0.010104'
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - no-cache
+      X-Bench-Route:
+      - oembed/get_oembed_code
+      X-Varnish:
+      - '575477023'
+      Age:
+      - '0'
+      X-Fs-Uuid:
+      - 295cacf7354b8b1440dde585942b0000
+      X-Li-Fabric:
+      - prod-lva1
+      Set-Cookie:
+      - SERVERID=r87|WDx+s|WDx+s; path=/
+      - _uv_id=1562949148; Path=/; Domain=.slideshare.net
+      - bcookie="v=2&62720453-4f02-4554-8c8c-b896d4b8433e"; domain=.slideshare.net;
+        Path=/; Expires=Thu, 29-Nov-2018 06:37:29 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Li-Pop:
+      - PROD-IDB2
+      X-Li-Uuid:
+      - KVys9zVLixRA3eWFlCsAAA==
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        PCFET0NUWVBFIGh0bWw+CjxodG1sIHhtbG5zPSJodHRwOi8vd3d3LnczLm9y
+        Zy8xOTk5L3hodG1sIiB4bWw6bGFuZz0iZW4iIGxhbmc9ImVuIj4KICA8aGVh
+        ZD4KICAgIDxtZXRhIGh0dHAtZXF1aXY9IkNvbnRlbnQtVHlwZSIgY29udGVu
+        dD0idGV4dC9odG1sOyBjaGFyc2V0PXV0Zi04Ii8+CiAgICA8bGluayBocmVm
+        PSIvc3R5bGVzaGVldHMvZXJyb3IuY3NzIiB0eXBlPSJ0ZXh0L2NzcyIgcmVs
+        PSJzdHlsZXNoZWV0IiBtZWRpYT0ic2NyZWVuIiAvPgogICAgPGxpbmsgdHlw
+        ZT0idGV4dC9jc3MiIHJlbD0ic3R5bGVzaGVldCIgbWVkaWE9InNjcmVlbiIg
+        aHJlZj0iLi4vYmlnYm9vdC9jc3Mvc3MtY29yZS5jc3MiPgogICAgPHRpdGxl
+        PjQwNCBlcnJvci4gUGFnZSBOb3QgRm91bmQuPC90aXRsZT4KICAgIDxzY3Jp
+        cHQgdHlwZT0idGV4dC9qYXZhc2NyaXB0Ij4KICAgICAgZnVuY3Rpb24gZGlz
+        YWJsZVNlYXJjaChldmVudCkgewogICAgICAgIHZhciB0ID0gZG9jdW1lbnQu
+        Z2V0RWxlbWVudEJ5SWQoJ3NlYXJjaHN0cmluZycpOwogICAgICAgIGlmKHQu
+        dmFsdWUgPT09ICdUeXBlIHRleHQgaGVyZSDigKYnIHx8IHQudmFsdWUubGVu
+        Z3RoID09PSAwKSB7CiAgICAgICAgICBldmVudC5wcmV2ZW50RGVmYXVsdCgp
+        OwogICAgICAgIH0KICAgICAgfQogICAgPC9zY3JpcHQ+CiAgPC9oZWFkPgog
+        IDxib2R5PgogICAgPGRpdiBjbGFzcz0iY29udGFpbmVyIj4KICAgICAgPGRp
+        diBjbGFzcz0icm93Ij4KICAgICAgICA8ZGl2IGNsYXNzPSJzbWlsZXkiPgog
+        ICAgICAgICAgPGltZyBzcmM9Ii9pbWFnZXMvZXJyb3JzbWlsZXkucG5nIiB3
+        aWR0aD0iMTI4cHgiIGhlaWdodD0iMTI4cHgiIGFsdD0iZXJyb3IiIC8+CiAg
+        ICAgICAgPC9kaXY+CiAgICAgIDwvZGl2PgogICAgICA8ZGl2IGNsYXNzPSJy
+        b3ciPgogICAgICAgIDxkaXYgY2xhc3M9ImVycm9yQm94Ij4KICAgICAgICAg
+        IDxkaXYgY2xhc3M9InNwYW4zIj4KICAgICAgICAgICAgPGRpdiBjbGFzcz0i
+        ZXJyb3JDb2RlIj4KICAgICAgICAgICAgICA8aDE+NDA0PC9oMT4KICAgICAg
+        ICAgICAgPC9kaXY+CiAgICAgICAgICA8L2Rpdj4KICAgICAgICAgIDxkaXYg
+        Y2xhc3M9InNwYW43Ij4KICAgICAgICAgICAgPGRpdiBjbGFzcz0icGFnZS1o
+        ZWFkZXIiPgogICAgICAgICAgICAgIDxwIGNsYXNzPSJsZWFkIj5Tb3JyeSEg
+        V2UgY291bGQgbm90IGZpbmQgd2hhdCB5b3Ugd2VyZSBsb29raW5nIGZvciA6
+        KDwvcD4KICAgICAgICAgICAgICA8cD5Eb24ndCB3b3JyeSwgd2Ugd2lsbCBo
+        ZWxwIHlvdSBnZXQgdG8gdGhlIHJpZ2h0IHBsYWNlLjwvcD4KICAgICAgICAg
+        ICAgPC9kaXY+CiAgICAgICAgICAgIDxoMz5BcmUgeW91IGxvb2tpbmcgZm9y
+        PC9oMz4KICAgICAgICAgICAgPHVsPgogICAgICAgICAgICAgIDxsaT48YSBo
+        cmVmPSIvIj5Ib21lcGFnZTwvYT48L2xpPgogICAgICAgICAgICAgIDxsaSBj
+        bGFzcz0ibWlkZGxlIj48YSBocmVmPSIvY2hhbm5lbHMiPlNsaWRlU2hhcmUg
+        Q2hhbm5lbHM8L2E+PC9saT4KICAgICAgICAgICAgICA8bGk+PGEgaHJlZj0i
+        L3BvcHVsYXIiPlBvcHVsYXIgUHJlc2VudGF0aW9uczwvYT48L2xpPgogICAg
+        ICAgICAgICA8L3VsPgogICAgICAgICAgICA8ZGl2IGNsYXNzPSJzZWFyY2hT
+        ZWN0aW9uIj4KICAgICAgICAgICAgICA8Zm9ybSBzdHlsZT0iZGlzcGxheTog
+        aW5saW5lOyIgYWN0aW9uPSIvc2VhcmNoL3NsaWRlc2hvdyIgbWV0aG9kPSJn
+        ZXQiPgogICAgICAgICAgICAgICAgPGlucHV0IHR5cGU9InRleHQiIGlkPSJz
+        ZWFyY2hzdHJpbmciIG5hbWU9InEiIHZhbHVlPSJUeXBlIHRleHQgaGVyZSAm
+        aGVsbGlwOyIgY2xhc3M9ImVycm9yU2VhcmNoQm94IiBvbmNsaWNrPSJ0aGlz
+        LnZhbHVlID0gJyc7Ij4KICAgICAgICAgICAgICAgIDxidXR0b24gdHlwZT0i
+        c3VibWl0IiBvbmNsaWNrPSJkaXNhYmxlU2VhcmNoKGV2ZW50KSI+CiAgICAg
+        ICAgICAgICAgICAgIFNlYXJjaDxzcGFuPiZuYnNwOzwvc3Bhbj4KICAgICAg
+        ICAgICAgICAgIDwvYnV0dG9uPgogICAgICAgICAgICAgIDwvZm9ybT4KICAg
+        ICAgICAgICAgPC9kaXY+CiAgICAgICAgICA8L2Rpdj4KICAgICAgICA8L2Rp
+        dj4KICAgICAgPC9kaXY+CiAgICA8L2Rpdj4KICA8L2JvZHk+CjwvaHRtbD4=
+    http_version: 
+  recorded_at: Mon, 28 Nov 2016 18:59:57 GMT
+recorded_with: VCR 3.0.3
