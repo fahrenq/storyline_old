@@ -33,11 +33,11 @@ http_interactions:
       Cache-Control:
       - max-age=60
       Expires:
-      - Tue, 29 Nov 2016 18:51:58 GMT
+      - Tue, 29 Nov 2016 18:51:22 GMT
       Last-Modified:
-      - Tue, 29 Nov 2016 18:50:35 GMT
+      - Tue, 29 Nov 2016 18:35:11 GMT
       Etag:
-      - '"ef7436d3306e7e9255d34260863edbcf6d880195"'
+      - '"032d3638e8065391dbeecd94b9d454fc2abe4e43"'
       X-Ua-Compatible:
       - IE=edge
       X-Xss-Protection:
@@ -57,19 +57,19 @@ http_interactions:
       Accept-Ranges:
       - bytes
       Date:
-      - Tue, 29 Nov 2016 18:50:58 GMT
+      - Tue, 29 Nov 2016 18:50:23 GMT
       Age:
       - '0'
       Connection:
       - keep-alive
       X-Served-By:
-      - cache-iad2151-IAD, cache-ams4429-AMS
+      - cache-iad2125-IAD, cache-ams4427-AMS
       X-Cache:
       - MISS, MISS
       X-Cache-Hits:
       - 0, 0
       X-Timer:
-      - S1480445458.579211,VS0,VE126
+      - S1480445422.872663,VS0,VE137
       Vary:
       - User-Agent,Accept-Encoding
     body:
@@ -83,5 +83,5 @@ http_interactions:
         me by Jessie Ware \nhttps:\/\/itunes.apple.com\/us\/album\/say-you-love-me\/id909537169?i=909537180","thumbnail_url":"https:\/\/i.vimeocdn.com\/video\/574702569_640.jpg","thumbnail_width":640,"thumbnail_height":360,"thumbnail_url_with_play_button":"https:\/\/i.vimeocdn.com\/filter\/overlay?src0=https%3A%2F%2Fi.vimeocdn.com%2Fvideo%2F574702569_640.jpg&src1=http%3A%2F%2Ff.vimeocdn.com%2Fp%2Fimages%2Fcrawler_play.png","upload_date":"2016-06-08
         09:04:09","video_id":169850570,"uri":"\/videos\/169850570"}'
     http_version: 
-  recorded_at: Tue, 29 Nov 2016 18:50:57 GMT
+  recorded_at: Tue, 29 Nov 2016 18:50:22 GMT
 recorded_with: VCR 3.0.3

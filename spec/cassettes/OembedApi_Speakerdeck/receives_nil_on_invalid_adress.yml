@@ -23,7 +23,7 @@ http_interactions:
       Connection:
       - close
       Date:
-      - Sun, 27 Nov 2016 20:33:02 GMT
+      - Tue, 29 Nov 2016 18:50:56 GMT
       Status:
       - 301 Moved Permanently
       Strict-Transport-Security:
@@ -37,9 +37,9 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - 13a5a17c-4a2a-47d4-a6ff-8b720f91dbe1
+      - 3d4b42d1-17c8-4d6e-8eda-f88fded3de93
       X-Runtime:
-      - '0.002480'
+      - '0.017265'
       X-Rack-Cache:
       - miss
       Vary:
@@ -50,7 +50,7 @@ http_interactions:
       encoding: ASCII-8BIT
       string: ''
     http_version: 
-  recorded_at: Sun, 27 Nov 2016 20:33:03 GMT
+  recorded_at: Tue, 29 Nov 2016 18:50:55 GMT
 - request:
     method: get
     uri: https://speakerdeck.com/oembed.json?url=https://speakerdeck.com/akmu322
@@ -74,7 +74,7 @@ http_interactions:
       Connection:
       - close
       Date:
-      - Sun, 27 Nov 2016 20:33:03 GMT
+      - Tue, 29 Nov 2016 18:50:57 GMT
       Status:
       - 404 Not Found
       Strict-Transport-Security:
@@ -88,13 +88,13 @@ http_interactions:
       Cache-Control:
       - no-cache
       Set-Cookie:
-      - _secure_speakerd_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJTFlYTgyOWQ5NDQwMjEyMWI2MGVlOTZjNTk5MmJmYTViBjsAVA%3D%3D--ee0b9f50a873031cca24b9d8c38e43c38b577580;
-        path=/; expires=Sun, 11-Dec-2016 20:33:03 GMT; secure; HttpOnly
+      - _secure_speakerd_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJTU3MmViMzE1NWI0ODA3ODM0ZTUzNWY4YmFiMmQ4MGE0BjsAVA%3D%3D--5b488e3b4e1744733e7ba4bf15a53a45229b15cc;
+        path=/; expires=Tue, 13-Dec-2016 18:50:57 GMT; secure; HttpOnly
       - peek=false; path=/
       X-Request-Id:
-      - 6eb339da-2108-496a-a8fa-80a4a8c31f01
+      - 917d8350-2785-47cc-80ff-092358d6a95b
       X-Runtime:
-      - '0.027364'
+      - '0.130629'
       X-Rack-Cache:
       - miss
       Vary:
@@ -105,5 +105,5 @@ http_interactions:
       encoding: ASCII-8BIT
       string: " "
     http_version: 
-  recorded_at: Sun, 27 Nov 2016 20:33:03 GMT
+  recorded_at: Tue, 29 Nov 2016 18:50:56 GMT
 recorded_with: VCR 3.0.3

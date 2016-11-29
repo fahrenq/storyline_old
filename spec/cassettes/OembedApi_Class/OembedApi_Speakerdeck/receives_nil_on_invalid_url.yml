@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://speakerdeck.com/oembed.json?url=https://speakerdeck.com/akmu322
+    uri: http://speakerdeck.com/oembed.json?url=https://www.err.ror/badlink
     body:
       encoding: US-ASCII
       string: ''
@@ -23,7 +23,7 @@ http_interactions:
       Connection:
       - close
       Date:
-      - Mon, 28 Nov 2016 18:59:59 GMT
+      - Tue, 29 Nov 2016 18:50:21 GMT
       Status:
       - 301 Moved Permanently
       Strict-Transport-Security:
@@ -31,15 +31,15 @@ http_interactions:
       Content-Type:
       - text/html
       Location:
-      - https://speakerdeck.com/oembed.json?url=https%3A%2F%2Fspeakerdeck.com%2Fakmu322
+      - https://speakerdeck.com/oembed.json?url=https%3A%2F%2Fwww.err.ror%2Fbadlink
       X-Ua-Compatible:
       - IE=Edge,chrome=1
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - d0c7478a-c0e5-41b0-9aaf-c5a48c42b68f
+      - e097e439-eea0-402a-8216-ed169bbcb567
       X-Runtime:
-      - '0.002218'
+      - '0.002971'
       X-Rack-Cache:
       - miss
       Vary:
@@ -50,10 +50,10 @@ http_interactions:
       encoding: ASCII-8BIT
       string: ''
     http_version: 
-  recorded_at: Mon, 28 Nov 2016 19:00:00 GMT
+  recorded_at: Tue, 29 Nov 2016 18:50:20 GMT
 - request:
     method: get
-    uri: https://speakerdeck.com/oembed.json?url=https://speakerdeck.com/akmu322
+    uri: https://speakerdeck.com/oembed.json?url=https://www.err.ror/badlink
     body:
       encoding: US-ASCII
       string: ''
@@ -74,7 +74,7 @@ http_interactions:
       Connection:
       - close
       Date:
-      - Mon, 28 Nov 2016 19:00:00 GMT
+      - Tue, 29 Nov 2016 18:50:21 GMT
       Status:
       - 404 Not Found
       Strict-Transport-Security:
@@ -88,13 +88,13 @@ http_interactions:
       Cache-Control:
       - no-cache
       Set-Cookie:
-      - _secure_speakerd_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJWI1ODg2NjYxMmVmNWRiNTBmMDg1ZGMxZGM0ZGUyZTZjBjsAVA%3D%3D--06a41a8bb1c0c7cf242a7fbeedaa08b98fce9dbe;
-        path=/; expires=Mon, 12-Dec-2016 19:00:00 GMT; secure; HttpOnly
+      - _secure_speakerd_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJThhYWNjMTdhM2NmNGI2ZWQwMjlmYTU5ZWQxNWZlYzE2BjsAVA%3D%3D--7b954ba1008781689374bee94a55a9641243e803;
+        path=/; expires=Tue, 13-Dec-2016 18:50:21 GMT; secure; HttpOnly
       - peek=false; path=/
       X-Request-Id:
-      - 7182d332-3802-48e5-a52f-da39dcff1a5b
+      - 78d10ecd-a75c-4c85-93ee-1e46715f41f1
       X-Runtime:
-      - '0.051342'
+      - '0.013107'
       X-Rack-Cache:
       - miss
       Vary:
@@ -105,5 +105,5 @@ http_interactions:
       encoding: ASCII-8BIT
       string: " "
     http_version: 
-  recorded_at: Mon, 28 Nov 2016 19:00:00 GMT
+  recorded_at: Tue, 29 Nov 2016 18:50:20 GMT
 recorded_with: VCR 3.0.3

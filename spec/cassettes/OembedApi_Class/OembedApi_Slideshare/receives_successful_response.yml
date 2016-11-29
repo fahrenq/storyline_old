@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Tue, 29 Nov 2016 18:50:54 GMT
+      - Tue, 29 Nov 2016 18:50:19 GMT
       Content-Type:
       - application/json; charset=utf-8
       Status:
@@ -30,15 +30,15 @@ http_interactions:
       - nosniff
       - nosniff
       X-Runtime:
-      - '0.036341'
+      - '0.035750'
       X-Request-Id:
-      - f1564dbca4622e46cfaf28a8a1dd6fab
+      - 02585e1e6b85314991806a5c3c26408e
       X-Xss-Protection:
       - 1; mode=block
       X-Bench-Route:
       - oembed/get_oembed_code
       X-Request-Uuid:
-      - V/ZDNbAHmmn/rs+7AWRpjQ==
+      - 71KfcA4JeHl3D4UmSapC8g==
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Ua-Compatible:
@@ -46,20 +46,20 @@ http_interactions:
       P3p:
       - CP="OTI DSP COR CUR ADM DEV PSD IVD CONo OUR IND"
       X-Varnish:
-      - '959763278'
+      - '963916651'
       Age:
       - '0'
       Accept-Ranges:
       - bytes
       X-Fs-Uuid:
-      - 451fab174c998b1440870861952b0000
+      - 45f7e5c743998b1400915ef0962b0000
       X-Li-Fabric:
       - prod-lva1
       Set-Cookie:
-      - SERVERID=r88|WD3OE|WD3OE; path=/
-      - _uv_id=671543557; Path=/; Domain=.slideshare.net
-      - bcookie="v=2&65555b67-50e4-46b3-86ec-4baca72d597f"; domain=.slideshare.net;
-        Path=/; Expires=Fri, 30-Nov-2018 06:28:26 GMT
+      - SERVERID=r88|WD3N7|WD3N7; path=/
+      - _uv_id=438185079; Path=/; Domain=.slideshare.net
+      - bcookie="v=2&13d161da-6668-4cf0-89c4-f9424b62b116"; domain=.slideshare.net;
+        Path=/; Expires=Fri, 30-Nov-2018 06:27:51 GMT
       Transfer-Encoding:
       - chunked
       Connection:
@@ -67,7 +67,7 @@ http_interactions:
       X-Li-Pop:
       - prod-tln1
       X-Li-Uuid:
-      - RR+rF0yZixRAhwhhlSsAAA==
+      - Rfflx0OZixQAkV7wlisAAA==
     body:
       encoding: ASCII-8BIT
       string: '{"version_no":"1473332126","slideshow_id":65752735,"slide_image_baseurl":"//image.slidesharecdn.com/learn-bem-css-naming-convention-160906200350/95/slide-","thumbnail_url":"https://cdn.slidesharecdn.com/ss_thumbnails/learn-bem-css-naming-convention-160906200350-thumbnail.jpg?cb=1473332126","author_name":"In
@@ -83,5 +83,5 @@ http_interactions:
         \u003C/div\u003E\n\n","version":"1.0","conversion_version":2,"author_url":"http://www.slideshare.net/inarocket","title":"Learn
         BEM: CSS Naming Convention","thumbnail":"//cdn.slidesharecdn.com/ss_thumbnails/learn-bem-css-naming-convention-160906200350-thumbnail.jpg?cb=1473332126","thumbnail_width":170}'
     http_version: 
-  recorded_at: Tue, 29 Nov 2016 18:50:53 GMT
+  recorded_at: Tue, 29 Nov 2016 18:50:18 GMT
 recorded_with: VCR 3.0.3

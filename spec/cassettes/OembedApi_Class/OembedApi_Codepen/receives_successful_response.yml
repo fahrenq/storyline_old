@@ -19,7 +19,7 @@ http_interactions:
       message: Found
     headers:
       Date:
-      - Tue, 29 Nov 2016 18:50:43 GMT
+      - Tue, 29 Nov 2016 18:50:07 GMT
       Content-Type:
       - text/html; charset=utf-8
       Transfer-Encoding:
@@ -27,18 +27,18 @@ http_interactions:
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=d0268a5fa5e695e3bfbd5303e52f46ba11480445443; expires=Wed, 29-Nov-17
-        18:50:43 GMT; path=/; domain=.codepen.io; HttpOnly
+      - __cfduid=d9d0ca2b3415cca19f387c3d4b8026dab1480445407; expires=Wed, 29-Nov-17
+        18:50:07 GMT; path=/; domain=.codepen.io; HttpOnly
       Status:
       - 302 Found
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - a21a611a-ddaa-49dc-b8c7-68c4656ef63c
+      - 1abbebce-2b70-49a6-8746-eb6e1222c702
       Location:
       - https://codepen.io/api/oembed?url=http%3A%2F%2Fcodepen.io%2Fmudrenok%2Fpen%2FaBWbgM
       X-Runtime:
-      - '0.004361'
+      - '0.003823'
       X-Frame-Options:
       - ALLOWALL
       X-Powered-By:
@@ -46,12 +46,12 @@ http_interactions:
       Server:
       - cloudflare-nginx
       Cf-Ray:
-      - 30983f33363636f6-ARN
+      - 30983e56b63436e4-ARN
     body:
       encoding: UTF-8
       string: <html><body>You are being <a href="https://codepen.io/api/oembed?url=http%3A%2F%2Fcodepen.io%2Fmudrenok%2Fpen%2FaBWbgM">redirected</a>.</body></html>
     http_version: 
-  recorded_at: Tue, 29 Nov 2016 18:50:42 GMT
+  recorded_at: Tue, 29 Nov 2016 18:50:07 GMT
 - request:
     method: get
     uri: https://codepen.io/api/oembed?url=http://codepen.io/mudrenok/pen/aBWbgM
@@ -71,7 +71,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 29 Nov 2016 18:50:44 GMT
+      - Tue, 29 Nov 2016 18:50:08 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -79,16 +79,16 @@ http_interactions:
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=d1233ae80809c7e616ef6c1b7d91180c41480445443; expires=Wed, 29-Nov-17
-        18:50:43 GMT; path=/; domain=.codepen.io; HttpOnly
-      - _codepen_session=bW5SbjlwdWMyR3FlOXZpZmxLTTdaa1YxaGZ4U0piR0dhMXhXV1dXYS9ibkhrSDRpbVUrOE42MEtYa0o2dnNKRG91Z2xyOEI2NjdqcklBWmxmc25YUnoyMzFIZXZFWG1kd1ZpQWg5V3RjQlk9LS1FVGJXOWROQklvWHJoU2gwQXJPWCtnPT0%3D--72722d2438110e7820baa673070b9f800aa1d4e8;
-        path=/; expires=Thu, 29 Dec 2016 18:50:44 -0000; HttpOnly
+      - __cfduid=d9a13fe107c6d69290ae6e33a71cb1b0b1480445408; expires=Wed, 29-Nov-17
+        18:50:08 GMT; path=/; domain=.codepen.io; HttpOnly
+      - _codepen_session=VVdVQlpxMU9CZlRxQmlvaHJMcTltMkZydWYycHZSM01Kenl6SWROdmNBNDJBK0J2YWRldzRvbUgzRGVPTnRzeHI1dUEvdEZhSWtlb2wxQk5XbzVjVHNkbzBSb2FrTjdGZFJKWjhmUENYMG89LS11bHZlSGQ5T2RSd2dvbi9SdFZTelR3PT0%3D--650ed4f52708bcfccf369fe5b39f35a580d1fe8c;
+        path=/; expires=Thu, 29 Dec 2016 18:50:08 -0000; HttpOnly
       Status:
       - 200 OK
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - d33375e8-cfbb-4c7e-81ba-8f43c2d2ef1e
+      - 2361c9ce-94da-4511-a8f8-72495073393a
       X-Env:
       - production
       Etag:
@@ -96,13 +96,13 @@ http_interactions:
       X-Frame-Options:
       - ALLOWALL
       X-Runtime:
-      - '0.025309'
+      - '0.016025'
       X-Powered-By:
       - Phusion Passenger Enterprise 5.0.30
       Server:
       - cloudflare-nginx
       Cf-Ray:
-      - 30983f358df90a4e-ARN
+      - 30983e598cc216a0-ARN
     body:
       encoding: ASCII-8BIT
       string: |-
@@ -123,5 +123,5 @@ http_interactions:
           "html": "<iframe id=\"cp_embed_aBWbgM\" src=\"https://codepen.io/mudrenok/embed/preview/aBWbgM?height=300&amp;amp;slug-hash=aBWbgM&amp;amp;default-tabs=css,result&amp;amp;host=http%3A%2F%2Fcodepen.io&amp;amp;embed-version=2\" title=\"wave (CSS animation)\" scrolling=\"no\" frameborder=\"0\" height=\"300\" allowtransparency=\"true\" class=\"cp_embed_iframe\" style=\"width: 100%; overflow: hidden;\"></iframe>"
         }
     http_version: 
-  recorded_at: Tue, 29 Nov 2016 18:50:43 GMT
+  recorded_at: Tue, 29 Nov 2016 18:50:08 GMT
 recorded_with: VCR 3.0.3

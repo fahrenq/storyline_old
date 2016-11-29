@@ -23,7 +23,7 @@ http_interactions:
       Connection:
       - close
       Date:
-      - Fri, 11 Nov 2016 12:14:24 GMT
+      - Tue, 29 Nov 2016 18:50:19 GMT
       Status:
       - 301 Moved Permanently
       Strict-Transport-Security:
@@ -37,9 +37,9 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - f1107575-632d-461d-8d2d-481210c27796
+      - 05f42b12-7ef8-42d9-8d90-da6cc182b2da
       X-Runtime:
-      - '0.002890'
+      - '0.005310'
       X-Rack-Cache:
       - miss
       Vary:
@@ -50,7 +50,7 @@ http_interactions:
       encoding: ASCII-8BIT
       string: ''
     http_version: 
-  recorded_at: Fri, 11 Nov 2016 12:14:24 GMT
+  recorded_at: Tue, 29 Nov 2016 18:50:19 GMT
 - request:
     method: get
     uri: https://speakerdeck.com/oembed.json?url=https://speakerdeck.com/akmur/atom-resistance-is-futile
@@ -74,7 +74,7 @@ http_interactions:
       Connection:
       - close
       Date:
-      - Fri, 11 Nov 2016 12:14:25 GMT
+      - Tue, 29 Nov 2016 18:50:20 GMT
       Status:
       - 200 OK
       Strict-Transport-Security:
@@ -90,13 +90,13 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       Set-Cookie:
-      - _secure_speakerd_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJWNjOTk0ZjdmZTM2OGY5YWQ4NzlkNmNjZGM4MzhjMzZkBjsAVA%3D%3D--f7fdcb067d60fc662b18fa40c75a549bd0a2f8eb;
-        path=/; expires=Fri, 25-Nov-2016 12:14:25 GMT; secure; HttpOnly
+      - _secure_speakerd_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJWE4YzJiMmVhYTA1MDc5ZTY2OTI0MGZiOTZlMTliZDE1BjsAVA%3D%3D--2a9f27e38c4e7250d89f47984a066718b068c58f;
+        path=/; expires=Tue, 13-Dec-2016 18:50:20 GMT; secure; HttpOnly
       - peek=false; path=/
       X-Request-Id:
-      - 99b0d8e9-daac-4c87-bf93-9b6a7f9de725
+      - 9cc5bc00-53c3-4849-a249-4fffc61ee454
       X-Runtime:
-      - '0.034941'
+      - '0.297369'
       X-Rack-Cache:
       - miss
       Vary:
@@ -114,5 +114,5 @@ http_interactions:
 
 '
     http_version: 
-  recorded_at: Fri, 11 Nov 2016 12:14:25 GMT
+  recorded_at: Tue, 29 Nov 2016 18:50:20 GMT
 recorded_with: VCR 3.0.3

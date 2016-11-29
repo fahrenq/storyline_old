@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://speakerdeck.com/oembed.json?url=https://speakerdeck.com/akmu322
+    uri: http://speakerdeck.com/oembed.json?url=https://speakerdeck.com/akmur/atom-resistance-is-futile
     body:
       encoding: US-ASCII
       string: ''
@@ -23,7 +23,7 @@ http_interactions:
       Connection:
       - close
       Date:
-      - Wed, 23 Nov 2016 16:00:37 GMT
+      - Tue, 29 Nov 2016 18:50:55 GMT
       Status:
       - 301 Moved Permanently
       Strict-Transport-Security:
@@ -31,15 +31,15 @@ http_interactions:
       Content-Type:
       - text/html
       Location:
-      - https://speakerdeck.com/oembed.json?url=https%3A%2F%2Fspeakerdeck.com%2Fakmu322
+      - https://speakerdeck.com/oembed.json?url=https%3A%2F%2Fspeakerdeck.com%2Fakmur%2Fatom-resistance-is-futile
       X-Ua-Compatible:
       - IE=Edge,chrome=1
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - 60d3817b-284a-4233-bec8-1bf710802f00
+      - 76f006d7-bf4c-4075-a3b4-69c1307d08a2
       X-Runtime:
-      - '0.005157'
+      - '0.002002'
       X-Rack-Cache:
       - miss
       Vary:
@@ -50,10 +50,10 @@ http_interactions:
       encoding: ASCII-8BIT
       string: ''
     http_version: 
-  recorded_at: Wed, 23 Nov 2016 16:00:37 GMT
+  recorded_at: Tue, 29 Nov 2016 18:50:54 GMT
 - request:
     method: get
-    uri: https://speakerdeck.com/oembed.json?url=https://speakerdeck.com/akmu322
+    uri: https://speakerdeck.com/oembed.json?url=https://speakerdeck.com/akmur/atom-resistance-is-futile
     body:
       encoding: US-ASCII
       string: ''
@@ -66,17 +66,17 @@ http_interactions:
       - Ruby
   response:
     status:
-      code: 404
-      message: Not Found
+      code: 200
+      message: OK
     headers:
       Server:
       - Cowboy
       Connection:
       - close
       Date:
-      - Wed, 23 Nov 2016 16:00:38 GMT
+      - Tue, 29 Nov 2016 18:50:56 GMT
       Status:
-      - 404 Not Found
+      - 200 OK
       Strict-Transport-Security:
       - max-age=0
       X-Frame-Options:
@@ -85,16 +85,18 @@ http_interactions:
       - application/json; charset=utf-8
       X-Ua-Compatible:
       - IE=Edge,chrome=1
+      Etag:
+      - '"402820082124b11fb49051bec44ca3d4"'
       Cache-Control:
-      - no-cache
+      - max-age=0, private, must-revalidate
       Set-Cookie:
-      - _secure_speakerd_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJTE2MTMzZGIxMmRmYmVjNDQ2NjEwZjdiZDFmN2MxN2MxBjsAVA%3D%3D--0b1f563134f392221efefb7ace2539f3710017c6;
-        path=/; expires=Wed, 07-Dec-2016 16:00:38 GMT; secure; HttpOnly
+      - _secure_speakerd_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJThlZWMxMmMwYzg1NWI1ZjU1MDlhNTg5NTAyZDRmODQzBjsAVA%3D%3D--fbd996a74e6e3c5ec18393f5f1cbeecf1c32c8c2;
+        path=/; expires=Tue, 13-Dec-2016 18:50:56 GMT; secure; HttpOnly
       - peek=false; path=/
       X-Request-Id:
-      - af929aad-74cb-42dd-9f39-405d14bf3ce2
+      - 4d2045fe-d709-4b86-8c65-1fa2d12c499c
       X-Runtime:
-      - '0.011256'
+      - '0.035273'
       X-Rack-Cache:
       - miss
       Vary:
@@ -103,7 +105,14 @@ http_interactions:
       - 1.1 vegur
     body:
       encoding: ASCII-8BIT
-      string: " "
+      string: '{"type":"rich","version":1.0,"provider_name":"Speaker Deck","provider_url":"https://speakerdeck.com/","title":"Atom:
+        Resistance is Futile","author_name":"Alex Muraro","author_url":"https://speakerdeck.com/akmur","html":"\u003Ciframe
+        allowfullscreen=\"true\" allowtransparency=\"true\" frameborder=\"0\" height=\"596\"
+        id=\"talk_frame_334722\" mozallowfullscreen=\"true\" src=\"//speakerdeck.com/player/5c499bf3c2fe44ae87fa899e227be7a3\"
+        style=\"border:0; padding:0; margin:0; background:transparent;\" webkitallowfullscreen=\"true\"
+        width=\"710\"\u003E\u003C/iframe\u003E\n","width":710,"height":596}
+
+'
     http_version: 
-  recorded_at: Wed, 23 Nov 2016 16:00:38 GMT
+  recorded_at: Tue, 29 Nov 2016 18:50:55 GMT
 recorded_with: VCR 3.0.3

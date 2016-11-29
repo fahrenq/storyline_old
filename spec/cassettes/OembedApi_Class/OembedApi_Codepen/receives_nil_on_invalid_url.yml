@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://codepen.io/api/oembed?url=http://codepen.i/ureo/e/BWgM
+    uri: http://codepen.io/api/oembed?url=https://www.err.ror/badlink
     body:
       encoding: US-ASCII
       string: ''
@@ -19,7 +19,7 @@ http_interactions:
       message: Found
     headers:
       Date:
-      - Wed, 23 Nov 2016 16:00:32 GMT
+      - Tue, 29 Nov 2016 18:50:09 GMT
       Content-Type:
       - text/html; charset=utf-8
       Transfer-Encoding:
@@ -27,18 +27,18 @@ http_interactions:
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=d09c34929dad838823d161d4cbf50c9b01479916831; expires=Thu, 23-Nov-17
-        16:00:31 GMT; path=/; domain=.codepen.io; HttpOnly
+      - __cfduid=db8fc5cb75d7455ea869f6e4cab11cf8f1480445409; expires=Wed, 29-Nov-17
+        18:50:09 GMT; path=/; domain=.codepen.io; HttpOnly
       Status:
       - 302 Found
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - b1c0c945-b0e7-4673-8440-fe63801700aa
+      - 4f2e2627-4934-4281-b254-871750d9144d
       Location:
-      - https://codepen.io/api/oembed?url=http%3A%2F%2Fcodepen.i%2Fureo%2Fe%2FBWgM
+      - https://codepen.io/api/oembed?url=https%3A%2F%2Fwww.err.ror%2Fbadlink
       X-Runtime:
-      - '0.002972'
+      - '0.003051'
       X-Frame-Options:
       - ALLOWALL
       X-Powered-By:
@@ -46,15 +46,15 @@ http_interactions:
       Server:
       - cloudflare-nginx
       Cf-Ray:
-      - 3065d5a734d636de-ARN
+      - 30983e5ed34d37a4-ARN
     body:
       encoding: UTF-8
-      string: <html><body>You are being <a href="https://codepen.io/api/oembed?url=http%3A%2F%2Fcodepen.i%2Fureo%2Fe%2FBWgM">redirected</a>.</body></html>
+      string: <html><body>You are being <a href="https://codepen.io/api/oembed?url=https%3A%2F%2Fwww.err.ror%2Fbadlink">redirected</a>.</body></html>
     http_version: 
-  recorded_at: Wed, 23 Nov 2016 16:00:32 GMT
+  recorded_at: Tue, 29 Nov 2016 18:50:08 GMT
 - request:
     method: get
-    uri: https://codepen.io/api/oembed?url=http://codepen.i/ureo/e/BWgM
+    uri: https://codepen.io/api/oembed?url=https://www.err.ror/badlink
     body:
       encoding: US-ASCII
       string: ''
@@ -71,7 +71,7 @@ http_interactions:
       message: Not Found
     headers:
       Date:
-      - Wed, 23 Nov 2016 16:00:33 GMT
+      - Tue, 29 Nov 2016 18:50:10 GMT
       Content-Type:
       - text/html; charset=utf-8
       Transfer-Encoding:
@@ -79,20 +79,20 @@ http_interactions:
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=d7c83969ddbf3af862927b3bec6dfe9121479916832; expires=Thu, 23-Nov-17
-        16:00:32 GMT; path=/; domain=.codepen.io; HttpOnly
-      - _codepen_session=Yzk0ZzRrdjhVaXRzYWh0aGVxY0JzVWJBalRWaHZaUkRSRkJ4VkVkRjJyOHltTUlKZzFMeUM3REpRTEt2VENtQVcraW5uR0tCZTZMajdQRURCNURKMnNuT1hBVWNSNG9mdVd6bFRpZ256Wjg9LS1zNWk2QTZFRVFUU1pzclBkVSs0WEJnPT0%3D--fbfacf1c5b90b5e7095dcea3a07c734fe7e267a5;
-        path=/; expires=Fri, 23 Dec 2016 16:00:33 -0000; HttpOnly
+      - __cfduid=d99be21a766d24b5cd2aa48cd868ad5b61480445409; expires=Wed, 29-Nov-17
+        18:50:09 GMT; path=/; domain=.codepen.io; HttpOnly
+      - _codepen_session=YVpOOWNtU1lCTmh2eUl5eEZlOFVFdXgxT0FoVjByNG5rTmdEVWJUeTZWL2gvdTBKallRYnE1N1Vhb28zc1kyU2VQejJpWTU1K1R1emdmSWNxblJsTkljNENwOXlWbjgxOEtsVStMb2lreVk9LS1CbzNXSVBqdDM2WlN0RjNLakNINFVBPT0%3D--345473a156a54dfc9eb359e00ab8125876474008;
+        path=/; expires=Thu, 29 Dec 2016 18:50:10 -0000; HttpOnly
       Status:
       - 404 Not Found
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - 36bf5c0d-daa8-404b-bc19-85488922f869
+      - c9556df2-e84a-4805-a267-5fef541ebec4
       X-Env:
       - production
       X-Runtime:
-      - '0.012265'
+      - '0.012148'
       X-Frame-Options:
       - ALLOWALL
       X-Powered-By:
@@ -100,10 +100,10 @@ http_interactions:
       Server:
       - cloudflare-nginx
       Cf-Ray:
-      - 3065d5aacc3937b6-ARN
+      - 30983e611f4c375c-ARN
     body:
       encoding: ASCII-8BIT
       string: Not Found
     http_version: 
-  recorded_at: Wed, 23 Nov 2016 16:00:33 GMT
+  recorded_at: Tue, 29 Nov 2016 18:50:09 GMT
 recorded_with: VCR 3.0.3

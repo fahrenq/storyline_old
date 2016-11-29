@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://www.slideshare.net/api/oembed/2?format=json&url=http://www.sledshr.et/ifrontend_development_at_ot
+    uri: http://www.slideshare.net/api/oembed/2?format=json&url=https://www.err.ror/badlink
     body:
       encoding: US-ASCII
       string: ''
@@ -21,40 +21,40 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Tue, 29 Nov 2016 18:50:55 GMT
+      - Tue, 29 Nov 2016 18:50:19 GMT
       Content-Type:
       - text/html; charset=utf-8
       Status:
       - 404 Not Found
-      X-Runtime:
-      - '0.008759'
-      X-Bench-Route:
-      - oembed/get_oembed_code
-      X-Content-Type-Options:
-      - nosniff
-      X-Xss-Protection:
-      - 1; mode=block
       Cache-Control:
       - no-cache
-      X-Request-Uuid:
-      - "+wlsFR2EmeLdsox53xdDRQ=="
+      X-Content-Type-Options:
+      - nosniff
+      X-Bench-Route:
+      - oembed/get_oembed_code
       X-Request-Id:
-      - 87df125aa8ff371ab91539e7b9288a54
+      - 91b971958e2d5694bc60149f1c62642a
+      X-Request-Uuid:
+      - igSf4sR7REXjDpwdGRrf3A==
+      X-Runtime:
+      - '0.011860'
       X-Ua-Compatible:
       - IE=Edge,chrome=1
+      X-Xss-Protection:
+      - 1; mode=block
       X-Varnish:
-      - '318071962'
+      - '963365674'
       Age:
       - '0'
       X-Fs-Uuid:
-      - f5f9b02b4c998b14c0384e8e952b0000
+      - 57982ada43998b14c079e939962b0000
       X-Li-Fabric:
       - prod-lva1
       Set-Cookie:
-      - SERVERID=r87|WD3OE|WD3OE; path=/
-      - _uv_id=1228823745; Path=/; Domain=.slideshare.net
-      - bcookie="v=2&cd5e0293-0e5d-46a1-8d1c-905fb605fd1b"; domain=.slideshare.net;
-        Path=/; Expires=Fri, 30-Nov-2018 06:28:27 GMT
+      - SERVERID=r88|WD3N7|WD3N7; path=/
+      - _uv_id=1753534090; Path=/; Domain=.slideshare.net
+      - bcookie="v=2&4607c224-da94-4e78-8ffc-c8bb955939ce"; domain=.slideshare.net;
+        Path=/; Expires=Fri, 30-Nov-2018 06:27:51 GMT
       Transfer-Encoding:
       - chunked
       Connection:
@@ -62,7 +62,7 @@ http_interactions:
       X-Li-Pop:
       - prod-tln1
       X-Li-Uuid:
-      - 9fmwK0yZixTAOE6OlSsAAA==
+      - V5gq2kOZixTAeek5lisAAA==
     body:
       encoding: ASCII-8BIT
       string: !binary |-
@@ -114,5 +114,5 @@ http_interactions:
         ICAgICAgICAgPC9kaXY+CiAgICAgICAgICA8L2Rpdj4KICAgICAgICA8L2Rp
         dj4KICAgICAgPC9kaXY+CiAgICA8L2Rpdj4KICA8L2JvZHk+CjwvaHRtbD4=
     http_version: 
-  recorded_at: Tue, 29 Nov 2016 18:50:54 GMT
+  recorded_at: Tue, 29 Nov 2016 18:50:18 GMT
 recorded_with: VCR 3.0.3

@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://backend.deviantart.com/oembed?url=http://www.deviantart.com/riie-645328427
+    uri: http://backend.deviantart.com/oembed?url=https://www.err.ror/badlink
     body:
       encoding: US-ASCII
       string: ''
@@ -21,23 +21,23 @@ http_interactions:
       Content-Type:
       - text/html; charset=ISO-8859-1
       Content-Length:
-      - '128'
+      - '102'
       Connection:
       - keep-alive
       Date:
-      - Wed, 23 Nov 2016 16:00:33 GMT
+      - Tue, 29 Nov 2016 18:50:10 GMT
       Server:
       - Apache
       X-Cache:
       - Error from cloudfront
       Via:
-      - 1.1 aeafa3db4617a306a1d43a9e2c98afad.cloudfront.net (CloudFront)
+      - 1.1 528e932a968fec7dcc37ac386f863bf3.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - 8v9LtLroPPpAJXslw_D-c1r4FnERjDWRUEVzjYhQdww8RnlZHhWlSw==
+      - v48mA9-eLXYK7LpU0rYINuUeUmNQ_FA72vecH8tdg5KxynsHloEPHA==
     body:
       encoding: UTF-8
-      string: 404 Not Found (http://www.deviantart.com/riie-645328427) The URL http://www.deviantart.com/riie-645328427
+      string: 404 Not Found (https://www.err.ror/badlink) The URL https://www.err.ror/badlink
         is not a deviation URL
     http_version: 
-  recorded_at: Wed, 23 Nov 2016 16:00:33 GMT
+  recorded_at: Tue, 29 Nov 2016 18:50:10 GMT
 recorded_with: VCR 3.0.3

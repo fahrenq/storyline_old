@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://soundcloud.com/oembed?format=json&url=https://oundc.loudom1savageeat-future
+    uri: http://soundcloud.com/oembed?format=json&url=https://www.err.ror/badlink
     body:
       encoding: US-ASCII
       string: ''
@@ -31,12 +31,12 @@ http_interactions:
       Content-Type:
       - text/html; charset=utf-8
       Date:
-      - Tue, 29 Nov 2016 18:50:55 GMT
+      - Tue, 29 Nov 2016 18:50:19 GMT
       Server:
       - am/2
       Set-Cookie:
-      - sc_anonymous_id=986765-814042-648601-227678; path=/; expires=Fri, 27 Nov 2026
-        18:50:55 GMT; domain=.soundcloud.com
+      - sc_anonymous_id=270494-822383-96147-254837; path=/; expires=Fri, 27 Nov 2026
+        18:50:19 GMT; domain=.soundcloud.com
       Status:
       - 404 Not Found
       X-Frame-Options:
@@ -47,5 +47,5 @@ http_interactions:
       encoding: UTF-8
       string: " "
     http_version: 
-  recorded_at: Tue, 29 Nov 2016 18:50:54 GMT
+  recorded_at: Tue, 29 Nov 2016 18:50:18 GMT
 recorded_with: VCR 3.0.3

@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.instagram.com/oembed?url=https://www.instagramcm.sr/pBMCEzS6hd4/?ake-y=heroku
+    uri: https://api.instagram.com/oembed?url=https://www.err.ror/badlink
     body:
       encoding: US-ASCII
       string: ''
@@ -25,13 +25,13 @@ http_interactions:
       Vary:
       - Accept-Language
       Location:
-      - https://api.instagram.com/publicapi/oembed/?url=https%3A%2F%2Fwww.instagramcm.sr%2FpBMCEzS6hd4%2F%3Fake-y%3Dheroku
+      - https://api.instagram.com/publicapi/oembed/?url=https%3A%2F%2Fwww.err.ror%2Fbadlink
       Pragma:
       - no-cache
       Cache-Control:
       - private, no-cache, no-store, must-revalidate
       Date:
-      - Wed, 23 Nov 2016 16:00:34 GMT
+      - Tue, 29 Nov 2016 18:50:15 GMT
       Content-Type:
       - text/html; charset=utf-8
       Connection:
@@ -42,10 +42,10 @@ http_interactions:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Wed, 23 Nov 2016 16:00:34 GMT
+  recorded_at: Tue, 29 Nov 2016 18:50:14 GMT
 - request:
     method: get
-    uri: https://api.instagram.com/publicapi/oembed/?url=https://www.instagramcm.sr/pBMCEzS6hd4/?ake-y=heroku
+    uri: https://api.instagram.com/publicapi/oembed/?url=https://www.err.ror/badlink
     body:
       encoding: US-ASCII
       string: ''
@@ -68,13 +68,13 @@ http_interactions:
       Vary:
       - Accept-Language
       Location:
-      - https://www.instagram.com/publicapi/oembed/?url=https://www.instagramcm.sr/pBMCEzS6hd4/?ake-y=heroku
+      - https://www.instagram.com/publicapi/oembed/?url=https://www.err.ror/badlink
       Pragma:
       - no-cache
       Cache-Control:
       - private, no-cache, no-store, must-revalidate
       Date:
-      - Wed, 23 Nov 2016 16:00:35 GMT
+      - Tue, 29 Nov 2016 18:50:16 GMT
       Content-Type:
       - text/html; charset=utf-8
       Connection:
@@ -85,10 +85,10 @@ http_interactions:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Wed, 23 Nov 2016 16:00:35 GMT
+  recorded_at: Tue, 29 Nov 2016 18:50:15 GMT
 - request:
     method: get
-    uri: https://www.instagram.com/publicapi/oembed/?url=https://www.instagramcm.sr/pBMCEzS6hd4/?ake-y=heroku
+    uri: https://www.instagram.com/publicapi/oembed/?url=https://www.err.ror/badlink
     body:
       encoding: US-ASCII
       string: ''
@@ -113,13 +113,13 @@ http_interactions:
       Vary:
       - Accept-Language
       Location:
-      - https://api.instagram.com/oembed/?url=https://www.instagramcm.sr/pBMCEzS6hd4/?ake-y=heroku
+      - https://api.instagram.com/oembed/?url=https://www.err.ror/badlink
       Pragma:
       - no-cache
       Cache-Control:
       - private, no-cache, no-store, must-revalidate
       Date:
-      - Wed, 23 Nov 2016 16:00:36 GMT
+      - Tue, 29 Nov 2016 18:50:17 GMT
       Content-Type:
       - text/html; charset=utf-8
       Connection:
@@ -130,10 +130,10 @@ http_interactions:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Wed, 23 Nov 2016 16:00:36 GMT
+  recorded_at: Tue, 29 Nov 2016 18:50:16 GMT
 - request:
     method: get
-    uri: https://api.instagram.com/oembed/?url=https://www.instagramcm.sr/pBMCEzS6hd4/?ake-y=heroku
+    uri: https://api.instagram.com/oembed/?url=https://www.err.ror/badlink
     body:
       encoding: US-ASCII
       string: ''
@@ -160,13 +160,13 @@ http_interactions:
       Cache-Control:
       - private, no-cache, no-store, must-revalidate
       Date:
-      - Wed, 23 Nov 2016 16:00:37 GMT
+      - Tue, 29 Nov 2016 18:50:18 GMT
       Content-Type:
       - text/html; charset=utf-8
       Set-Cookie:
-      - csrftoken=mjJtZIpbwSB4f8Q0MThr5u4pnFi6nSjN; expires=Wed, 22-Nov-2017 16:00:37
+      - csrftoken=AhttbkJCyJT2HVjMdPYomyUokEUzoO02; expires=Tue, 28-Nov-2017 18:50:18
         GMT; Max-Age=31449600; Path=/; secure
-      - mid=WDW9JQAEAAEVKgoActRflW71T_Iz; expires=Tue, 18-Nov-2036 16:00:37 GMT; Max-Age=630720000;
+      - mid=WD3N6gAEAAGCx6esSPBx0vTYPNWX; expires=Mon, 24-Nov-2036 18:50:18 GMT; Max-Age=630720000;
         Path=/
       Connection:
       - keep-alive
@@ -176,5 +176,5 @@ http_interactions:
       encoding: UTF-8
       string: No URL Match
     http_version: 
-  recorded_at: Wed, 23 Nov 2016 16:00:37 GMT
+  recorded_at: Tue, 29 Nov 2016 18:50:17 GMT
 recorded_with: VCR 3.0.3
