@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 describe 'OembedApi::Class' do
-
   CLASSES = {
     Codepen: 'http://codepen.io/mudrenok/pen/aBWbgM',
     DeviantArt: 'http://www.deviantart.com/art/Reading-time-645328427',
@@ -12,7 +11,7 @@ describe 'OembedApi::Class' do
     Twitter: 'https://twitter.com/fahrenhei7lt/status/788802438467837952',
     Vimeo: 'https://vimeo.com/169850570',
     Youtube: 'https://www.youtube.com/watch?v=mezO-nr7Ah4'
-  }
+  }.freeze
 
   CLASSES.each do |k, v|
     describe "OembedApi::#{k}".constantize, :vcr do
