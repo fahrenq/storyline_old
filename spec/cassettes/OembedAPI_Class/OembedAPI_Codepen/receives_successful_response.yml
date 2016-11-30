@@ -1,0 +1,127 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://codepen.io/api/oembed?url=http://codepen.io/mudrenok/pen/aBWbgM
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Wed, 30 Nov 2016 18:30:19 GMT
+      Content-Type:
+      - text/html; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d41ad871635fa3abde43b0273e2f3f5511480530619; expires=Thu, 30-Nov-17
+        18:30:19 GMT; path=/; domain=.codepen.io; HttpOnly
+      Status:
+      - 302 Found
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - e84e474d-ef53-41ed-883d-af12ac1a9fff
+      Location:
+      - https://codepen.io/api/oembed?url=http%3A%2F%2Fcodepen.io%2Fmudrenok%2Fpen%2FaBWbgM
+      X-Runtime:
+      - '0.006549'
+      X-Frame-Options:
+      - ALLOWALL
+      X-Powered-By:
+      - Phusion Passenger Enterprise 5.0.30
+      Server:
+      - cloudflare-nginx
+      Cf-Ray:
+      - 30a05eb394f33774-ARN
+    body:
+      encoding: UTF-8
+      string: <html><body>You are being <a href="https://codepen.io/api/oembed?url=http%3A%2F%2Fcodepen.io%2Fmudrenok%2Fpen%2FaBWbgM">redirected</a>.</body></html>
+    http_version: 
+  recorded_at: Wed, 30 Nov 2016 18:30:20 GMT
+- request:
+    method: get
+    uri: https://codepen.io/api/oembed?url=http://codepen.io/mudrenok/pen/aBWbgM
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 30 Nov 2016 18:30:20 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d2facac8da595b25e5153412cd92658001480530620; expires=Thu, 30-Nov-17
+        18:30:20 GMT; path=/; domain=.codepen.io; HttpOnly
+      - _codepen_session=UE01R05nbi9Wam0zdGhJaC9iTmpzcVFuTksydmlVNEFPR0ZVSDJOT3NUcktsRGV0aVl2WU9UTTB5NERhRFZOczdEcE9hc3R6bmFmYWFpSzVJZkdFdU11TFlwYXZ3VHhjS2g2Ui9xbXhab009LS0xS0NOYzdWNlJDU0dKTi9ES1lhNWF3PT0%3D--80c0cd3e542b72bcf751b868aba8086f98579756;
+        path=/; expires=Fri, 30 Dec 2016 18:30:20 -0000; HttpOnly
+      Status:
+      - 200 OK
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 282fa692-b81c-4faa-be35-f5614e122e0c
+      X-Env:
+      - production
+      Etag:
+      - W/"39e8969196050aca8faf902ad99242c0"
+      X-Frame-Options:
+      - ALLOWALL
+      X-Runtime:
+      - '0.016606'
+      X-Powered-By:
+      - Phusion Passenger Enterprise 5.0.30
+      Server:
+      - cloudflare-nginx
+      Cf-Ray:
+      - 30a05eb82b8237a4-ARN
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "success": true,
+          "type": "rich",
+          "version": "1.0",
+          "provider_name": "CodePen",
+          "provider_url": "http://codepen.io",
+          "title": "wave (CSS animation)",
+          "author_name": "Anton Mudrenok",
+          "author_url": "http://codepen.io/mudrenok/",
+          "height": "300",
+          "width": "800",
+          "thumbnail_width": "384",
+          "thumbnail_height": "225",
+          "thumbnail_url": "https://s3-us-west-2.amazonaws.com/i.cdpn.io/276691.aBWbgM.small.b7bca5b8-7072-4f4f-9fd5-8025ba2aac4d.png",
+          "html": "<iframe id=\"cp_embed_aBWbgM\" src=\"https://codepen.io/mudrenok/embed/preview/aBWbgM?height=300&amp;amp;slug-hash=aBWbgM&amp;amp;default-tabs=css,result&amp;amp;host=http%3A%2F%2Fcodepen.io&amp;amp;embed-version=2\" title=\"wave (CSS animation)\" scrolling=\"no\" frameborder=\"0\" height=\"300\" allowtransparency=\"true\" class=\"cp_embed_iframe\" style=\"width: 100%; overflow: hidden;\"></iframe>"
+        }
+    http_version: 
+  recorded_at: Wed, 30 Nov 2016 18:30:21 GMT
+recorded_with: VCR 3.0.3

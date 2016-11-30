@@ -21,7 +21,7 @@ class EmbeddedMoment < Moment
   # alias_attribute :body, :json_body
 
   def fill(params)
-    self.json_body = OembedApi::Handler.new(params[:url]).response
+    self.json_body = OembedAPI::Handler.new(params[:url]).response
     if save
       self
     else

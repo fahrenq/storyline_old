@@ -1,19 +1,19 @@
 require 'uri'
 
-module OembedApi
+module OembedAPI
   class Handler
     attr_accessor :url, :service_class
 
     SERVICES = {
-      twitter: OembedApi::Twitter,
-      youtube: OembedApi::Youtube,
-      soundcloud: OembedApi::Soundcloud,
-      vimeo: OembedApi::Vimeo,
-      instagram: OembedApi::Instagram,
-      speakerdeck: OembedApi::Speakerdeck,
-      slideshare: OembedApi::Slideshare,
-      deviantart: OembedApi::DeviantArt,
-      codepen: OembedApi::Codepen
+      twitter: OembedAPI::Twitter,
+      youtube: OembedAPI::Youtube,
+      soundcloud: OembedAPI::Soundcloud,
+      vimeo: OembedAPI::Vimeo,
+      instagram: OembedAPI::Instagram,
+      speakerdeck: OembedAPI::Speakerdeck,
+      slideshare: OembedAPI::Slideshare,
+      deviantart: OembedAPI::DeviantArt,
+      codepen: OembedAPI::Codepen
     }.freeze
 
     def initialize(url)

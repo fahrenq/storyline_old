@@ -26,12 +26,12 @@ describe EmbeddedMoment, type: :model do
   describe 'fill method' do
     let(:story) { create(:story) }
     let(:embedded_moment_new) { EmbeddedMoment.new(story: story) }
-    let(:twitter_oembed) { instance_double(OembedApi::Twitter) }
-    before { allow(OembedApi::Twitter).to receive(:new) { twitter_oembed } }
+    let(:twitter_oembed) { instance_double(OembedAPI::Twitter) }
+    before { allow(OembedAPI::Twitter).to receive(:new) { twitter_oembed } }
     let(:url) { 'https://twitter.com/someuser/sometweet' }
 
     it 'calls oembed api' do
-      expect(OembedApi::Twitter).to receive(:new)
+      expect(OembedAPI::Twitter).to receive(:new)
       expect(twitter_oembed).to receive(:fetch).with(url)
       embedded_moment_new.fill({ url: url })
     end

@@ -1,4 +1,4 @@
-module OembedApi
+module OembedAPI
   class DeviantArt
     include Oembed::Client
 

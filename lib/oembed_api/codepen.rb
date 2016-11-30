@@ -1,4 +1,4 @@
-module OembedApi
+module OembedAPI
   class Codepen
     include Oembed::Client
 

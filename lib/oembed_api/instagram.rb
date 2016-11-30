@@ -1,4 +1,4 @@
-module OembedApi
+module OembedAPI
   class Instagram
     include Oembed::Client
 

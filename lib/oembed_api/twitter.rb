@@ -1,4 +1,4 @@
-module OembedApi
+module OembedAPI
   class Twitter
     include Oembed::Client
 

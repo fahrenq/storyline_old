@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe 'OembedApi::Class' do
+describe 'OembedAPI::Class' do
   CLASSES = {
     Codepen: 'http://codepen.io/mudrenok/pen/aBWbgM',
     DeviantArt: 'http://www.deviantart.com/art/Reading-time-645328427',
@@ -14,7 +14,7 @@ describe 'OembedApi::Class' do
   }.freeze
 
   CLASSES.each do |k, v|
-    describe "OembedApi::#{k}".constantize, :vcr do
+    describe "OembedAPI::#{k}".constantize, :vcr do
       it 'receives successful response' do
         response = subject.fetch(v)
         expect(response.is_a?(Hash)).to be_truthy

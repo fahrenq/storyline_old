@@ -1,0 +1,212 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.instagram.com/oembed?url=https://www.instagram.com/p/BMCEzS6hd4P/?taken-by=heroku
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Content-Language:
+      - en
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Vary:
+      - Accept-Language
+      Location:
+      - https://api.instagram.com/publicapi/oembed/?url=https%3A%2F%2Fwww.instagram.com%2Fp%2FBMCEzS6hd4P%2F%3Ftaken-by%3Dheroku
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Date:
+      - Wed, 30 Nov 2016 18:30:23 GMT
+      Content-Type:
+      - text/html; charset=utf-8
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '0'
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Wed, 30 Nov 2016 18:30:23 GMT
+- request:
+    method: get
+    uri: https://api.instagram.com/publicapi/oembed/?url=https://www.instagram.com/p/BMCEzS6hd4P/?taken-by=heroku
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Content-Language:
+      - en
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Vary:
+      - Accept-Language
+      Location:
+      - https://www.instagram.com/publicapi/oembed/?url=https://www.instagram.com/p/BMCEzS6hd4P/?taken-by=heroku
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Date:
+      - Wed, 30 Nov 2016 18:30:24 GMT
+      Content-Type:
+      - text/html; charset=utf-8
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '0'
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Wed, 30 Nov 2016 18:30:24 GMT
+- request:
+    method: get
+    uri: https://www.instagram.com/publicapi/oembed/?url=https://www.instagram.com/p/BMCEzS6hd4P/?taken-by=heroku
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Strict-Transport-Security:
+      - max-age=86400
+      Content-Language:
+      - en
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Vary:
+      - Accept-Language
+      Location:
+      - https://api.instagram.com/oembed/?url=https://www.instagram.com/p/BMCEzS6hd4P/?taken-by=heroku
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Date:
+      - Wed, 30 Nov 2016 18:30:25 GMT
+      Content-Type:
+      - text/html; charset=utf-8
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '0'
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Wed, 30 Nov 2016 18:30:25 GMT
+- request:
+    method: get
+    uri: https://api.instagram.com/oembed/?url=https://www.instagram.com/p/BMCEzS6hd4P/?taken-by=heroku
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Language:
+      - en
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Vary:
+      - Cookie, Accept-Language, Accept-Encoding
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Date:
+      - Wed, 30 Nov 2016 18:30:26 GMT
+      Content-Type:
+      - application/json
+      Set-Cookie:
+      - csrftoken=K09yAeuLARYD2flyDk7ofmrg5xPkrNdV; expires=Wed, 29-Nov-2017 18:30:26
+        GMT; Max-Age=31449600; Path=/; secure
+      - mid=WD8awgAEAAHrltW2DhFI0YSkLDtG; expires=Tue, 25-Nov-2036 18:30:26 GMT; Max-Age=630720000;
+        Path=/
+      - s_network=; expires=Wed, 30-Nov-2016 19:30:26 GMT; Max-Age=3600; Path=/
+      - sessionid=IGSCf8718a68bf79f48257cef68eabe4e8e12f6f79480307f8363558d327a11701d1%3AWgPV9w8tcn2fQ7h87QDnCKJHPR3SnTVi%3A%7B%22asns%22%3A%7B%2293.170.110.8%22%3A49963%2C%22time%22%3A1480530626%7D%7D;
+        expires=Tue, 28-Feb-2017 18:30:26 GMT; httponly; Max-Age=7776000; Path=/;
+        secure
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1527'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"provider_url": "https://www.instagram.com", "media_id": "1369678353862614543_51414842",
+        "author_name": "heroku", "height": null, "thumbnail_url": "https://scontent-fra3-1.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/14515632_1415479858477358_3282699703979868160_n.jpg?ig_cache_key=MTM2OTY3ODM1Mzg2MjYxNDU0Mw%3D%3D.2",
+        "thumbnail_width": 640, "thumbnail_height": 640, "provider_name": "Instagram",
+        "title": "Have you signed up for Heroku Teams? By using Teams you can centralize
+        billing and management so you can focus on building beautiful #apps. Link
+        to website in our bio.", "html": "\u003cblockquote class=\"instagram-media\"
+        data-instgrm-captioned data-instgrm-version=\"7\" style=\" background:#FFF;
+        border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px
+        0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%;
+        width:-webkit-calc(100% - 2px); width:calc(100% - 2px);\"\u003e\u003cdiv style=\"padding:8px;\"\u003e
+        \u003cdiv style=\" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0%
+        0; text-align:center; width:100%;\"\u003e \u003cdiv style=\" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC);
+        display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px;
+        width:44px;\"\u003e\u003c/div\u003e\u003c/div\u003e \u003cp style=\" margin:8px
+        0 0 0; padding:0 4px;\"\u003e \u003ca href=\"https://www.instagram.com/p/BMCEzS6hd4P/\"
+        style=\" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal;
+        font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;\"
+        target=\"_blank\"\u003eHave you signed up for Heroku Teams? By using Teams
+        you can centralize billing and management so you can focus on building beautiful
+        #apps. Link to website in our bio.\u003c/a\u003e\u003c/p\u003e \u003cp style=\"
+        color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px;
+        margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center;
+        text-overflow:ellipsis; white-space:nowrap;\"\u003eA photo posted by Heroku
+        (@heroku) on \u003ctime style=\" font-family:Arial,sans-serif; font-size:14px;
+        line-height:17px;\" datetime=\"2016-10-26T16:13:25+00:00\"\u003eOct 26, 2016
+        at 9:13am PDT\u003c/time\u003e\u003c/p\u003e\u003c/div\u003e\u003c/blockquote\u003e\n\u003cscript
+        async defer src=\"//platform.instagram.com/en_US/embeds.js\"\u003e\u003c/script\u003e",
+        "width": 658, "version": "1.0", "author_url": "https://www.instagram.com/heroku",
+        "author_id": 51414842, "type": "rich"}'
+    http_version: 
+  recorded_at: Wed, 30 Nov 2016 18:30:26 GMT
+recorded_with: VCR 3.0.3

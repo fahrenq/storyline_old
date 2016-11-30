@@ -1,0 +1,87 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://vimeo.com/api/oembed.json?url=https://vimeo.com/169850570
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Content-Type:
+      - application/json
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - X-Requested-With
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - sameorigin
+      Cache-Control:
+      - max-age=60
+      Expires:
+      - Wed, 30 Nov 2016 18:31:34 GMT
+      Last-Modified:
+      - Wed, 30 Nov 2016 18:22:15 GMT
+      Etag:
+      - '"7330e3549585bee289f4b0e62b3608a07c5088ac"'
+      X-Ua-Compatible:
+      - IE=edge
+      X-Xss-Protection:
+      - 1; mode=block
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains; preload
+      Content-Security-Policy-Report-Only:
+      - 'default-src https: data: blob: ''unsafe-inline'' ''unsafe-eval''; report-uri
+        /_csp'
+      Via:
+      - 1.1 varnish
+      - 1.1 varnish
+      Fastly-Debug-Digest:
+      - b61202204075cbfb9ec3193d7cb2928489acc3c3b79a7519c1f8b4e17aeb630f
+      Content-Length:
+      - '565'
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Wed, 30 Nov 2016 18:30:34 GMT
+      Age:
+      - '0'
+      Connection:
+      - keep-alive
+      X-Served-By:
+      - cache-iad2138-IAD, cache-ams4144-AMS
+      X-Cache:
+      - MISS, MISS
+      X-Cache-Hits:
+      - 0, 0
+      X-Timer:
+      - S1480530634.198003,VS0,VE148
+      Vary:
+      - User-Agent,Accept-Encoding
+    body:
+      encoding: ASCII-8BIT
+      string: '{"type":"video","version":"1.0","provider_name":"Vimeo","provider_url":"https:\/\/vimeo.com\/","title":"Making
+        Weather","author_name":"Richard Clarkson","author_url":"https:\/\/vimeo.com\/richardclarkson","is_plus":"0","html":"<iframe
+        src=\"https:\/\/player.vimeo.com\/video\/169850570\" width=\"640\" height=\"360\"
+        frameborder=\"0\" title=\"Making Weather\" webkitallowfullscreen mozallowfullscreen
+        allowfullscreen><\/iframe>","width":640,"height":360,"duration":78,"description":"Levitating
+        Cloud Project with Crealev and Richard Clarkson Studio\n\nMusic: Say you love
+        me by Jessie Ware \nhttps:\/\/itunes.apple.com\/us\/album\/say-you-love-me\/id909537169?i=909537180","thumbnail_url":"https:\/\/i.vimeocdn.com\/video\/574702569_640.jpg","thumbnail_width":640,"thumbnail_height":360,"thumbnail_url_with_play_button":"https:\/\/i.vimeocdn.com\/filter\/overlay?src0=https%3A%2F%2Fi.vimeocdn.com%2Fvideo%2F574702569_640.jpg&src1=http%3A%2F%2Ff.vimeocdn.com%2Fp%2Fimages%2Fcrawler_play.png","upload_date":"2016-06-08
+        09:04:09","video_id":169850570,"uri":"\/videos\/169850570"}'
+    http_version: 
+  recorded_at: Wed, 30 Nov 2016 18:30:34 GMT
+recorded_with: VCR 3.0.3

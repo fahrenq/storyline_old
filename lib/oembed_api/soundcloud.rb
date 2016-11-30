@@ -1,4 +1,4 @@
-module OembedApi
+module OembedAPI
   class Soundcloud
     include Oembed::Client
 

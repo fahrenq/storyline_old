@@ -13,7 +13,7 @@ class Web::Moments::EmbeddedMomentsController < Web::Moments::ApplicationControl
     @embedded_moment = EmbeddedMoment.new(story: current_story)
     authorize @embedded_moment
     # EmbeddedMoment#fill receives params and fetch url from them,
-    # then, it calls OembedApi::Handler. It determines what API class
+    # then, it calls OembedAPI::Handler. It determines what API class
     # to use, request JSON response from server and return it or nil.
     # #fill method writes it in EmbeddedMoment#body, and if it saves -
     # returns self, otherwise - returns false
