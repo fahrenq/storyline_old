@@ -32,7 +32,7 @@ end
 group :test do
   gem 'email_spec'
   gem 'database_cleaner'
-  gem 'codeclimate-test-reporter', require: nil
+  gem 'codeclimate-test-reporter', require: false
   gem 'vcr'
   gem 'webmock'
 end
