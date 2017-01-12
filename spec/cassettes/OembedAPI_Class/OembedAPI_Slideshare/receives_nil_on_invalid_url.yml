@@ -21,48 +21,52 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Wed, 30 Nov 2016 18:30:30 GMT
+      - Thu, 12 Jan 2017 15:50:45 GMT
       Content-Type:
       - text/html; charset=utf-8
       Status:
       - 404 Not Found
       X-Request-Id:
-      - 3ac6fd79ac3b59f6c06e332d0902ec5d
-      X-Bench-Route:
-      - oembed/get_oembed_code
-      X-Runtime:
-      - '0.008176'
-      X-Request-Uuid:
-      - GY/z0RiQHjX+ZTMFe3pavA==
-      X-Ua-Compatible:
-      - IE=Edge,chrome=1
+      - ae795afd2b02435ebe27375dbcf84d0f
       X-Content-Type-Options:
       - nosniff
       X-Xss-Protection:
       - 1; mode=block
       Cache-Control:
       - no-cache
+      X-Runtime:
+      - '0.011435'
+      X-Request-Uuid:
+      - QyV9L19Ul9O1ZGp89bT49g==
+      X-Bench-Route:
+      - oembed/get_oembed_code
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
       X-Varnish:
-      - '112829977'
+      - '951436748'
       Age:
       - '0'
-      X-Fs-Uuid:
-      - ce567a9fc3e68b14000987ec6c2b0000
       X-Li-Fabric:
       - prod-lva1
       Set-Cookie:
-      - SERVERID=r88|WD8ay|WD8ay; path=/
-      - _uv_id=594926621; Path=/; Domain=.slideshare.net
-      - bcookie="v=2&29c4efb1-a6dc-4896-8ece-76dedc198b9b"; domain=.slideshare.net;
-        Path=/; Expires=Sat, 01-Dec-2018 06:08:02 GMT
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
+      - SERVERID=r87|WHel2|WHel2; path=/
+      - _uv_id=2059944073; Path=/; Domain=.slideshare.net
+      - bcookie="v=2&9deed5f5-6951-42a7-8c86-061218bf5c6a"; domain=.slideshare.net;
+        Path=/; Expires=Sun, 13-Jan-2019 03:28:17 GMT
       X-Li-Pop:
-      - PROD-IDB2
+      - prod-tln1
       X-Li-Uuid:
-      - zlZ6n8PmixQACYfsbCsAAA==
+      - 3UbmWAARmRRAo2bNLisAAA==
+      X-Cache:
+      - MISS from blacklist.ttk.ru
+      - MISS from bnat
+      X-Cache-Lookup:
+      - MISS from blacklist.ttk.ru:3128
+      - MISS from bnat:3130
+      Via:
+      - 1.1 blacklist.ttk.ru (squid), 1.1 bnat (squid/3.5.8)
+      Connection:
+      - close
     body:
       encoding: ASCII-8BIT
       string: !binary |-
@@ -114,5 +118,5 @@ http_interactions:
         ICAgICAgICAgPC9kaXY+CiAgICAgICAgICA8L2Rpdj4KICAgICAgICA8L2Rp
         dj4KICAgICAgPC9kaXY+CiAgICA8L2Rpdj4KICA8L2JvZHk+CjwvaHRtbD4=
     http_version: 
-  recorded_at: Wed, 30 Nov 2016 18:30:30 GMT
+  recorded_at: Thu, 12 Jan 2017 15:50:45 GMT
 recorded_with: VCR 3.0.3

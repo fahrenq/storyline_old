@@ -1,5 +1,6 @@
 GEM
   remote: https://rubygems.org/
+  remote: https://rails-assets.org/
   specs:
     actioncable (5.0.0.1)
       actionpack (= 5.0.0.1)
@@ -167,6 +168,11 @@ GEM
       bundler (>= 1.3.0, < 2.0)
       railties (= 5.0.0.1)
       sprockets-rails (>= 2.0.0)
+    rails-assets-eonasdan-bootstrap-datetimepicker (4.17.44)
+      rails-assets-jquery (>= 1.8.3)
+      rails-assets-moment (>= 2.10.5)
+    rails-assets-jquery (3.1.1)
+    rails-assets-moment (2.17.1)
     rails-controller-testing (0.1.1)
       actionpack (~> 5.x)
       actionview (~> 5.x)
@@ -299,6 +305,8 @@ DEPENDENCIES
   puma (~> 3.0)
   pundit
   rails (~> 5.0.0, >= 5.0.0.1)
+  rails-assets-eonasdan-bootstrap-datetimepicker!
+  rails-assets-moment!
   rails-controller-testing
   rspec-rails (~> 3.5)
   sass-rails (~> 5.0)

@@ -19,7 +19,7 @@ http_interactions:
       message: Found
     headers:
       Date:
-      - Wed, 30 Nov 2016 18:30:21 GMT
+      - Thu, 12 Jan 2017 15:50:02 GMT
       Content-Type:
       - text/html; charset=utf-8
       Transfer-Encoding:
@@ -27,18 +27,18 @@ http_interactions:
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=db830d23f0301861709bb89ab245f32de1480530621; expires=Thu, 30-Nov-17
-        18:30:21 GMT; path=/; domain=.codepen.io; HttpOnly
+      - __cfduid=d246630d6f6d26310131e7deba32908151484236202; expires=Fri, 12-Jan-18
+        15:50:02 GMT; path=/; domain=.codepen.io; HttpOnly
       Status:
       - 302 Found
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - 4d99daf3-f07f-43c6-b4f4-d7111be3535c
+      - 8e02ad29-420b-43de-ad69-62bbc9984709
       Location:
       - https://codepen.io/api/oembed?url=https%3A%2F%2Fwww.err.ror%2Fbadlink
       X-Runtime:
-      - '0.003792'
+      - '0.003178'
       X-Frame-Options:
       - ALLOWALL
       X-Powered-By:
@@ -46,12 +46,12 @@ http_interactions:
       Server:
       - cloudflare-nginx
       Cf-Ray:
-      - 30a05ebe11c2375c-ARN
+      - 3201c30992713774-ARN
     body:
       encoding: UTF-8
       string: <html><body>You are being <a href="https://codepen.io/api/oembed?url=https%3A%2F%2Fwww.err.ror%2Fbadlink">redirected</a>.</body></html>
     http_version: 
-  recorded_at: Wed, 30 Nov 2016 18:30:21 GMT
+  recorded_at: Thu, 12 Jan 2017 15:50:03 GMT
 - request:
     method: get
     uri: https://codepen.io/api/oembed?url=https://www.err.ror/badlink
@@ -71,7 +71,7 @@ http_interactions:
       message: Not Found
     headers:
       Date:
-      - Wed, 30 Nov 2016 18:30:21 GMT
+      - Thu, 12 Jan 2017 15:50:04 GMT
       Content-Type:
       - text/html; charset=utf-8
       Transfer-Encoding:
@@ -79,20 +79,20 @@ http_interactions:
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=d786d59cb13a311114b1a367824fbe5ec1480530621; expires=Thu, 30-Nov-17
-        18:30:21 GMT; path=/; domain=.codepen.io; HttpOnly
-      - _codepen_session=OWdFN1M0ZnNFaU04dWNPVTE3b1BXbXZOM0dIZ3VBaG1rVm8ydkROaHNVU0VNeWxLN3hraHVwZjN4d3I4UWhCQ2d3TnZ5SzNweGVZRExpa2NnQ3hsUmMzblZWOFFSNDFwSTg5MkwzekMwWFE9LS1uM1JoMEJSV29iUmZEN1JBd0M4bkVnPT0%3D--34044a158a89bafb3ba12a45e410dbcf27d939ef;
-        path=/; expires=Fri, 30 Dec 2016 18:30:21 -0000; HttpOnly
+      - __cfduid=d8b36ff4df95287caaf7d662cfd1d07781484236204; expires=Fri, 12-Jan-18
+        15:50:04 GMT; path=/; domain=.codepen.io; HttpOnly
+      - _codepen_session=YVNpc3FVUXl0MkVqSFMrQmxuVlFuMXVzRHhZOXk0Tk9TY0tqdTVkMHAxd2s4UjlpY2daOERsLzBLMEZ0eU5oWk5qbWVCb2lML05QQXB5cWNPQUZsWDkzTXNxeGFXeE9nSEpudnNlak1vTmc9LS16bFhHYXJKcWZLVTFjd2Q3OGVmUEZRPT0%3D--02c408217e3e8006e454d9aca53b1537bb7c52ae;
+        path=/; expires=Sat, 11 Feb 2017 15:50:04 -0000; HttpOnly
       Status:
       - 404 Not Found
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - 5626592a-e4da-4bda-b766-a06becc25106
+      - 3a9af2fe-a6d9-4618-afa5-97af6415be42
       X-Env:
       - production
       X-Runtime:
-      - '0.011340'
+      - '0.037291'
       X-Frame-Options:
       - ALLOWALL
       X-Powered-By:
@@ -100,10 +100,10 @@ http_interactions:
       Server:
       - cloudflare-nginx
       Cf-Ray:
-      - 30a05ec0cca7378c-ARN
+      - 3201c3138ef716a0-ARN
     body:
       encoding: ASCII-8BIT
       string: Not Found
     http_version: 
-  recorded_at: Wed, 30 Nov 2016 18:30:21 GMT
+  recorded_at: Thu, 12 Jan 2017 15:50:04 GMT
 recorded_with: VCR 3.0.3

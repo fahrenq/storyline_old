@@ -47,12 +47,12 @@ class Web::Moments::NativeMomentsController < Web::Moments::ApplicationControlle
 
   def native_moment_params
     params.require(:native_moment)
-          .permit(:body, :picture)
+          .permit(:body, :picture, :happened_at)
           .merge(story: current_story)
   end
 
   def native_moment_params_shallow
     params.require(:native_moment)
-          .permit(:body, :picture)
+          .permit(:body, :picture, :happened_at)
   end
 end

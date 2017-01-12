@@ -17,7 +17,11 @@
 
 class Moment < ApplicationRecord
   belongs_to :story
+  validates :happened_at, presence: true
 
   scope :embedded_moments, -> { where(type: 'embedded_moment') }
   scope :native_moments, -> { where(type: 'native_moment') }
+
+
+  def url; end
 end

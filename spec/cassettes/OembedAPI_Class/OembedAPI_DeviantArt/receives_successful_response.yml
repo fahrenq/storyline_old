@@ -22,29 +22,33 @@ http_interactions:
       - application/json; charset=utf-8
       Content-Length:
       - '645'
-      Connection:
-      - keep-alive
       Cache-Control:
       - max-age=180
       Date:
-      - Wed, 30 Nov 2016 18:30:22 GMT
+      - Thu, 12 Jan 2017 15:50:37 GMT
       Expires:
-      - Wed, 30 Nov 2016 18:33:22 GMT
+      - Thu, 12 Jan 2017 15:53:37 GMT
       Server:
       - Apache
       Vary:
       - Accept-Encoding
       X-Cache:
+      - MISS from bnat
       - Miss from cloudfront
-      Via:
-      - 1.1 a71f83d1ba0346520093d0d32e0ea7dc.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - Ca83RHZMmCp4cOcBbS_r4BQkTuNaah6bEcCvtommFwVVOnez9RAAvw==
+      - Ph4grIM4RdCuibTbnwsTuz0QbkS5FaDy6D6mnE78r0YQe79jmfqebw==
+      X-Cache-Lookup:
+      - MISS from bnat:3130
+      Via:
+      - 1.1 fc9d9a7af13415e6a82bdb916c46eb5a.cloudfront.net (CloudFront), 1.1 bnat
+        (squid/3.5.8)
+      Connection:
+      - close
     body:
       encoding: ASCII-8BIT
       string: '{"version":"1.0","type":"photo","title":"Reading time!","category":"Manga
-        & Anime > Digital Media > Drawings","url":"http:\/\/pre07.deviantart.net\/2ede\/th\/pre\/i\/2016\/316\/c\/2\/reading_time__by_piss_kun-dao7mln.png","author_name":"Piss-kun","author_url":"http:\/\/Piss-kun.deviantart.com","provider_name":"DeviantArt","provider_url":"http:\/\/www.deviantart.com","safety":"nonadult","pubdate":"2016-11-11T21:01:38-08:00","community":{"statistics":{"_attributes":{"views":375,"favorites":262,"comments":31,"downloads":0}}},"tags":"fanart,
+        & Anime > Digital Media > Drawings","url":"http:\/\/pre07.deviantart.net\/2ede\/th\/pre\/i\/2016\/316\/c\/2\/reading_time__by_piss_kun-dao7mln.png","author_name":"Piss-kun","author_url":"http:\/\/Piss-kun.deviantart.com","provider_name":"DeviantArt","provider_url":"http:\/\/www.deviantart.com","safety":"nonadult","pubdate":"2016-11-11T21:01:38-08:00","community":{"statistics":{"_attributes":{"views":498,"favorites":276,"comments":33,"downloads":0}}},"tags":"fanart,
         hanamaru, kunikida, live, love, lovelive, lovelivesunshine","copyright":{"_attributes":{"url":"http:\/\/Piss-kun.deviantart.com","year":"2016","entity":"Piss-kun"}},"width":738,"height":1082,"imagetype":"png","thumbnail_url":"http:\/\/t14.deviantart.net\/PVQEFS95KQvWJIMZct97gVtlePI=\/fit-in\/300x900\/filters:no_upscale():origin()\/pre07\/2ede\/th\/pre\/i\/2016\/316\/c\/2\/reading_time__by_piss_kun-dao7mln.png","thumbnail_width":300,"thumbnail_height":440,"thumbnail_url_150":"http:\/\/t03.deviantart.net\/rRM41VWkt6LjOpqORNmEHSe0YGM=\/fit-in\/150x150\/filters:no_upscale():origin()\/pre07\/2ede\/th\/pre\/i\/2016\/316\/c\/2\/reading_time__by_piss_kun-dao7mln.png","thumbnail_url_200h":"http:\/\/t13.deviantart.net\/hNID3cRDAepj3o1GiJFqJV62wBs=\/300x200\/filters:fixed_height(100,100):origin()\/pre07\/2ede\/th\/pre\/i\/2016\/316\/c\/2\/reading_time__by_piss_kun-dao7mln.png","thumbnail_width_200h":136,"thumbnail_height_200h":200}'
     http_version: 
-  recorded_at: Wed, 30 Nov 2016 18:30:22 GMT
+  recorded_at: Thu, 12 Jan 2017 15:50:37 GMT
 recorded_with: VCR 3.0.3

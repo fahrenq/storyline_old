@@ -18,6 +18,7 @@ module OembedAPI
 
     def initialize(url)
       @url = url
+      return nil if url.nil?
       # adds 'http://' if http or https protocol not stated
       smart_add_url_protocol
     end

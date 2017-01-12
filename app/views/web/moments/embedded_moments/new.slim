@@ -1,3 +1,4 @@
-= simple_form_for :embedded_moment_attrs, url: story_embedded_moments_path, method: :post do |f|
+= simple_form_for :embedded_moment, url: story_embedded_moments_path, method: :post do |f|
   = f.input :url
+  = f.input :happened_at, as: :date_time_picker
   = f.button :submit

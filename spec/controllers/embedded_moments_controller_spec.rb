@@ -1,7 +1,8 @@
 require 'rails_helper'
 
 describe Web::Moments::EmbeddedMomentsController, type: :controller do
-  let(:embedded_moment_attributes) { { url: 'https://twitter.com/fahrenhei7lt/status/765376955697008640' } }
+  let(:embedded_moment_attributes) { { url: 'https://twitter.com/fahrenhei7lt/status/765376955697008640',
+                                       happened_at: Time.now.to_s  } }
 
   shared_examples 'public access to embedded_moments' do
     let(:embedded_moment) { create(:embedded_moment) }
@@ -23,7 +24,7 @@ describe Web::Moments::EmbeddedMomentsController, type: :controller do
       after(:each) { expect(response).to redirect_to(new_user_session_url) }
       it { get :new, params: { story_id: story } }
       it { post :create, params: { story_id: story,
-                                   embedded_moment_attrs: embedded_moment_attributes } }
+                                   embedded_moment: embedded_moment_attributes } }
       it { delete :destroy, params: { id: embedded_moment } }
     end
 
@@ -31,7 +32,7 @@ describe Web::Moments::EmbeddedMomentsController, type: :controller do
       it 'POST #create' do
         expect {
           post :create, params: { story_id: story,
-                                  embedded_moment_attrs: embedded_moment_attributes }
+                                  embedded_moment: embedded_moment_attributes }
         }.not_to change(EmbeddedMoment, :count)
       end
       it 'DELETE #destroy' do
@@ -51,20 +52,20 @@ describe Web::Moments::EmbeddedMomentsController, type: :controller do
       let(:story) { create(:story, user: user_2) }
       let(:embedded_moment) { create(:embedded_moment, story: story) }
 
-      context 'redirects to pundit path' do
+      context 'redirects to pundit path', :vcr do
         after(:each) { expect(response).to redirect_to(root_path) }
 
         it { get :new, params: { story_id: story } }
         it { post :create, params: { story_id: story,
-                                     embedded_moment_attrs: embedded_moment_attributes } }
+                                     embedded_moment: embedded_moment_attributes } }
         it { delete :destroy, params: { id: embedded_moment } }
       end
 
-      context 'does not touch database' do
+      context 'does not touch database', :vcr do
         it 'POST #create' do
           expect {
             post :create, params: { story_id: story,
-                                    embedded_moment_attrs: embedded_moment_attributes }
+                                    embedded_moment: embedded_moment_attributes }
           }.not_to change(EmbeddedMoment, :count)
         end
         it 'DELETE #destroy' do
@@ -90,25 +91,25 @@ describe Web::Moments::EmbeddedMomentsController, type: :controller do
         context 'valid_data' do
           it 'redirects to story#show', :vcr do
             post :create, params: { story_id: story,
-                                    embedded_moment_attrs: embedded_moment_attributes }
+                                    embedded_moment: embedded_moment_attributes }
             expect(response).to redirect_to(assigns[:embedded_moment])
           end
           it 'creates notification for subscribed user', :vcr do
             expect {
               post :create, params: { story_id: story,
-                                      embedded_moment_attrs: embedded_moment_attributes }
+                                      embedded_moment: embedded_moment_attributes }
             }.to change(subscriber.notifications, :count).by(1)
           end
           it 'creates notification with right data', :vcr do
             post :create, params: { story_id: story,
-                                    embedded_moment_attrs: embedded_moment_attributes }
+                                    embedded_moment: embedded_moment_attributes }
             expect(subscriber.notifications.last.info).to be_a(Hash)
           end
           it 'does not create notification for stoty without subs', :vcr do
             expect {
               story_without_sub = create(:story, user: user)
               post :create, params: { story_id: story_without_sub,
-                                      embedded_moment_attrs: embedded_moment_attributes }
+                                      embedded_moment: embedded_moment_attributes }
             }.not_to change(Notification, :count)
           end
         end
@@ -116,21 +117,9 @@ describe Web::Moments::EmbeddedMomentsController, type: :controller do
         context 'invalid_data' do
           it 'renders :new template', :vcr do
             post :create, params: { story_id: story,
-                                    embedded_moment_attrs: embedded_moment_attributes.merge(url: 'srcwrong') }
+                                    embedded_moment: embedded_moment_attributes.merge(url: 'srcwrong') }
             expect(response).to render_template(:new)
           end
-        end
-        it 'sends fill method to model object' do
-          embedded_moment_model = instance_double(EmbeddedMoment)
-          allow(EmbeddedMoment).to receive(:new) { embedded_moment_model }
-          allow(controller).to receive(:authorize) { true }
-          params = ActionController::Parameters.new(embedded_moment_attributes).permit(:url)
-          expect(EmbeddedMoment).to receive(:new)
-            .with(story: story)
-          expect(embedded_moment_model).to receive(:fill)
-            .with(params)
-          post :create, params: { story_id: story,
-                                  embedded_moment_attrs: embedded_moment_attributes }
         end
       end
 

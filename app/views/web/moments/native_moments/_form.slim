@@ -1,4 +1,5 @@
 = simple_form_for native_moment, url: url, method: method do |f|
   = f.input :body
   = f.input :picture
+  = f.input :happened_at, as: :date_time_picker
   = f.button :submit

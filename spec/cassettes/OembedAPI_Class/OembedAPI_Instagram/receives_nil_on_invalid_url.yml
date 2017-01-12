@@ -18,22 +18,22 @@ http_interactions:
       code: 301
       message: Moved Permanently
     headers:
+      Vary:
+      - Accept-Language
+      Content-Type:
+      - text/html; charset=utf-8
       Content-Language:
       - en
       Expires:
       - Sat, 01 Jan 2000 00:00:00 GMT
-      Vary:
-      - Accept-Language
-      Location:
-      - https://api.instagram.com/publicapi/oembed/?url=https%3A%2F%2Fwww.err.ror%2Fbadlink
-      Pragma:
-      - no-cache
+      Date:
+      - Thu, 12 Jan 2017 15:50:41 GMT
       Cache-Control:
       - private, no-cache, no-store, must-revalidate
-      Date:
-      - Wed, 30 Nov 2016 18:30:26 GMT
-      Content-Type:
-      - text/html; charset=utf-8
+      Pragma:
+      - no-cache
+      Location:
+      - https://api.instagram.com/publicapi/oembed/?url=https%3A%2F%2Fwww.err.ror%2Fbadlink
       Connection:
       - keep-alive
       Content-Length:
@@ -42,7 +42,7 @@ http_interactions:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Wed, 30 Nov 2016 18:30:27 GMT
+  recorded_at: Thu, 12 Jan 2017 15:50:41 GMT
 - request:
     method: get
     uri: https://api.instagram.com/publicapi/oembed/?url=https://www.err.ror/badlink
@@ -61,20 +61,20 @@ http_interactions:
       code: 302
       message: Found
     headers:
-      Content-Language:
-      - en
-      Expires:
-      - Sat, 01 Jan 2000 00:00:00 GMT
       Vary:
       - Accept-Language
-      Location:
-      - https://www.instagram.com/publicapi/oembed/?url=https://www.err.ror/badlink
+      Date:
+      - Thu, 12 Jan 2017 15:50:42 GMT
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Content-Language:
+      - en
       Pragma:
       - no-cache
       Cache-Control:
       - private, no-cache, no-store, must-revalidate
-      Date:
-      - Wed, 30 Nov 2016 18:30:27 GMT
+      Location:
+      - https://www.instagram.com/publicapi/oembed/?url=https://www.err.ror/badlink
       Content-Type:
       - text/html; charset=utf-8
       Connection:
@@ -85,7 +85,7 @@ http_interactions:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Wed, 30 Nov 2016 18:30:28 GMT
+  recorded_at: Thu, 12 Jan 2017 15:50:42 GMT
 - request:
     method: get
     uri: https://www.instagram.com/publicapi/oembed/?url=https://www.err.ror/badlink
@@ -104,24 +104,24 @@ http_interactions:
       code: 302
       message: Found
     headers:
-      Strict-Transport-Security:
-      - max-age=86400
       Content-Language:
       - en
-      Expires:
-      - Sat, 01 Jan 2000 00:00:00 GMT
-      Vary:
-      - Accept-Language
+      Date:
+      - Thu, 12 Jan 2017 15:50:43 GMT
       Location:
       - https://api.instagram.com/oembed/?url=https://www.err.ror/badlink
-      Pragma:
-      - no-cache
       Cache-Control:
       - private, no-cache, no-store, must-revalidate
-      Date:
-      - Wed, 30 Nov 2016 18:30:28 GMT
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Pragma:
+      - no-cache
       Content-Type:
       - text/html; charset=utf-8
+      Vary:
+      - Accept-Language
+      Strict-Transport-Security:
+      - max-age=86400
       Connection:
       - keep-alive
       Content-Length:
@@ -130,7 +130,7 @@ http_interactions:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Wed, 30 Nov 2016 18:30:29 GMT
+  recorded_at: Thu, 12 Jan 2017 15:50:43 GMT
 - request:
     method: get
     uri: https://api.instagram.com/oembed/?url=https://www.err.ror/badlink
@@ -151,22 +151,22 @@ http_interactions:
     headers:
       Content-Language:
       - en
-      Expires:
-      - Sat, 01 Jan 2000 00:00:00 GMT
-      Vary:
-      - Cookie, Accept-Language
+      Date:
+      - Thu, 12 Jan 2017 15:50:43 GMT
       Pragma:
       - no-cache
-      Cache-Control:
-      - private, no-cache, no-store, must-revalidate
-      Date:
-      - Wed, 30 Nov 2016 18:30:29 GMT
+      Vary:
+      - Cookie, Accept-Language
       Content-Type:
       - text/html; charset=utf-8
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
       Set-Cookie:
-      - csrftoken=dmkR7iSo7f6yk6AIpYGN7FW5sAEFU1bp; expires=Wed, 29-Nov-2017 18:30:29
-        GMT; Max-Age=31449600; Path=/; secure
-      - mid=WD8axQAEAAH5TAjpd16VPoGXr28t; expires=Tue, 25-Nov-2036 18:30:29 GMT; Max-Age=630720000;
+      - csrftoken=9vmFvTX7JVaUB5zFU6GIOrOnBcGcLXnb; expires=Thu, 11-Jan-2018 15:50:43
+        GMT; Max-Age=31449600; Path=/; Secure
+      - mid=WHel0wAEAAEYf3l9kVgEJDQQ31kN; expires=Wed, 07-Jan-2037 15:50:43 GMT; Max-Age=630720000;
         Path=/
       Connection:
       - keep-alive
@@ -176,5 +176,5 @@ http_interactions:
       encoding: UTF-8
       string: No URL Match
     http_version: 
-  recorded_at: Wed, 30 Nov 2016 18:30:29 GMT
+  recorded_at: Thu, 12 Jan 2017 15:50:43 GMT
 recorded_with: VCR 3.0.3

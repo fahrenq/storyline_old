@@ -26,6 +26,7 @@ FactoryGirl.define do
         "version"   =>"1.0"
       }
     }
+    happened_at Time.now
     association :story
   end
 end

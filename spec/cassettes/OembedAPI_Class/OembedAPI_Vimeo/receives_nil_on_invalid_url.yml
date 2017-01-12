@@ -33,7 +33,7 @@ http_interactions:
       Cache-Control:
       - max-age=300, must-revalidate
       Expires:
-      - Wed, 30 Nov 2016 18:35:34 GMT
+      - Thu, 12 Jan 2017 15:55:53 GMT
       X-Ua-Compatible:
       - IE=edge
       X-Xss-Protection:
@@ -53,24 +53,24 @@ http_interactions:
       Accept-Ranges:
       - bytes
       Date:
-      - Wed, 30 Nov 2016 18:30:34 GMT
+      - Thu, 12 Jan 2017 15:50:53 GMT
       Age:
       - '0'
       Connection:
       - keep-alive
       X-Served-By:
-      - cache-iad2143-IAD, cache-ams4125-AMS
+      - cache-iad2127-IAD, cache-fra1243-FRA
       X-Cache:
       - MISS, MISS
       X-Cache-Hits:
       - 0, 0
       X-Timer:
-      - S1480530634.622944,VS0,VE113
+      - S1484236253.136463,VS0,VE107
       Vary:
       - User-Agent,Accept-Encoding
     body:
       encoding: ASCII-8BIT
       string: 404 Not Found
     http_version: 
-  recorded_at: Wed, 30 Nov 2016 18:30:34 GMT
+  recorded_at: Thu, 12 Jan 2017 15:50:53 GMT
 recorded_with: VCR 3.0.3

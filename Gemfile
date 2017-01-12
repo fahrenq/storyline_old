@@ -18,6 +18,11 @@ gem 'oembed'
 gem 'paperclip', '~> 5.0.0'
 gem 'paperclip-i18n'
 
+source 'https://rails-assets.org' do
+  gem 'rails-assets-moment'
+  gem 'rails-assets-eonasdan-bootstrap-datetimepicker'
+end
+
 group :development, :test do
   gem 'byebug', platform: :mri
   gem 'rspec-rails', '~> 3.5'

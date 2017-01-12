@@ -17,5 +17,6 @@ FactoryGirl.define do
   factory :native_moment do
     body "Body Description From Factory Girl"
     association :story
+    happened_at Time.now
   end
 end

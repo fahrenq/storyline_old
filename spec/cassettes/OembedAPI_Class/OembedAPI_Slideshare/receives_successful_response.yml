@@ -21,57 +21,62 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Wed, 30 Nov 2016 18:30:30 GMT
+      - Thu, 12 Jan 2017 15:50:44 GMT
       Content-Type:
       - application/json; charset=utf-8
       Status:
       - 200 OK
-      X-Request-Id:
-      - 0304925b063ce6ceabcba854b676ece2
-      X-Runtime:
-      - '0.045069'
-      X-Bench-Route:
-      - oembed/get_oembed_code
-      X-Xss-Protection:
-      - 1; mode=block
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Uuid:
-      - xxxL7Y8AXKtmn1Su2I1ZYQ==
       X-Ua-Compatible:
       - IE=Edge,chrome=1
+      X-Request-Uuid:
+      - Xb1wa1Esk5uX+x333jrIHg==
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Runtime:
+      - '0.549227'
+      X-Xss-Protection:
+      - 1; mode=block
       X-Content-Type-Options:
       - nosniff
       - nosniff
+      X-Request-Id:
+      - ff881bf27edd5c1a25cd2818b5da908e
+      X-Bench-Route:
+      - oembed/get_oembed_code
       P3p:
       - CP="OTI DSP COR CUR ADM DEV PSD IVD CONo OUR IND"
       X-Varnish:
-      - '339298277'
+      - '967517811'
       Age:
       - '0'
       Accept-Ranges:
       - bytes
-      X-Fs-Uuid:
-      - d2480d8bc3e68b14809b17e46c2b0000
       X-Li-Fabric:
       - prod-lva1
       Set-Cookie:
-      - SERVERID=r87|WD8ay|WD8ay; path=/
-      - _uv_id=1079578136; Path=/; Domain=.slideshare.net
-      - bcookie="v=2&aa8d652a-233b-4e78-8ce2-0ac8c84806c5"; domain=.slideshare.net;
-        Path=/; Expires=Sat, 01-Dec-2018 06:08:02 GMT
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
+      - SERVERID=r88|WHel1|WHel1; path=/
+      - _uv_id=316307658; Path=/; Domain=.slideshare.net
+      - bcookie="v=2&c57e4d74-e151-4b6a-8557-e70b6e302be3"; domain=.slideshare.net;
+        Path=/; Expires=Sun, 13-Jan-2019 03:28:16 GMT
       X-Li-Pop:
-      - PROD-IDB2
+      - prod-tln1
       X-Li-Uuid:
-      - 0kgNi8PmixSAmxfkbCsAAA==
+      - AvJVGAARmRRAwpAPLisAAA==
+      X-Cache:
+      - MISS from blacklist.ttk.ru
+      - MISS from bnat
+      X-Cache-Lookup:
+      - MISS from blacklist.ttk.ru:3128
+      - MISS from bnat:3130
+      Via:
+      - 1.1 blacklist.ttk.ru (squid), 1.1 bnat (squid/3.5.8)
+      Connection:
+      - close
     body:
       encoding: ASCII-8BIT
-      string: '{"author_url":"http://www.slideshare.net/inarocket","thumbnail_url":"https://cdn.slidesharecdn.com/ss_thumbnails/learn-bem-css-naming-convention-160906200350-thumbnail.jpg?cb=1473332126","type":"rich","height":355,"slide_image_baseurl":"//image.slidesharecdn.com/learn-bem-css-naming-convention-160906200350/95/slide-","slideshow_id":65752735,"title":"Learn
-        BEM: CSS Naming Convention","html":"\u003Ciframe src=\"https://www.slideshare.net/slideshow/embed_code/key/8IvB9fJqJ1ppUJ\"
+      string: '{"slide_image_baseurl_suffix":"-1024.jpg","title":"Learn BEM: CSS Naming
+        Convention","thumbnail_height":128,"author_name":"In a Rocket","version_no":"1473332126","slideshow_id":65752735,"version":"1.0","provider_name":"SlideShare","height":355,"author_url":"http://www.slideshare.net/inarocket","type":"rich","width":425,"thumbnail":"//cdn.slidesharecdn.com/ss_thumbnails/learn-bem-css-naming-convention-160906200350-thumbnail.jpg?cb=1473332126","html":"\u003Ciframe
+        src=\"https://www.slideshare.net/slideshow/embed_code/key/8IvB9fJqJ1ppUJ\"
         width=\"427\" height=\"356\" frameborder=\"0\" marginwidth=\"0\" marginheight=\"0\"
         scrolling=\"no\" style=\"border:1px solid #CCC; border-width:1px; margin-bottom:5px;
         max-width: 100%;\" allowfullscreen\u003E \u003C/iframe\u003E \u003Cdiv style=\"margin-bottom:5px\"\u003E
@@ -79,8 +84,7 @@ http_interactions:
         title=\"Learn BEM: CSS Naming Convention\" target=\"_blank\"\u003ELearn BEM:
         CSS Naming Convention\u003C/a\u003E \u003C/strong\u003E from \u003Cstrong\u003E\u003Ca
         target=\"_blank\" href=\"http://www.slideshare.net/inarocket\"\u003EIn a Rocket\u003C/a\u003E\u003C/strong\u003E
-        \u003C/div\u003E\n\n","width":425,"slide_image_baseurl_suffix":"-1024.jpg","thumbnail_height":128,"total_slides":27,"version_no":"1473332126","author_name":"In
-        a Rocket","version":"1.0","thumbnail":"//cdn.slidesharecdn.com/ss_thumbnails/learn-bem-css-naming-convention-160906200350-thumbnail.jpg?cb=1473332126","conversion_version":2,"thumbnail_width":170,"provider_name":"SlideShare","provider_url":"http://www.slideshare.net"}'
+        \u003C/div\u003E\n\n","thumbnail_width":170,"total_slides":27,"conversion_version":2,"slide_image_baseurl":"//image.slidesharecdn.com/learn-bem-css-naming-convention-160906200350/95/slide-","provider_url":"http://www.slideshare.net/","thumbnail_url":"https://cdn.slidesharecdn.com/ss_thumbnails/learn-bem-css-naming-convention-160906200350-thumbnail.jpg?cb=1473332126"}'
     http_version: 
-  recorded_at: Wed, 30 Nov 2016 18:30:30 GMT
+  recorded_at: Thu, 12 Jan 2017 15:50:45 GMT
 recorded_with: VCR 3.0.3

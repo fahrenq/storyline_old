@@ -18,36 +18,36 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Content-Type:
+      - application/json
       Strict-Transport-Security:
       - max-age=31536000
       X-Content-Type-Options:
       - nosniff
+      Cache-Control:
+      - no-cache
+      X-Xss-Protection:
+      - 1; mode=block; report=https://www.google.com/appserve/security-bugs/log/youtube
       P3p:
       - CP="This is not a P3P policy! See http://support.google.com/accounts/answer/151657?hl=en
         for more info."
-      X-Xss-Protection:
-      - 1; mode=block; report=https://www.google.com/appserve/security-bugs/log/youtube
       Expires:
       - Tue, 27 Apr 1971 19:44:06 EST
-      Content-Type:
-      - application/json
-      Cache-Control:
-      - no-cache
       Date:
-      - Wed, 30 Nov 2016 18:30:34 GMT
+      - Thu, 12 Jan 2017 15:50:55 GMT
       Server:
       - YouTubeFrontEnd
       Alt-Svc:
-      - quic=":443"; ma=2592000; v="36,35,34"
+      - quic=":443"; ma=2592000; v="35,34"
       Transfer-Encoding:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: '{"thumbnail_url":"https:\/\/i.ytimg.com\/vi\/mezO-nr7Ah4\/hqdefault.jpg","type":"video","thumbnail_width":480,"html":"\u003ciframe
-        width=\"480\" height=\"270\" src=\"https:\/\/www.youtube.com\/embed\/mezO-nr7Ah4?feature=oembed\"
-        frameborder=\"0\" allowfullscreen\u003e\u003c\/iframe\u003e","author_name":"Sorax","height":270,"width":480,"provider_name":"YouTube","author_url":"https:\/\/www.youtube.com\/user\/ArtSorax","title":"Sorax
+      string: '{"author_url":"https:\/\/www.youtube.com\/user\/ArtSorax","provider_name":"YouTube","thumbnail_url":"https:\/\/i.ytimg.com\/vi\/mezO-nr7Ah4\/hqdefault.jpg","height":270,"title":"Sorax
         \u043e \u043f\u043e\u0442\u0435\u043d\u0446\u0438\u0430\u043b\u0435 [Q\u0026A
-        04] (\u041f\u043e\u0434\u043a\u0430\u0441\u0442 31.10.16)","provider_url":"https:\/\/www.youtube.com\/","thumbnail_height":360,"version":"1.0"}'
+        04] (\u041f\u043e\u0434\u043a\u0430\u0441\u0442 31.10.16)","type":"video","version":"1.0","author_name":"Sorax","html":"\u003ciframe
+        width=\"480\" height=\"270\" src=\"https:\/\/www.youtube.com\/embed\/mezO-nr7Ah4?feature=oembed\"
+        frameborder=\"0\" allowfullscreen\u003e\u003c\/iframe\u003e","thumbnail_width":480,"provider_url":"https:\/\/www.youtube.com\/","thumbnail_height":360,"width":480}'
     http_version: 
-  recorded_at: Wed, 30 Nov 2016 18:30:35 GMT
+  recorded_at: Thu, 12 Jan 2017 15:50:55 GMT
 recorded_with: VCR 3.0.3

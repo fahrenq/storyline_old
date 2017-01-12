@@ -14,4 +14,7 @@
 //= require jquery_ujs
 //= require bootstrap-sprockets
 //= require turbolinks
+//= require moment
 //= require twitter-widjets
+//= require eonasdan-bootstrap-datetimepicker
+//= require date-time-picker-initialize

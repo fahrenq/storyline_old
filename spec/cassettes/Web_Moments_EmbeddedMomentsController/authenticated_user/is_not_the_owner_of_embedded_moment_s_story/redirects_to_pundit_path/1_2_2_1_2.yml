@@ -27,26 +27,26 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Thu, 12 Jan 2017 15:49:45 GMT
+      - Thu, 12 Jan 2017 15:49:33 GMT
       Expires:
-      - Sat, 19 Dec 2116 15:49:44 GMT
+      - Sat, 19 Dec 2116 15:49:33 GMT
       Last-Modified:
-      - Thu, 12 Jan 2017 15:49:44 GMT
+      - Thu, 12 Jan 2017 15:49:33 GMT
       Server:
       - tsa_o
       Set-Cookie:
-      - guest_id=v1%3A148423618494054646; Domain=.twitter.com; Path=/; Expires=Sat,
-        12-Jan-2019 15:49:44 UTC
+      - guest_id=v1%3A148423617339086457; Domain=.twitter.com; Path=/; Expires=Sat,
+        12-Jan-2019 15:49:33 UTC
       Strict-Transport-Security:
       - max-age=631138519
       X-Connection-Hash:
-      - 292a5fc3cff58856e273ccbeab9463f3
+      - 2ddd40889785c079b2e9cad360254ea4
       X-Content-Type-Options:
       - nosniff
       X-Frame-Options:
       - SAMEORIGIN
       X-Response-Time:
-      - '113'
+      - '110'
       X-Xss-Protection:
       - 1; mode=block
     body:
@@ -74,5 +74,5 @@ http_interactions:
         VHdpdHRlciIsInByb3ZpZGVyX3VybCI6Imh0dHBzOlwvXC90d2l0dGVyLmNv
         bSIsInZlcnNpb24iOiIxLjAifQ==
     http_version: 
-  recorded_at: Thu, 12 Jan 2017 15:49:45 GMT
+  recorded_at: Thu, 12 Jan 2017 15:49:33 GMT
 recorded_with: VCR 3.0.3

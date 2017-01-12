@@ -20,14 +20,17 @@ class EmbeddedMoment < Moment
 
   # alias_attribute :body, :json_body
 
-  def fill(params)
-    self.json_body = OembedAPI::Handler.new(params[:url]).response
-    if save
-      self
-    else
-      false
-    end
-  end
+  def url=(url); end
+
+  #def fill(params)
+    #self.json_body = OembedAPI::Handler.new(params[:url]).response
+    #self.happened_at = DateTime.parse(params[:happened_at]).in_time_zone(Time.zone)
+    #if save
+      #self
+    #else
+      #false
+    #end
+  #end
 
   def provider
     # provider is service name like 'twitter', 'youtube', etc.

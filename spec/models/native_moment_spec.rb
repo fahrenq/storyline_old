@@ -21,6 +21,7 @@ require 'paperclip/matchers'
 describe NativeMoment, type: :model do
   # validations
   it { should validate_presence_of(:body) }
+  it { should validate_presence_of(:happened_at) }
   it { should validate_length_of(:body).is_at_least(4) }
   it { should validate_length_of(:body).is_at_most(2048) }
   it { should validate_attachment_content_type(:picture)

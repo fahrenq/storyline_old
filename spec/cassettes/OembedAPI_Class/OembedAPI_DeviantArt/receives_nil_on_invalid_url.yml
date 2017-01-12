@@ -22,22 +22,26 @@ http_interactions:
       - text/html; charset=ISO-8859-1
       Content-Length:
       - '102'
-      Connection:
-      - keep-alive
       Date:
-      - Wed, 30 Nov 2016 18:30:22 GMT
+      - Thu, 12 Jan 2017 15:50:37 GMT
       Server:
       - Apache
       X-Cache:
       - Error from cloudfront
-      Via:
-      - 1.1 adc079cdd0930716b2e55a5421cf30bf.cloudfront.net (CloudFront)
+      - MISS from bnat
       X-Amz-Cf-Id:
-      - 1oYCaXKY5IZyVb8bdZ-pcnQXcKjAmCX9hw54RenN5SfoV4xWsowAsg==
+      - m6ea8H7M2vyQfxmA5RkzfOEjGqCXABJmkyEdNCoKSEyWqP-G9zXlZw==
+      X-Cache-Lookup:
+      - MISS from bnat:3130
+      Via:
+      - 1.1 b5146ebeffe697d29f90cd7f3d830809.cloudfront.net (CloudFront), 1.1 bnat
+        (squid/3.5.8)
+      Connection:
+      - close
     body:
       encoding: UTF-8
       string: 404 Not Found (https://www.err.ror/badlink) The URL https://www.err.ror/badlink
         is not a deviation URL
     http_version: 
-  recorded_at: Wed, 30 Nov 2016 18:30:22 GMT
+  recorded_at: Thu, 12 Jan 2017 15:50:37 GMT
 recorded_with: VCR 3.0.3
