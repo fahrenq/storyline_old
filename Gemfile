@@ -9,7 +9,7 @@ gem 'coffee-rails', '~> 4.2'
 gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
-gem 'bootstrap-sass', '~> 3.3.6'
+# gem 'bootstrap-sass', '~> 3.3.6'
 gem 'slim-rails'
 gem 'devise'
 gem 'simple_form'
@@ -21,6 +21,7 @@ gem 'paperclip-i18n'
 source 'https://rails-assets.org' do
   gem 'rails-assets-moment'
   gem 'rails-assets-eonasdan-bootstrap-datetimepicker'
+  gem 'rails-assets-semantic-ui'
 end
 
 group :development, :test do

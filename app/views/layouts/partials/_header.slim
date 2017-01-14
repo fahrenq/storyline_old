@@ -1,27 +1,41 @@
-nav.navbar.navbar-default
-  .container
-    /! Brand and toggle get grouped for better mobile display
-    .navbar-header
-      button.navbar-toggle.collapsed aria-expanded="false" data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" type="button"
-        span.sr-only Toggle navigation
-        span.icon-bar
-        span.icon-bar
-        span.icon-bar
-      = link_to 'storyline', root_path, class: 'navbar-brand'
-    /! Collect the nav links, forms, and other content for toggling
-    #bs-example-navbar-collapse-1.collapse.navbar-collapse
-      ul.nav.navbar-nav.navbar-right
-        - if current_user
-          li.dropdown
-            a.dropdown-toggle#dropdown-user(data-toggle='dropdown' href='#' role='button' aria-haspopup='true' aria-expand='false' )
-              = current_user.name
-              span.caret
-            ul.dropdown-menu(aria-labelledby='dropdown-user')
-              li = link_to 'Edit account', edit_user_registration_path
-          li
-            = link_to 'Log out', destroy_user_session_path, method: :delete
-        - else
-          li
-            = link_to 'Registration', new_user_registration_path
-          li
-            = link_to 'Log in', new_user_session_path
+header
+  .header-element Hello
+  .header-element
+    = link_to 'STORYLINE', root_path, class: 'logo'
+  /.header-element
+  .header-element
+    .ui.dropdown.icon.floating.user-nav
+      = image_tag current_user.avatar.url(:thumb)
+      .menu
+        .item Home Goods
+
+
+
+
+/nav.navbar.navbar-default
+  /.container
+    //! Brand and toggle get grouped for better mobile display
+    /.navbar-header
+      /button.navbar-toggle.collapsed aria-expanded="false" data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" type="button"
+        /span.sr-only Toggle navigation
+        /span.icon-bar
+        /span.icon-bar
+        /span.icon-bar
+      /= link_to 'storyline', root_path, class: 'navbar-brand'
+    //! Collect the nav links, forms, and other content for toggling
+    /#bs-example-navbar-collapse-1.collapse.navbar-collapse
+      /ul.nav.navbar-nav.navbar-right
+        /- if current_user
+          /li.dropdown
+            /a.dropdown-toggle#dropdown-user(data-toggle='dropdown' href='#' role='button' aria-haspopup='true' aria-expand='false' )
+              /= current_user.name
+              /span.caret
+            /ul.dropdown-menu(aria-labelledby='dropdown-user')
+              /li = link_to 'Edit account', edit_user_registration_path
+          /li
+            /= link_to 'Log out', destroy_user_session_path, method: :delete
+        /- else
+          /li
+            /= link_to 'Registration', new_user_registration_path
+          /li
+            /= link_to 'Log in', new_user_session_path
