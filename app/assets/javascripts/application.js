@@ -12,9 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require bootstrap-sprockets
+//= require semantic-ui
 //= require turbolinks
 //= require moment
 //= require twitter-widjets
 //= require eonasdan-bootstrap-datetimepicker
 //= require date-time-picker-initialize
+//= require global

@@ -47,9 +47,6 @@ GEM
     autoprefixer-rails (6.4.0.3)
       execjs
     bcrypt (3.1.11)
-    bootstrap-sass (3.3.7)
-      autoprefixer-rails (>= 5.2.1)
-      sass (>= 3.3.4)
     builder (3.2.2)
     byebug (9.0.5)
     capybara (2.7.1)
@@ -173,6 +170,8 @@ GEM
       rails-assets-moment (>= 2.10.5)
     rails-assets-jquery (3.1.1)
     rails-assets-moment (2.17.1)
+    rails-assets-semantic-ui (2.2.7)
+      rails-assets-jquery (>= 1.8)
     rails-controller-testing (0.1.1)
       actionpack (~> 5.x)
       actionview (~> 5.x)
@@ -283,7 +282,7 @@ PLATFORMS
 
 DEPENDENCIES
   annotate
-  bootstrap-sass (~> 3.3.6)
+  autoprefixer-rails
   byebug
   capybara
   capybara-email
@@ -307,6 +306,7 @@ DEPENDENCIES
   rails (~> 5.0.0, >= 5.0.0.1)
   rails-assets-eonasdan-bootstrap-datetimepicker!
   rails-assets-moment!
+  rails-assets-semantic-ui!
   rails-controller-testing
   rspec-rails (~> 3.5)
   sass-rails (~> 5.0)

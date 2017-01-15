@@ -11,6 +11,8 @@ feature 'Registration with email' do
       .join('|'))
   end
 
+  before { logout }
+
   scenario 'registration with valid data' do
     registration_form.visit_page_direct
                      .fill_in_with
