@@ -12,6 +12,27 @@ header {
     display: flex;
   }
 
+  // phones
+  @media screen and (max-width: 767px) {
+    .wide-only {
+      display: none !important;
+    }
+  }
+
+  // computers, tablets
+  @media screen and (min-width: 768px) {
+    .mobile-only {
+      display: none !important;
+    }
+  }
+
+  #sidebar-opener {
+    position: absolute;
+    left: 5px;
+    font-size: 1.5em;
+    line-height: 46px;
+  }
+
   .logo {
     font-size: 2em;
     font-family: 'Poppins', sans-serif;
@@ -32,4 +53,6 @@ header {
   }
 }
 
-.global-wrapper {}
+.global-wrapper {
+  padding-top: 50px;
+}

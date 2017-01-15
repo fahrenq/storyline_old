@@ -1,14 +1,15 @@
 doctype html
 html
   head
-    meta content=("text/html; charset=UTF-8") http-equiv="Content-Type" /
+    meta content=("text/html; charset=UTF-8") http-equiv="Content-Type"
+    meta name="viewport" content=("width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;")
     title Storyline
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   body
     = render 'layouts/partials/header'
-    .container
+    .global-wrapper
       - flash.each do |key, value|
         div class=("alert alert-#{key}") = value
       = yield

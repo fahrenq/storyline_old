@@ -17,6 +17,7 @@ gem 'pundit'
 gem 'oembed'
 gem 'paperclip', '~> 5.0.0'
 gem 'paperclip-i18n'
+gem 'autoprefixer-rails'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-moment'

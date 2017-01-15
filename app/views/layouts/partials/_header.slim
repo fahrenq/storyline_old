@@ -1,13 +1,41 @@
-header
-  .header-element Hello
-  .header-element
-    = link_to 'STORYLINE', root_path, class: 'logo'
-  /.header-element
-  .header-element
-    .ui.dropdown.icon.floating.user-nav
-      = image_tag current_user.avatar.url(:thumb)
+.ui.thin.sidebar.vertical.menu
+  - if user_signed_in?
+    .item
+      .header = current_user.name
       .menu
-        .item Home Goods
+        = link_to 'Settings', edit_user_registration_path, class: 'item'
+        = link_to 'Log out', destroy_user_session_path, method: :delete, class: 'item'
+  - else
+    = link_to 'Log in', new_user_session_path, class: 'item violet'
+    = link_to 'Registration', new_user_registration_path, class: 'item violet'
+  .item
+    .header Navigation
+    .menu
+      = link_to 'Home', root_path, class: "item violet #{active_class('static_pages', 'welcome')}"
+      = link_to 'Stories', stories_path, class: "item violet #{active_class('stories', ['index', 'show', 'new', 'edit'])}"
+
+header.ui.fixed.menu.top
+  .header-element.ui.container.wide-only
+    = link_to 'Home', root_path, class: "item violet #{active_class('static_pages', 'welcome')}"
+    = link_to 'Stories', stories_path, class: "item violet #{active_class('stories', ['index', 'show', 'new', 'edit'])}"
+  .header-element
+    .mobile-only#sidebar-opener
+      i.content.icon
+    = link_to 'STORYLINE', root_path, class: 'logo'
+  - if user_signed_in?
+    .header-element.wide-only
+      .ui.top.right.pointing.dropdown.icon.user-nav
+        = image_tag current_user.avatar.url(:thumb)
+        i.caret.down.icon
+        .menu
+          .header = current_user.name
+          .ui.divider
+          = link_to 'Settings', edit_user_registration_path, class: 'item'
+          = link_to 'Log out', destroy_user_session_path, method: :delete, class: 'item'
+  - else
+    .header-element.ui.container.wide-only
+      = link_to 'Log in', new_user_session_path, class: 'item violet'
+      = link_to 'Registration', new_user_registration_path, class: 'item violet'
 
 
 
