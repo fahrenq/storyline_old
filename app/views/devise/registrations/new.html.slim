@@ -13,5 +13,5 @@
         = f.button :submit, 'Sign up'
     .ui.horizontal.divider
       | Already signed up?
-    .ui.message
+    .ui.stacked.segment.additional-link
       | #{link_to 'Login here.', new_user_session_path, class: 'ui header violet center aligned'}

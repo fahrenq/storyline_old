@@ -8,10 +8,10 @@
         .forgot-password
           = link_to 'Forgot password?', new_password_path(resource_name)
         = f.button :submit, 'Log in'
-        - if flash[:alert]
-          .ui.error.message
-            p = flash[:alert]
+        /- if flash[:alert]
+          /.ui.error.message
+            /p = flash[:alert]
     .ui.horizontal.divider
       | New to us?
-    .ui.message
+    .ui.stacked.segment.additional-link
       | #{link_to 'Sign up here!', new_user_registration_path, class: 'ui header violet center aligned'}

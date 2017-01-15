@@ -10,6 +10,16 @@ header {
     justify-content: center;
     align-items: center;
     display: flex;
+    transition: flex 0.5s ease-in;
+  }
+
+  .flash-element {
+    display: none;
+    .message {
+      padding: 0 7px;
+      line-height: 36px;
+      white-space: nowrap;
+    }
   }
 
   // phones
@@ -55,6 +65,7 @@ header {
 
 body {
   padding-top: 50px;
+  background-color: #FAFAFA;
 }
 
 .c-wrap {
