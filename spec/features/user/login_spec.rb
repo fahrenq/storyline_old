@@ -21,4 +21,6 @@ feature 'Log in with login/password' do
               .submit
     expect(page).not_to have_content(success_content)
   end
+
+  after { logout }
 end
