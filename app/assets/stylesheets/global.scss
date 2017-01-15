@@ -53,6 +53,16 @@ header {
   }
 }
 
-.global-wrapper {
+body {
   padding-top: 50px;
+}
+
+.c-wrap {
+  .column {
+    margin: 80px auto 0 auto;
+    max-width: 450px;
+  }
+  h2.header {
+    font-family: 'Open Sans', sans-serif;
+  }
 }
