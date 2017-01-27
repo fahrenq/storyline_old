@@ -1,0 +1,13 @@
+.c-wrap
+  .column
+    h2.ui.violet.header.centered = title
+    .ui.stacked.segment
+      = yield
+    - unless content_for(:additional_panel).blank?
+      .ui.horizontal.divider
+        = divider_text unless local_assigns[:divider_text].nil?
+      .ui.stacked.segment.additional-panel
+        = content_for :additional_panel
+
+/ tip for classes needed in content_for for beautiful text:
+/ class: 'ui header violet center aligned'

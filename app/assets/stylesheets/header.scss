@@ -1,0 +1,65 @@
+header {
+  height: 46px;
+  width: 100%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+
+  .header-element {
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    transition: flex 0.5s ease-in;
+  }
+
+  .flash-element {
+    display: none;
+
+    .message {
+      padding: 0 7px;
+      line-height: 36px;
+      white-space: nowrap;
+    }
+  }
+
+  // phones
+  @media screen and (max-width: 767px) {
+    .wide-only {
+      display: none !important;
+    }
+  }
+
+  // computers, tablets
+  @media screen and (min-width: 768px) {
+    .mobile-only {
+      display: none !important;
+    }
+  }
+
+  #sidebar-opener {
+    position: absolute;
+    left: 5px;
+    font-size: 1.5em;
+    line-height: 46px;
+  }
+
+  .logo {
+    font-size: 2em;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    line-height: 46px;
+    color: black;
+    text-decoration: none;
+  }
+
+  .user-nav {
+    img {
+      width: 32px;
+      height: 32px;
+      border-radius: 4px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+}

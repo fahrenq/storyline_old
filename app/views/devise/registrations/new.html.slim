@@ -1,17 +1,16 @@
-.registration-wrapper.c-wrap
-  .column
-    h2.ui.violet.header.centered Sign up
-    .ui.stacket.segment
-      = simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-        = f.error_notification
-        = f.input :name, required: true, autofocus: true
-        = f.input :email, required: true
-        = f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length)
-        = f.input :password_confirmation, required: true
-        .no-confirmation
-          = link_to "Didn't receive confirmation instructions?", new_confirmation_path(resource_name)
-        = f.button :submit, 'Sign up'
-    .ui.horizontal.divider
-      | Already signed up?
-    .ui.stacked.segment.additional-link
-      | #{link_to 'Login here.', new_user_session_path, class: 'ui header violet center aligned'}
+= render layout: 'web/shared/centered_form', locals: { title: 'Sign up',
+  divider_text: 'Already signed up?' } do
+  = simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+    = f.error_notification
+    = f.input :name, required: true, autofocus: true
+    = f.input :email, required: true
+    = f.input :password, required: true,
+      hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length)
+    = f.input :password_confirmation, required: true, wrapper_html: { class: 'pswd-mb' }
+    / pswd-mb is a custom class only for custom css
+    .no-confirmation
+      = link_to "Didn't receive confirmation instructions?", new_confirmation_path(resource_name)
+    = f.button :submit, 'Sign up'
+
+  - content_for :additional_panel do
+    = link_to 'Log in here.', new_user_session_path, class: 'ui header violet center aligned'
