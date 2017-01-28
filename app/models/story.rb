@@ -16,10 +16,13 @@
 
 class Story < ApplicationRecord
   belongs_to :user
+
   has_many :moments, dependent: :destroy
 
   has_many :subscriptions
   has_many :subscribers, through: :subscriptions, source: :user
+
+  has_many :notifications
 
   validates :title,
             presence: true,

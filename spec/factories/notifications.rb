@@ -14,11 +14,12 @@ FactoryGirl.define do
   factory :notification do
     body 'MyString'
     category :new_moment
-    info {
-      {
-        'story_id'    => 1,
-        'story_title' => 'MyTitle'
-      }
-    }
+    # info {
+    #   {
+    #     'story_id'    => 1,
+    #     'story_title' => 'MyTitle'
+    #   }
+    # }
+    association :story
   end
 end

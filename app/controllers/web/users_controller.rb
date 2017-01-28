@@ -2,6 +2,9 @@ class Web::UsersController < Web::ApplicationController
   before_action :authenticate_user!
   before_action :set_user
 
+  def home
+  end
+
   def change_avatar
     @user.update(avatar_params)
     redirect_to edit_user_registration_path

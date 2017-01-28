@@ -88,24 +88,24 @@ describe Web::Moments::EmbeddedMomentsController, type: :controller do
       end
 
       describe 'POST #create' do
-        context 'valid_data' do
-          it 'redirects to story#show', :vcr do
+        context 'valid_data', :vcr do
+          it 'redirects to story#show' do
             post :create, params: { story_id: story,
                                     embedded_moment: embedded_moment_attributes }
             expect(response).to redirect_to(assigns[:embedded_moment])
           end
-          it 'creates notification for subscribed user', :vcr do
+          it 'creates notification for subscribed user' do
             expect {
               post :create, params: { story_id: story,
                                       embedded_moment: embedded_moment_attributes }
             }.to change(subscriber.notifications, :count).by(1)
           end
-          it 'creates notification with right data', :vcr do
+          it 'creates notification with right story' do
             post :create, params: { story_id: story,
                                     embedded_moment: embedded_moment_attributes }
-            expect(subscriber.notifications.last.info).to be_a(Hash)
+            expect(subscriber.notifications.last.story).to eq(story)
           end
-          it 'does not create notification for stoty without subs', :vcr do
+          it 'does not create notification for stoty without subs' do
             expect {
               story_without_sub = create(:story, user: user)
               post :create, params: { story_id: story_without_sub,

@@ -13,6 +13,7 @@
 class Notification < ApplicationRecord
   has_many :notification_recipients
   has_many :users, through: :notification_recipients
+  belongs_to :story
 
   validates_presence_of :users
 
@@ -21,7 +22,8 @@ class Notification < ApplicationRecord
   def self.create_for_new_moment(moment)
     new(
       users: moment.story.subscribers,
-      info: { story_id: moment.story.id, story_title: moment.story.title },
+      story: moment.story,
+      # info: { story_id: moment.story.id, story_title: moment.story.title },
       category: 'new_moment'
     ).save
   end

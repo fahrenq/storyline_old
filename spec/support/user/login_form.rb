@@ -13,10 +13,10 @@ class LoginForm
   #   self
   # end
 
-  def fill_in_fields(login_string, user, invalid = false)
-    if login_string == 'email'
+  def fill_in_fields(login_word, user, invalid = false)
+    if login_word == 'email'
       fill_in('Login', with: user.email)
-    elsif login_string == 'name'
+    elsif login_word == 'name'
       fill_in('Login', with: user.name)
     else
       raise ArgumentError, 'Wrong "login string" value. Only "email" or "name" allowed.'
