@@ -3,12 +3,14 @@ class Web::NotificationsController < Web::ApplicationController
   after_action :read_notifications
 
   def index
-    @notifications = current_user.notifications
+    @notifications = Notification.for_user(current_user)
   end
 
   private
 
   def read_notifications
-    ReadNotifications.new(@notifications, current_user).call
+    unless @notifications.all? { |n| n.read_by?(current_user) }
+      ReadNotifications.new(@notifications, current_user).call
+    end
   end
 end

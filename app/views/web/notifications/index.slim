@@ -1,10 +1,10 @@
-= @notifications.count
+= @notifications.length
 br
 - @notifications.each do |n|
   - if n.new_moment?
     ' There is a new moment in
-    b = link_to n.info['story_title'], story_path(n.info['story_id'])
-    ' !
+    b = link_to n.story.title, n.story
+    ' j
   - unless n.read_by?(current_user)
     b NEW NOTIFICATION!
   br

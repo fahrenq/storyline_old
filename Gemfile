@@ -52,6 +52,8 @@ group :development do
   gem 'spring-commands-rspec' # bundle exec spring binstub rspec; spring stop
   gem 'shoulda-matchers', '~> 3.1'
   gem 'annotate'
+
+  gem 'meta_request'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

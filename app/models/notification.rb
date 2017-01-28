@@ -19,6 +19,10 @@ class Notification < ApplicationRecord
 
   enum category: [:new_moment]
 
+  scope :for_user, lambda { |user| includes(notification_recipients: [:user])
+                                   .includes(:story)
+                                   .where(notification_recipients: { user: user }) }
+
   def self.create_for_new_moment(moment)
     new(
       users: moment.story.subscribers,
@@ -29,6 +33,7 @@ class Notification < ApplicationRecord
   end
 
   def read_by?(user)
-    notification_recipients.where(user: user).first.read == true
+    # not using find_by here, because it hits database
+    notification_recipients.find { |n| n.user == user }.read?
   end
 end
