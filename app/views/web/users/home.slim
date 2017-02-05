@@ -1,0 +1,18 @@
+.ui.relaxed.grid.
+  .three.column.doubling.centered.row
+    .column.ui.segment
+      .ui.divided.items
+        - @subscribed_stories.each do |s|
+          .item.sub_story_home
+            .ui.tiny.rounded.image
+              = image_tag s.picture.url(:thumb)
+            .middle.aligned.content
+              = link_to s.title, s, class: 'header'
+              .meta
+                span  started #{s.created_at}
+              .extra
+                / TODO implement indicator if new stories
+                ' New stories!
+
+    .column
+      h1 hi

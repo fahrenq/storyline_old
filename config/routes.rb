@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   scope module: 'web' do
-    root to: 'static_pages#welcome'
+    root to: 'users#home'
     # Devise routing start
     devise_for :users, path: '', controllers: {
       sessions: 'custom_sessions',

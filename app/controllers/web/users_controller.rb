@@ -3,6 +3,7 @@ class Web::UsersController < Web::ApplicationController
   before_action :set_user
 
   def home
+    @subscribed_stories = current_user.sub_stories
   end
 
   def change_avatar

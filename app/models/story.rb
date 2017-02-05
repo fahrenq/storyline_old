@@ -32,7 +32,8 @@ class Story < ApplicationRecord
             presence: true,
             length: { in: 4..4128 }
 
-  has_attached_file :picture, styles: { medium: '300x300>', thumb: '100x100>' }
+  has_attached_file :picture, styles: { medium: '300x300>', thumb: '100x100>' },
+                             default_url: '/images/picture_:style.png'
   validates_attachment_content_type :picture, content_type: /\Aimage\/.*\z/
 
   delegate :embedded_moments, :native_moments, to: :moments

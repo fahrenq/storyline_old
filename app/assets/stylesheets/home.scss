@@ -1,0 +1,13 @@
+.sub_story_home {
+  img {
+    // it not overrides semantic styles without important
+    width: 80px !important;
+    height: 80px !important;
+    object-fit: cover;
+  }
+  // span {
+  //   font-family: 'Open Sans', sans-serif;
+  //   font-size: 1.2em;
+  //   padding-left: 10px;
+  // }
+}
