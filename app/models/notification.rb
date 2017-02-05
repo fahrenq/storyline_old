@@ -19,8 +19,7 @@ class Notification < ApplicationRecord
 
   enum category: [:new_moment]
 
-  scope :for_user, lambda { |user| includes(notification_recipients: [:user])
-                                   .includes(:story)
+  scope :for_user, lambda { |user| includes(:story, notification_recipients: :user)
                                    .where(notification_recipients: { user: user }) }
 
   def self.create_for_new_moment(moment)

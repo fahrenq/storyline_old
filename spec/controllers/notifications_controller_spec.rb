@@ -12,7 +12,7 @@ describe Web::NotificationsController, type: :controller do
 
   describe 'authenticated user' do
     let(:user) { create(:user) }
-    let(:notifications) { create_list(:notification, 5, users: [user]) }
+    let!(:notifications) { create_list(:notification, 5, users: [user]) }
     before { sign_in user }
 
     describe 'GET #index' do
