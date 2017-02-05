@@ -294,7 +294,7 @@ DEPENDENCIES
   capybara
   capybara-email
   capybara-webkit
-  codeclimate-test-reporter
+  codeclimate-test-reporter (~> 1.0.0)
   coffee-rails (~> 4.2)
   database_cleaner
   devise
@@ -320,6 +320,7 @@ DEPENDENCIES
   sass-rails (~> 5.0)
   shoulda-matchers (~> 3.1)
   simple_form
+  simplecov
   slim-rails
   spring
   spring-commands-rspec

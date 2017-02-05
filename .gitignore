@@ -1,3 +1,5 @@
+cc.sh
+
 *.rbc
 capybara-*.html
 .rspec

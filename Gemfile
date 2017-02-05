@@ -39,9 +39,10 @@ end
 group :test do
   gem 'email_spec'
   gem 'database_cleaner'
-  gem 'codeclimate-test-reporter', require: false
   gem 'vcr'
   gem 'webmock'
+  gem 'simplecov'
+  gem 'codeclimate-test-reporter', '~> 1.0.0'
 end
 
 group :development do
