@@ -20,7 +20,9 @@ header.ui.fixed.menu.top
   .header-element
     .mobile-only#sidebar-opener
       i.content.icon
-    = link_to 'STORYLINE', root_path, class: 'logo'
+    = link_to root_path, class: 'logo' do
+      .main STORYLINE
+      .slogan UNIVERSAL MEDIA
     - if flash.first
       .flash-element
         .ui.message.violet

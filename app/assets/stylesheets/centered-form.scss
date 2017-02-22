@@ -9,8 +9,8 @@
   }
 
   .pswd-mb {
-    // need !important because the field has multiclass css in semantic-ui
-    // and these styles has higher priority
+    // need !important because the field has several css classes in semantic-ui
+    // and those styles has higher priority
     margin-bottom: 2px !important;
   }
 

@@ -1,13 +1,25 @@
-.sub_story_home {
-  img {
-    // it not overrides semantic styles without important
-    width: 80px !important;
-    height: 80px !important;
-    object-fit: cover;
+.subscribed_stories_home {
+  background-color: #fff;
+  .story {
+    padding: 5px 0;
+    min-height: 70px;
+    display: flex;
+    flex-direction: row;
+    .img-wrapper {
+      margin: 5px 5px 5px 0;
+      align-self: center;
+      img {
+        object-fit: cover;
+        width: 50px;
+        height: 50px;
+      }
+    }
+    .content {
+      .title {
+        color: #292f33;
+        font-family: 'Lato', sans-serif;
+        font-weight: 600;
+      }
+    }
   }
-  // span {
-  //   font-family: 'Open Sans', sans-serif;
-  //   font-size: 1.2em;
-  //   padding-left: 10px;
-  // }
 }
