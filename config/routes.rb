@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   scope module: 'web' do
-    root to: 'users#home'
     # Devise routing start
     devise_for :users, path: '', controllers: {
       sessions: 'custom_sessions',
@@ -13,7 +12,11 @@ Rails.application.routes.draw do
       sign_out: 'logout',
       sign_in: 'login'
     }
+    authenticated :user do
+      root to: 'users#home', as: :authenticated_root
+    end
     # Devise routing end
+    root to: 'static_pages#welcome'
     patch '/change_avatar', to: 'users#change_avatar', as: :change_avatar
     delete '/destroy_avatar', to: 'users#destroy_avatar', as: :destroy_avatar
 

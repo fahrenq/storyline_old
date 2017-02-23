@@ -4,6 +4,7 @@ abort("The Rails environment is running in production mode!") if Rails.env.produ
 require 'spec_helper'
 require 'rspec/rails'
 require 'database_cleaner'
+require 'capybara/poltergeist'
 require 'devise'
 require 'shoulda-matchers'
 require 'paperclip/matchers'
@@ -11,7 +12,7 @@ require 'vcr'
 
 ActiveRecord::Migration.maintain_test_schema!
 
-Capybara.javascript_driver = :webkit
+Capybara.javascript_driver = :poltergeist
 
 RSpec.configure do |config|
 

@@ -29,8 +29,8 @@ group :development, :test do
   gem 'byebug', platform: :mri
   gem 'rspec-rails', '~> 3.5'
   gem 'capybara'
-  gem 'capybara-webkit'
   gem 'capybara-email'
+  gem 'poltergeist'
   gem 'rails-controller-testing'
   gem 'factory_girl_rails'
   gem 'faker'
